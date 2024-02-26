@@ -1,6 +1,8 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test, vi } from 'vitest';
 
 import { render, screen } from '@testing-library/react';
+
+import userEvent from '@testing-library/user-event';
 
 import { Button } from '..';
 import { createRef } from 'react';
@@ -25,5 +27,33 @@ describe('Button', () => {
     const ref = createRef<HTMLButtonElement>();
     render(<Button ref={ref}>Button</Button>);
     expect(screen.queryByRole('button')).toBe(ref.current);
+  });
+
+  test('should be clickable', async () => {
+    const user = userEvent.setup();
+    const onClick = vi.fn();
+
+    render(<Button onClick={onClick}>Button</Button>);
+
+    const button = screen.getByRole('button');
+    await user.click(button);
+
+    expect(onClick).toHaveBeenCalled();
+  });
+
+  test('should not be clickable when disabled', async () => {
+    const user = userEvent.setup();
+    const onClick = vi.fn();
+
+    render(
+      <Button isDisabled onClick={onClick}>
+        Button
+      </Button>,
+    );
+
+    const button = screen.getByRole('button');
+    await user.click(button);
+
+    expect(onClick).not.toHaveBeenCalled();
   });
 });
