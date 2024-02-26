@@ -1,22 +1,30 @@
-import 'mirotone/dist/styles.css';
-
 import { forwardRef } from 'react';
 
 import { ButtonProps } from './types';
 import { getIsLoadingClassName, getSizeClassName, getVariantClassName } from './utils';
+import { isString } from '../../utils/common';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-  const { size = 'medium', variant = 'primary', isDisabled = false, isLoading = false, children } = props;
+  const {
+    size = 'medium',
+    variant = 'primary',
+    isDisabled = false,
+    isLoading = false,
+    children,
+    className,
+    ...rest
+  } = props;
 
   const classNames = [
+    className,
     'button',
     getSizeClassName(size),
     getVariantClassName(variant),
     getIsLoadingClassName(isLoading),
-  ].filter(Boolean);
+  ].filter(isString);
 
   return (
-    <button ref={ref} type='button' className={classNames.join(' ')} disabled={isDisabled}>
+    <button {...rest} ref={ref} type='button' className={classNames.join(' ')} disabled={isDisabled}>
       {children}
     </button>
   );

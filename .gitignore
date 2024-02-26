@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .yarn
+lib
+.storybook
+coverage

@@ -10,8 +10,19 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: [
+    'dist',
+    'lib',
+    '.eslintrc.cjs',
+    './components/index.ts',
+    'src/vite-env.d.ts',
+    'vite.config.ts',
+    'vitest.config.ts',
+  ],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+  },
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
