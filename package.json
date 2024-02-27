@@ -10,7 +10,7 @@
     "precommit": "yarn lint && yarn typecheck",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "build-storybook -o docs-build",
+    "build-storybook": "storybook build",
     "build": "rollup -c",
     "test": "vitest --run",
     "coverage": "vitest --coverage --run"
