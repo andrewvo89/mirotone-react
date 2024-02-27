@@ -16,15 +16,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   } = props;
 
   const classNames = [
-    className,
     'button',
     getSizeClassName(size),
     getVariantClassName(variant),
     getIsLoadingClassName(isLoading),
+    className,
   ].filter(isString);
 
   return (
-    <button {...rest} ref={ref} type='button' className={classNames.join(' ')} disabled={isDisabled}>
+    <button {...rest} ref={ref} className={classNames.join(' ')} disabled={isDisabled}>
       {children}
     </button>
   );
