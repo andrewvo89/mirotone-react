@@ -3,7 +3,7 @@ import { describe, expect, test } from 'vitest';
 
 import { render, screen } from '@testing-library/react';
 
-import { AppCardTitle } from '../';
+import { AppCardTitle } from '..';
 
 describe('AppCardTitle', () => {
   test('should render component', () => {

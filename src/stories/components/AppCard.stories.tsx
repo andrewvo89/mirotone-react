@@ -1,15 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AppCard as BaseAppCard, AppCardBody, AppCardDescription, AppCardTags, AppCardTitle, tokens } from '../';
+import { AppCard as BaseAppCard, AppCardBody, AppCardDescription, AppCardTags, AppCardTitle, tokens } from '../..';
 
 const meta = {
   title: 'Components/AppCard',
   component: BaseAppCard,
   parameters: {
     layout: 'centered',
-  },
-  args: {
-    accentColor: 'var(--blue700)',
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof BaseAppCard>;
@@ -18,7 +15,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const AppCard: Story = {
+export const Default: Story = {};
+
+export const Complete: Story = {
   render: (args) => (
     <BaseAppCard {...args}>
       <AppCardTitle>App card title</AppCardTitle>

@@ -1,0 +1,13 @@
+import { Meta, Title, IconGallery, IconItem } from '@storybook/blocks';
+
+import { Icon, deviceIcons } from '../..';
+
+<Meta title='Icons/Devices' />
+
+<IconGallery>
+  {deviceIcons.map((name) => (
+    <IconItem name={name}>
+      <Icon key={name} name={name} />
+    </IconItem>
+  ))}
+</IconGallery>

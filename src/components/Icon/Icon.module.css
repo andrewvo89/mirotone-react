@@ -1,0 +1,41 @@
+.xxsmall {
+  background-size: calc(var(--icon-size) / 3);
+  height: calc(var(--icon-size) / 3);
+  width: calc(var(--icon-size) / 3);
+}
+
+.xsmall {
+  background-size: calc(var(--icon-size) / 2);
+  height: calc(var(--icon-size) / 2);
+  width: calc(var(--icon-size) / 2);
+}
+
+.small {
+  background-size: calc(var(--icon-size) / 1.5);
+  height: calc(var(--icon-size) / 1.5);
+  width: calc(var(--icon-size) / 1.5);
+}
+
+.medium {
+  background-size: var(--icon-size);
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.large {
+  background-size: calc(var(--icon-size) * 1.5);
+  height: calc(var(--icon-size) * 1.5);
+  width: calc(var(--icon-size) * 1.5);
+}
+
+.xlarge {
+  background-size: calc(var(--icon-size) * 2);
+  height: calc(var(--icon-size) * 2);
+  width: calc(var(--icon-size) * 2);
+}
+
+.xxlarge {
+  background-size: calc(var(--icon-size) * 3);
+  height: calc(var(--icon-size) * 3);
+  width: calc(var(--icon-size) * 3);
+}

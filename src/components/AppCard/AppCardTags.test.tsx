@@ -5,7 +5,7 @@ import { describe, expect, test } from 'vitest';
 
 import { render, screen } from '@testing-library/react';
 
-import { AppCardTags } from '../';
+import { AppCardTags } from '..';
 
 describe('AppCardTags', () => {
   test('should render component', () => {
