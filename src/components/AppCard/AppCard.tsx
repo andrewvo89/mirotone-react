@@ -2,7 +2,6 @@ import { forwardRef } from 'react';
 
 import { isString } from '../../utils/common';
 import { AppCardProps } from './types';
-import { getAppCardAttributes } from './utils';
 
 const AppCard = forwardRef<HTMLDivElement, AppCardProps>((props, ref) => {
   const { accentColor = 'var(--blue700)', className, children, ...rest } = props;
@@ -10,7 +9,7 @@ const AppCard = forwardRef<HTMLDivElement, AppCardProps>((props, ref) => {
   const classNames = ['app-card', className].filter(isString);
 
   return (
-    <div {...rest} ref={ref} className={classNames.join(' ')} {...getAppCardAttributes(accentColor)}>
+    <div {...rest} ref={ref} className={classNames.join(' ')} style={{ '--accent-color': accentColor }}>
       {children}
     </div>
   );
