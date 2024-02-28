@@ -51,4 +51,15 @@ export const colors = {
     800: 'var(--red800)',
     900: 'var(--red900)',
   },
+  yellow: {
+    100: 'var(--yellow100)',
+    400: 'var(--yellow400)',
+    700: 'var(--yellow700)',
+  },
+  white: 'var(--white)',
+  whiteAlpha: {
+    20: 'var(--whiteAlpha20)',
+    40: 'var(--whiteAlpha40)',
+    80: 'var(--whiteAlpha80)',
+  },
 } as const;

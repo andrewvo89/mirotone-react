@@ -1,13 +1,15 @@
 // FILEPATH: /Users/andrew/Documents/Projects/mirotone-react/src/components/AppCard/AppCardTags.test.tsx
 
 import { createRef } from 'react';
-import { describe, expect, test } from 'vitest';
+import { afterEach, describe, expect, test } from 'vitest';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 
-import { AppCardTags } from '..';
+import { AppCardTags } from '../';
 
 describe('AppCardTags', () => {
+  afterEach(cleanup);
+
   test('should render component', () => {
     render(<AppCardTags>Content</AppCardTags>);
     const appCardTags = screen.queryByText('Content');

@@ -1,11 +1,13 @@
 import { createRef } from 'react';
-import { describe, expect, test } from 'vitest';
+import { afterEach, describe, expect, test } from 'vitest';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 
-import { AppCard } from '..';
+import { AppCard } from '../';
 
 describe('AppCard', () => {
+  afterEach(cleanup);
+
   test('should render component', () => {
     render(<AppCard>Content</AppCard>);
     const appCard = screen.queryByText('Content');

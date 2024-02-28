@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AppCard as BaseAppCard, AppCardBody, AppCardDescription, AppCardTags, AppCardTitle, tokens } from '../..';
+import { AppCard, AppCardBody, AppCardDescription, AppCardTags, AppCardTitle, tokens } from '../..';
 
 const meta = {
   title: 'Components/AppCard',
-  component: BaseAppCard,
+  component: AppCard,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof BaseAppCard>;
+} satisfies Meta<typeof AppCard>;
 
 export default meta;
 
@@ -17,9 +17,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const Complete: Story = {
+export const Composition: Story = {
   render: (args) => (
-    <BaseAppCard {...args}>
+    <AppCard {...args}>
       <AppCardTitle>App card title</AppCardTitle>
       <AppCardDescription>App card description</AppCardDescription>
       <AppCardBody>
@@ -38,7 +38,7 @@ export const Complete: Story = {
           <circle r='12' cx='12' cy='12' fill={tokens.colors.indigo[700]}></circle>
         </svg>
       </AppCardBody>
-    </BaseAppCard>
+    </AppCard>
   ),
 };
 
@@ -50,30 +50,30 @@ export const AccentColor: Story = {
 
 export const Title: Story = {
   render: (args) => (
-    <BaseAppCard {...args}>
+    <AppCard {...args}>
       <AppCardTitle>App card title</AppCardTitle>
-    </BaseAppCard>
+    </AppCard>
   ),
 };
 
 export const Description: Story = {
   render: (args) => (
-    <BaseAppCard {...args}>
+    <AppCard {...args}>
       <AppCardTitle>App card title</AppCardTitle>
       <AppCardDescription>App card description</AppCardDescription>
-    </BaseAppCard>
+    </AppCard>
   ),
 };
 
 export const AppLogo: Story = {
   render: (args) => (
-    <BaseAppCard {...args}>
+    <AppCard {...args}>
       <AppCardBody>
         <AppCardTags />
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' className='app-card--app-logo'>
           <circle r='12' cx='12' cy='12' fill={tokens.colors.indigo[700]}></circle>
         </svg>
       </AppCardBody>
-    </BaseAppCard>
+    </AppCard>
   ),
 };

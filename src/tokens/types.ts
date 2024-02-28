@@ -19,7 +19,13 @@ export type BlackAlpha = (typeof colors)['blackAlpha'][keyof (typeof colors)['bl
 
 export type Red = (typeof colors)['red'][keyof (typeof colors)['red']];
 
-export type Colors = Blue | Indigo | IndigoAlpha | Green | Black | BlackAlpha | Red;
+export type Yellow = (typeof colors)['yellow'][keyof (typeof colors)['yellow']];
+
+export type White = (typeof colors)['white'];
+
+export type WhiteAlpha = (typeof colors)['whiteAlpha'][keyof (typeof colors)['whiteAlpha']];
+
+export type Colors = Blue | Indigo | IndigoAlpha | Green | Black | BlackAlpha | Red | Yellow | White | WhiteAlpha;
 
 export type FontWeight = (typeof typography)['fontWeight'][keyof (typeof typography)['fontWeight']];
 

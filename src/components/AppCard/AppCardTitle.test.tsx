@@ -1,11 +1,13 @@
 import { createRef } from 'react';
-import { describe, expect, test } from 'vitest';
+import { afterEach, describe, expect, test } from 'vitest';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 
 import { AppCardTitle } from '..';
 
 describe('AppCardTitle', () => {
+  afterEach(cleanup);
+
   test('should render component', () => {
     render(<AppCardTitle>Title</AppCardTitle>);
     const appCardTitle = screen.queryByText('Title');

@@ -16,6 +16,8 @@ export default defineConfig({
     coverage: {
       provider: 'istanbul',
       reporter: ['text', 'html'],
+      include: ['src/**'],
+      exclude: ['src/**/*.stories.*'],
     },
     setupFiles: ['./setup.jsdom.ts'],
     globals: true,

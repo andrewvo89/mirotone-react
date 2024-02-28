@@ -1,13 +1,14 @@
-import { describe, expect, test, vi } from 'vitest';
+import { createRef } from 'react';
+import { afterEach, describe, expect, test, vi } from 'vitest';
 
-import { render, screen } from '@testing-library/react';
-
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { Button } from '..';
-import { createRef } from 'react';
+import { Button } from '../';
 
 describe('Button', () => {
+  afterEach(cleanup);
+
   test('should render a default button', () => {
     render(<Button>Button</Button>);
     expect(screen.queryByRole('button')).toBeDefined();

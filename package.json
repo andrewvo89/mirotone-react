@@ -7,7 +7,7 @@
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc --noEmit",
-    "precommit": "yarn lint && yarn typecheck",
+    "precommit": "yarn lint && yarn typecheck && yarn coverage",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

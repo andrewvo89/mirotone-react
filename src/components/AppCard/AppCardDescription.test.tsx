@@ -1,11 +1,13 @@
 import { createRef } from 'react';
-import { describe, expect, test } from 'vitest';
+import { afterEach, describe, expect, test } from 'vitest';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 
 import { AppCardDescription } from '..';
 
 describe('AppCardDescription', () => {
+  afterEach(cleanup);
+
   test('should render component with provided children', () => {
     render(<AppCardDescription>Sample Description</AppCardDescription>);
     const description = screen.getByText('Sample Description');
