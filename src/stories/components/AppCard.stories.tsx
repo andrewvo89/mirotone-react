@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AppCard, AppCardBody, AppCardDescription, AppCardTags, AppCardTitle, tokens } from '../..';
+import { AppCard, AppCardBody, AppCardDescription, AppCardTags, AppCardTitle, Tag, tokens } from '../..';
 
 const meta = {
   title: 'Components/AppCard',
@@ -24,15 +24,11 @@ export const Composition: Story = {
       <AppCardDescription>App card description</AppCardDescription>
       <AppCardBody>
         <AppCardTags>
-          <span className='tag'>Tag</span>
-          <span className='tag' style={{ '--background': 'var(--yellow700)' }}>
-            Another tag
-          </span>
-          <span className='tag' style={{ '--color': 'var(--green700)' }}>
-            Just one more
-          </span>
-          <span className='tag'>JIRA-1234</span>
-          <span className='tag icon icon-link'>A tag with icon</span>
+          <Tag>Tag</Tag>
+          <Tag backgroundColor='var(--yellow700)'>Another tag</Tag>
+          <Tag textColor='var(--green700)'>Just one more</Tag>
+          <Tag>JIRA-1234</Tag>
+          <Tag icon='link'>A tag with icon</Tag>
         </AppCardTags>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' className='app-card--app-logo'>
           <circle r='12' cx='12' cy='12' fill={tokens.colors.indigo[700]}></circle>
@@ -44,7 +40,7 @@ export const Composition: Story = {
 
 export const AccentColor: Story = {
   args: {
-    accentColor: tokens.colors.indigo[600],
+    accentColor: 'var(--indigo600)',
   },
 };
 
