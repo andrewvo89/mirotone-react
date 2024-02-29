@@ -11,7 +11,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
   return (
     <label className='checkbox'>
       <input {...rest} ref={ref} className={className} type='checkbox' checked={value} onChange={onChangeHandler} />
-      {label ? <span>{label}</span> : <span className={styles.label} />}
+      {label ? <span>{label}</span> : <span className={styles['empty-label']} />}
     </label>
   );
 });
