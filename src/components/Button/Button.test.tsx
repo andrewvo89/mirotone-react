@@ -14,7 +14,7 @@ describe('Button', () => {
     expect(screen.queryByRole('button')).toBeDefined();
   });
 
-  test('should render a default button', () => {
+  test('should render a disabled button', () => {
     render(<Button isDisabled>Button</Button>);
     expect(screen.queryByRole('button')).toBeDisabled();
   });

@@ -1,12 +1,12 @@
 import { forwardRef } from 'react';
 
-import { isString } from '../../utils/common';
+import { isNonEmptyString } from '../../utils/common';
 import { AppCardBodyProps } from './types';
 
 const AppCardBody = forwardRef<HTMLDivElement, AppCardBodyProps>((props, ref) => {
   const { className, children, ...rest } = props;
 
-  const classNames = ['app-card--body', className].filter(isString);
+  const classNames = ['app-card--body', className].filter(isNonEmptyString);
 
   return (
     <div {...rest} ref={ref} className={classNames.join(' ')}>

@@ -1,11 +1,13 @@
 import { createRef } from 'react';
-import { describe, expect, test } from 'vitest';
+import { afterEach, describe, expect, test } from 'vitest';
 
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 
 import Divider from './Divider';
 
 describe('Divider component', () => {
+  afterEach(cleanup);
+
   test('should render correctly', () => {
     const { container } = render(<Divider />);
     const divider = container.querySelector('hr');

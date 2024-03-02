@@ -1,13 +1,15 @@
 import { forwardRef } from 'react';
 
-import { isString } from '../../utils/common';
+import { isNonEmptyString } from '../../utils/common';
 import { FormGroupProps } from './types';
-import { getSizeClassName } from './utils';
+import { getIsDisabledClassName, getSizeClassName } from './utils';
 
 const FormGroup = forwardRef<HTMLDivElement, FormGroupProps>((props, ref) => {
-  const { size = 'medium', className, children, ...rest } = props;
+  const { size = 'medium', status, isDisabled, className, children, ...rest } = props;
 
-  const classNames = [getSizeClassName(size), className].filter(isString);
+  const classNames = [getSizeClassName(size), getIsDisabledClassName(isDisabled), status, className].filter(
+    isNonEmptyString,
+  );
 
   return (
     <div {...rest} ref={ref} className={classNames.join(' ')}>

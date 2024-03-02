@@ -8,3 +8,7 @@ export function getSizeClassName(size: FormGroupSize): string {
       return 'form-group';
   }
 }
+
+export function getIsDisabledClassName(isDisabled?: boolean): string {
+  return isDisabled ? 'form-group__disabled' : '';
+}

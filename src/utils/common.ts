@@ -4,6 +4,6 @@
  * @param {unknown} value
  * @return {*}  {value is string}
  */
-export function isString(value: unknown): value is string {
-  return typeof value === 'string';
+export function isNonEmptyString(value: unknown): value is string {
+  return typeof value === 'string' && value.length > 0;
 }

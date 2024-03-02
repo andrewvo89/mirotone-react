@@ -1,10 +1,12 @@
 import { createRef } from 'react';
-import { describe, expect, test } from 'vitest';
-import { render } from '@testing-library/react';
+import { afterEach, describe, expect, test } from 'vitest';
+import { cleanup, render } from '@testing-library/react';
 
 import { InputLabel } from '../..';
 
 describe('InputLabel', () => {
+  afterEach(cleanup);
+
   test('should render correctly', () => {
     const { container } = render(<InputLabel />);
     const inputLabel = container.querySelector('label');

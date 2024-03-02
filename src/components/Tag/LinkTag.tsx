@@ -1,13 +1,13 @@
 import { forwardRef } from 'react';
 
-import { isString } from '../../utils/common';
+import { isNonEmptyString } from '../../utils/common';
 import { LinkTagProps } from './types';
 import { getIconClassName } from './utils';
 
 const LinkTag = forwardRef<HTMLAnchorElement, LinkTagProps>((props, ref) => {
   const { icon, textColor = 'var(--black)', backgroundColor = 'var(--indigo50)', className, children, ...rest } = props;
 
-  const classNames = ['tag', getIconClassName(icon), className].filter(isString);
+  const classNames = ['tag', getIconClassName(icon), className].filter(isNonEmptyString);
 
   return (
     <a

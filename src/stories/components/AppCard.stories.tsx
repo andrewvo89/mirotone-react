@@ -2,6 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { AppCard, AppCardBody, AppCardDescription, AppCardTags, AppCardTitle, Tag, tokens } from '../..';
 
+function Logo() {
+  return (
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' className='app-card--app-logo'>
+      <circle r='12' cx='12' cy='12' fill={tokens.colors.indigo[700]}></circle>
+    </svg>
+  );
+}
+
 const meta = {
   title: 'Components/AppCard',
   component: AppCard,
@@ -30,9 +38,7 @@ export const Composition: Story = {
           <Tag>JIRA-1234</Tag>
           <Tag icon='link'>A tag with icon</Tag>
         </AppCardTags>
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' className='app-card--app-logo'>
-          <circle r='12' cx='12' cy='12' fill={tokens.colors.indigo[700]}></circle>
-        </svg>
+        <Logo />
       </AppCardBody>
     </AppCard>
   ),
@@ -66,9 +72,7 @@ export const AppLogo: Story = {
     <AppCard {...args}>
       <AppCardBody>
         <AppCardTags />
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' className='app-card--app-logo'>
-          <circle r='12' cx='12' cy='12' fill={tokens.colors.indigo[700]}></circle>
-        </svg>
+        <Logo />
       </AppCardBody>
     </AppCard>
   ),

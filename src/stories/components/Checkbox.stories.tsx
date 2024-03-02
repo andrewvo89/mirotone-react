@@ -20,6 +20,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const Controlled: Story = {
+  args: {
+    value: false,
+  },
   render: function Component(args) {
     const [, setArgs] = useArgs();
 
@@ -28,10 +31,7 @@ export const Controlled: Story = {
       setArgs({ value });
     };
 
-    return <Checkbox {...args} onChange={onChange} />;
-  },
-  args: {
-    value: false,
+    return <Checkbox {...args} value={args.value} onChange={onChange} />;
   },
 };
 

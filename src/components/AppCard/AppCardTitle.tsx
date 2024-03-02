@@ -1,12 +1,12 @@
 import { forwardRef } from 'react';
 
-import { isString } from '../../utils/common';
+import { isNonEmptyString } from '../../utils/common';
 import { AppCardTitleProps } from './types';
 
 const AppCardTitle = forwardRef<HTMLHeadingElement, AppCardTitleProps>((props, ref) => {
   const { className, children, ...rest } = props;
 
-  const classNames = ['app-card--title', className].filter(isString);
+  const classNames = ['app-card--title', className].filter(isNonEmptyString);
 
   return (
     <h1 {...rest} ref={ref} className={classNames.join(' ')}>

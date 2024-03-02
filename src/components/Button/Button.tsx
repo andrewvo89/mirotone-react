@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 
 import { ButtonProps } from './types';
 import { getIsLoadingClassName, getSizeClassName, getVariantClassName } from './utils';
-import { isString } from '../../utils/common';
+import { isNonEmptyString } from '../../utils/common';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const {
@@ -21,7 +21,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
     getVariantClassName(variant),
     getIsLoadingClassName(isLoading),
     className,
-  ].filter(isString);
+  ]
+    .filter(isNonEmptyString)
+    .filter(Boolean);
 
   return (
     <button {...rest} ref={ref} className={classNames.join(' ')} disabled={isDisabled}>
