@@ -4,14 +4,15 @@ import { afterEach, describe, expect, test, vi } from 'vitest';
 import { cleanup, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { Checkbox } from '../';
+import { Checkbox } from '../../';
 
 describe('Checkbox', () => {
   afterEach(cleanup);
 
   test('should render a checkbox', () => {
     const { queryByRole } = render(<Checkbox />);
-    expect(queryByRole('checkbox')).toBeDefined();
+    const checkbox = queryByRole('checkbox');
+    expect(checkbox).not.toBeNull();
   });
 
   test('should call onChange when checkbox is clicked', async () => {
@@ -43,14 +44,16 @@ describe('Checkbox', () => {
     const label = 'Checkbox Label';
 
     const { queryByText } = render(<Checkbox label={label} />);
-    expect(queryByText(label)).not.toBeNull();
+    const checkbox = queryByText(label);
+    expect(checkbox).not.toBeNull();
   });
 
   test('should apply custom class name', () => {
     const customClassName = 'custom-checkbox';
 
     const { getByRole } = render(<Checkbox className={customClassName} />);
-    expect(getByRole('checkbox')).toHaveClass(customClassName);
+    const checkbox = getByRole('checkbox');
+    expect(checkbox).toHaveClass(customClassName);
   });
 
   test('should pass ref to the input element', () => {
