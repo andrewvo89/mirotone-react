@@ -6,4 +6,5 @@ export * from './FormGroup';
 export * from './Input';
 export * from './Icon';
 export * from './Label';
+export * from './Link';
 export * from './Tag';
