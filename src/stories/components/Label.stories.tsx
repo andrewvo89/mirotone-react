@@ -7,6 +7,7 @@ const meta = {
   component: Label,
   args: {
     variant: 'info',
+    children: 'Label',
   },
   parameters: {
     layout: 'centered',
@@ -23,11 +24,13 @@ export const Default: Story = {};
 export const Info: Story = {
   args: {
     variant: 'info',
+    children: 'Info label',
   },
 };
 
 export const Warning: Story = {
   args: {
     variant: 'warning',
+    children: 'Warning label',
   },
 };

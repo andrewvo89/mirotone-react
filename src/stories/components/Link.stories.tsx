@@ -7,6 +7,7 @@ const meta = {
   component: Link,
   args: {
     variant: 'primary',
+    children: 'Link',
   },
   parameters: {
     layout: 'centered',
@@ -23,17 +24,20 @@ export const Default: Story = {};
 export const Primary: Story = {
   args: {
     variant: 'primary',
+    children: 'Primary link',
   },
 };
 
 export const Danger: Story = {
   args: {
     variant: 'danger',
+    children: 'Danger link',
   },
 };
 
 export const Text: Story = {
   args: {
     variant: 'text',
+    children: 'Text link',
   },
 };
