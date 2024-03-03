@@ -63,7 +63,7 @@ describe('Input component', () => {
   test('should pass ref to the input element', () => {
     const ref = createRef<HTMLInputElement>();
     render(<Input ref={ref} />);
-    expect(ref.current).not.toBeNull();
-    expect(ref.current).toBeInstanceOf(HTMLInputElement);
+    const inputElement = screen.getByRole('textbox');
+    expect(inputElement).toBe(ref.current);
   });
 });

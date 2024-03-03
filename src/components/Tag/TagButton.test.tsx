@@ -9,8 +9,10 @@ describe('TagButton', () => {
   afterEach(cleanup);
 
   test('should render correctly', () => {
-    const { queryByRole } = render(<TagButton icon='activity' />);
-    expect(queryByRole('button')).not.toBeNull();
+    const { queryByRole, queryByText } = render(<TagButton icon='activity' />);
+    const button = queryByRole('button');
+    expect(button).not.toBeNull();
+    expect(queryByText('Hello')).toBeNull();
   });
 
   test('should apply custom class name', () => {
@@ -25,7 +27,7 @@ describe('TagButton', () => {
 
   test('should forward ref to the TagButton component', () => {
     const ref = createRef<HTMLButtonElement>();
-    render(<TagButton ref={ref} icon='activity' />);
-    expect(ref.current).not.toBeNull();
+    const { queryByRole } = render(<TagButton ref={ref} icon='activity' />);
+    expect(queryByRole('button')).toBe(ref.current);
   });
 });

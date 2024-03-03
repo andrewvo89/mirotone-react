@@ -55,8 +55,8 @@ describe('Checkbox', () => {
 
   test('should pass ref to the input element', () => {
     const ref = createRef<HTMLInputElement>();
-
     const { getByRole } = render(<Checkbox ref={ref} />);
-    expect(ref.current).toBe(getByRole('checkbox'));
+    const checkbox = getByRole('checkbox');
+    expect(checkbox).toBe(ref.current);
   });
 });

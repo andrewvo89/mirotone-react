@@ -22,7 +22,8 @@ describe('Divider component', () => {
 
   test('should pass down ref', () => {
     const ref = createRef<HTMLHRElement>();
-    render(<Divider ref={ref} />);
-    expect(ref.current).toBeInTheDocument();
+    const { container } = render(<Divider ref={ref} />);
+    const divider = container.querySelector('hr');
+    expect(divider).toBe(ref.current);
   });
 });

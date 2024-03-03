@@ -27,7 +27,8 @@ describe('InputLabel', () => {
 
   test('should pass ref to the input element', () => {
     const ref = createRef<HTMLLabelElement>();
-    render(<InputLabel ref={ref} />);
-    expect(ref.current).toBeInTheDocument();
+    const { container } = render(<InputLabel ref={ref} />);
+    const inputLabel = container.querySelector('label');
+    expect(inputLabel).toBe(ref.current);
   });
 });

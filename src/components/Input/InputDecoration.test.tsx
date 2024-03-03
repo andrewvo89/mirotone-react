@@ -48,6 +48,6 @@ describe('InputDecoration', () => {
     render(<InputDecoration ref={ref} />);
     const { container } = render(<InputDecoration ref={ref} />);
     const inputDecoration = container.querySelector('.input-decoration');
-    expect(ref.current).toBe(inputDecoration);
+    expect(inputDecoration).toBe(ref.current);
   });
 });

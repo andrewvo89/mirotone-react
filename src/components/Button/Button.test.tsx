@@ -27,7 +27,8 @@ describe('Button', () => {
   test('should forward ref to parent button component', () => {
     const ref = createRef<HTMLButtonElement>();
     render(<Button ref={ref}>Button</Button>);
-    expect(screen.queryByRole('button')).toBe(ref.current);
+    const button = screen.queryByRole('button');
+    expect(button).toBe(ref.current);
   });
 
   test('should be clickable', async () => {

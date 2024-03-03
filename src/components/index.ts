@@ -5,4 +5,5 @@ export * from './Divider';
 export * from './FormGroup';
 export * from './Input';
 export * from './Icon';
+export * from './Label';
 export * from './Tag';

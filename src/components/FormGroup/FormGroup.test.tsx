@@ -46,7 +46,8 @@ describe('FormGroup component', () => {
 
   test('should pass ref to the input element', () => {
     const ref = createRef<HTMLDivElement>();
-    render(<FormGroup ref={ref} />);
-    expect(ref.current).not.toBeNull();
+    const { container } = render(<FormGroup ref={ref} />);
+    const formGroup = container.querySelector('.form-group');
+    expect(formGroup).toBe(ref.current);
   });
 });

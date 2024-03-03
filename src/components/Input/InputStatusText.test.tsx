@@ -23,7 +23,8 @@ describe('InputStatusText', () => {
 
   test('should pass down ref', () => {
     const ref = React.createRef<HTMLDivElement>();
-    render(<InputStatusText ref={ref} />);
-    expect(ref.current).toBeInTheDocument();
+    const { container } = render(<InputStatusText ref={ref} />);
+    const inputStatusText = container.querySelector('.status-text');
+    expect(inputStatusText).toBe(ref.current);
   });
 });

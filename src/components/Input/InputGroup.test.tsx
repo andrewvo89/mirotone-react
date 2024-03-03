@@ -22,7 +22,8 @@ describe('InputGroup', (test) => {
 
   test('should pass down ref', () => {
     const ref = createRef<HTMLDivElement>();
-    render(<InputGroup ref={ref} />);
-    expect(ref.current).toBeInTheDocument();
+    const { container } = render(<InputGroup ref={ref} />);
+    const inputGroup = container.querySelector('.input-group');
+    expect(inputGroup).toBe(ref.current);
   });
 });
