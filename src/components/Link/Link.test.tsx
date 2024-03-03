@@ -1,11 +1,13 @@
 import { createRef } from 'react';
-import { describe, expect } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
 
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 
 import { Link } from '../';
 
 describe('Link', (test) => {
+  afterEach(cleanup);
+
   test('should render correctly', () => {
     const { queryByText } = render(<Link>Hello World</Link>);
     const link = queryByText('Hello World');

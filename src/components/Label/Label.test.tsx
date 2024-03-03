@@ -1,11 +1,13 @@
-import { describe, expect } from 'vitest';
+import { createRef } from 'react';
+import { afterEach, describe, expect, test } from 'vitest';
 
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 
 import { Label } from '../';
-import { createRef } from 'react';
 
-describe('Label', (test) => {
+describe('Label', () => {
+  afterEach(cleanup);
+
   test('should render correctly', () => {
     const { queryByText } = render(<Label>Hello World</Label>);
     const label = queryByText('Hello World');
