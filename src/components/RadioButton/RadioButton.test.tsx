@@ -12,7 +12,6 @@ describe('RadioButton', () => {
   test('should render a radiobutton', () => {
     const { queryByRole } = render(<RadioButton />);
     const radiobutton = queryByRole('radio');
-    console.log('radiobutton', radiobutton);
     expect(radiobutton).not.toBeNull();
   });
 

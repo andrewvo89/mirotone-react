@@ -12,6 +12,9 @@ export default defineConfig({
     environment: 'jsdom',
     css: {
       include: [/.+/],
+      modules: {
+        classNameStrategy: 'non-scoped',
+      },
     },
     coverage: {
       provider: 'istanbul',

@@ -9,6 +9,7 @@ export * from './Label';
 export * from './Link';
 export * from './RadioButton';
 export * from './Select';
+export * from './Spinner';
 export * from './Table';
 export * from './Tabs';
 export * from './Tag';

@@ -9,20 +9,22 @@ describe('TableHead', () => {
   afterEach(cleanup);
 
   test('should render table head', () => {
-    const { container } = render(<TableHead />);
+    const { container } = render(<TableHead />, { container: document.createElement('table') });
     const tableBody = container.querySelector('thead');
     expect(tableBody).not.toBeNull();
   });
 
   test('should pass down custom class name', () => {
-    const { container } = render(<TableHead className='custom-class' />);
+    const { container } = render(<TableHead className='custom-class' />, {
+      container: document.createElement('table'),
+    });
     const tableBody = container.querySelector('thead');
     expect(tableBody).toHaveClass('custom-class');
   });
 
   test('should pass down ref', () => {
     const ref = createRef<HTMLTableSectionElement>();
-    const { container } = render(<TableHead ref={ref} />);
+    const { container } = render(<TableHead ref={ref} />, { container: document.createElement('table') });
     const tableBody = container.querySelector('thead');
     expect(tableBody).toBe(ref.current);
   });

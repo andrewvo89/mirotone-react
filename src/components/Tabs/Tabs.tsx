@@ -16,7 +16,7 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
           const isActive = activeIndex === index;
           const classNames = ['tab', getActiveClassName(isActive), className].filter(isNonEmptyString);
           return (
-            <div className={classNames.join(' ')} tabIndex={0} onClick={() => setActiveIndex?.(index)}>
+            <div key={tab.id} className={classNames.join(' ')} tabIndex={0} onClick={() => setActiveIndex?.(index)}>
               <div className='tab-text tab-badge' data-badge={tab.badge}>
                 {tab.children}
               </div>

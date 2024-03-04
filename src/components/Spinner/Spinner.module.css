@@ -1,0 +1,56 @@
+.spinner {
+  display: block;
+  animation: 2s linear 0s infinite normal none running spin;
+  transform-origin: center center;
+  stroke: currentcolor;
+  color: var(--spinner-color);
+}
+
+.spinner-small {
+  width: calc(var(--icon-size) / 1.5);
+  height: calc(var(--icon-size) / 1.5);
+}
+
+.spinner-medium {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.spinner-large {
+  width: calc(var(--icon-size) * 1.5);
+  height: calc(var(--icon-size) * 1.5);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circle {
+  @media (prefers-reduced-motion: no-preference) {
+    animation-name: circleAnimation;
+  }
+  stroke-width: 4;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 89, 200;
+  stroke-dashoffset: 0;
+  animation: 1.5s ease-in-out 0s infinite normal none running animate;
+  stroke-linecap: round;
+}
+
+@keyframes circleAnimation {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
