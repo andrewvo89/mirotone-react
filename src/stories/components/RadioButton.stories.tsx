@@ -27,12 +27,12 @@ export const Controlled: Story = {
   render: function Component(args) {
     const [, setArgs] = useArgs();
 
-    const onChange = (value: boolean) => {
+    const onChangeHandler = (value: boolean) => {
       args.onChange?.(value);
       setArgs({ value });
     };
 
-    return <RadioButton {...args} value={args.value} onChange={onChange} />;
+    return <RadioButton {...args} value={args.value} onChange={onChangeHandler} />;
   },
 };
 

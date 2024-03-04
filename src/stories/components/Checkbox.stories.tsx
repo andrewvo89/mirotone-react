@@ -26,12 +26,12 @@ export const Controlled: Story = {
   render: function Component(args) {
     const [, setArgs] = useArgs();
 
-    const onChange = (value: boolean) => {
+    const onChangeHandler = (value: boolean) => {
       args.onChange?.(value);
       setArgs({ value });
     };
 
-    return <Checkbox {...args} value={args.value} onChange={onChange} />;
+    return <Checkbox {...args} value={args.value} onChange={onChangeHandler} />;
   },
 };
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { FormGroup, InputDecoration, InputGroup, Select, SelectLabel, SelectOption } from '../..';
+import { FormGroup, InputDecoration, InputGroup, Select, InputLabel, SelectOption } from '../..';
 
 import { useArgs } from '@storybook/preview-api';
 
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => (
     <FormGroup>
-      <SelectLabel htmlFor='select-default'>What do you want?</SelectLabel>
+      <InputLabel htmlFor='select-default'>What do you want?</InputLabel>
       <Select {...args} id='select-default'>
         <SelectOption value='1'>Option one</SelectOption>
         <SelectOption value='2'>Option two</SelectOption>
@@ -44,15 +44,15 @@ export const Controlled: Story = {
   render: function Component(args) {
     const [, setArgs] = useArgs();
 
-    const onChange = (value: string) => {
+    const onChangeHandler = (value: string) => {
       args.onChange?.(value);
       setArgs({ value });
     };
 
     return (
       <FormGroup>
-        <SelectLabel htmlFor='select-controlled'>What do you want?</SelectLabel>
-        <Select {...args} id='select-controlled' value={args.value} onChange={onChange}>
+        <InputLabel htmlFor='select-controlled'>What do you want?</InputLabel>
+        <Select {...args} id='select-controlled' value={args.value} onChange={onChangeHandler}>
           <SelectOption value='1'>Option one</SelectOption>
           <SelectOption value='2'>Option two</SelectOption>
           <SelectOption value='3'>Option three</SelectOption>
@@ -66,7 +66,7 @@ export const Controlled: Story = {
 export const Small: Story = {
   render: (args) => (
     <FormGroup size='small'>
-      <SelectLabel htmlFor='select-small'>What do you want?</SelectLabel>
+      <InputLabel htmlFor='select-small'>What do you want?</InputLabel>
       <Select {...args} id='select-small' size='small'>
         <SelectOption value='1'>Option one</SelectOption>
         <SelectOption value='2'>Option two</SelectOption>
@@ -80,7 +80,7 @@ export const Small: Story = {
 export const Decoration: Story = {
   render: (args) => (
     <FormGroup>
-      <SelectLabel htmlFor='select-decoration'>Do you use a VCS?</SelectLabel>
+      <InputLabel htmlFor='select-decoration'>Do you use a VCS?</InputLabel>
       <InputGroup>
         <InputDecoration>Yes:</InputDecoration>
         <Select {...args} id='select-decoration'>
@@ -96,7 +96,7 @@ export const Decoration: Story = {
 export const Disabled: Story = {
   render: (args) => (
     <FormGroup>
-      <SelectLabel htmlFor='select-disabled'>What do you want?</SelectLabel>
+      <InputLabel htmlFor='select-disabled'>What do you want?</InputLabel>
       <Select {...args} id='select-disabled' isDisabled>
         <SelectOption value='1'>Option one</SelectOption>
         <SelectOption value='2'>Option two</SelectOption>

@@ -46,7 +46,7 @@ export const Controlled: Story = {
   render: function Component(args) {
     const [, setArgs] = useArgs();
 
-    const onChange = (value: string) => {
+    const onChangeHandler = (value: string) => {
       args.onChange?.(value);
       setArgs({ value });
     };
@@ -54,7 +54,7 @@ export const Controlled: Story = {
     return (
       <FormGroup>
         <InputLabel htmlFor='example-1'>Input Label</InputLabel>
-        <Input id='example-1' {...args} value={args.value} onChange={onChange} />
+        <Input id='example-1' {...args} value={args.value} onChange={onChangeHandler} />
       </FormGroup>
     );
   },
