@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 
 import { SelectLabelProps } from './types';
 
-const SelecLabel = forwardRef<HTMLLabelElement, SelectLabelProps>((props, ref) => {
+const SelectLabel = forwardRef<HTMLLabelElement, SelectLabelProps>((props, ref) => {
   const { className, children, ...rest } = props;
 
   return (
@@ -12,6 +12,6 @@ const SelecLabel = forwardRef<HTMLLabelElement, SelectLabelProps>((props, ref) =
   );
 });
 
-SelecLabel.displayName = 'SelecLabel';
+SelectLabel.displayName = 'SelectLabel';
 
-export default SelecLabel;
+export default SelectLabel;
