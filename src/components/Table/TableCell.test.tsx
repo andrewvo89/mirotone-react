@@ -1,11 +1,13 @@
 import { createRef } from 'react';
-import { describe, expect, test } from 'vitest';
+import { afterEach, describe, expect, test } from 'vitest';
 
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 
 import { TableCell } from '../../';
 
 describe('TableCell', () => {
+  afterEach(cleanup);
+
   test('should render table cell', () => {
     const { container } = render(<TableCell />);
     const tableBody = container.querySelector('td');

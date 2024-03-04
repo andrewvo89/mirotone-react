@@ -1,7 +1,7 @@
 import { createRef } from 'react';
-import { describe, expect, test, vi } from 'vitest';
+import { afterEach, describe, expect, test, vi } from 'vitest';
 
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { Tabs } from '../..';
@@ -14,6 +14,8 @@ const tabs: TabProps[] = [
 ];
 
 describe('Tabs component', () => {
+  afterEach(cleanup);
+
   test('should render tabs', () => {
     const { container } = render(<Tabs tabs={tabs} />);
 

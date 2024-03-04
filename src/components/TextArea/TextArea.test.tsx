@@ -1,10 +1,12 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, test, vi } from 'vitest';
+import { afterEach, describe, expect, test, vi } from 'vitest';
 import { TextArea } from '.';
 import { createRef } from 'react';
 
 describe('TextArea', () => {
+  afterEach(cleanup);
+
   test('should render properly', () => {
     render(<TextArea />);
     const textarea = screen.queryByRole('textbox');
