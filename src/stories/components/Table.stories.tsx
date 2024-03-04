@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Fragment } from 'react/jsx-runtime';
+import { PropsWithChildren } from 'react';
 
 import {
   Checkbox,
@@ -16,7 +16,6 @@ import {
   TableRow,
   Tag,
 } from '../..';
-import { PropsWithChildren } from 'react';
 
 const Container = (props: PropsWithChildren) => <div style={{ height: 200, overflow: 'auto' }}>{props.children}</div>;
 
