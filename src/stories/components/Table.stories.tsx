@@ -16,23 +16,21 @@ import {
   TableRow,
   Tag,
 } from '../..';
+import { PropsWithChildren } from 'react';
+
+const Container = (props: PropsWithChildren) => <div style={{ height: 200, overflow: 'auto' }}>{props.children}</div>;
 
 const meta = {
   title: 'Components/Table',
   component: Table,
   render: (args) => (
-    <div
-      style={{
-        height: 200,
-        overflow: 'auto',
-      }}
-    >
+    <Container>
       <Table {...args} />
-    </div>
+    </Container>
   ),
   args: {
     children: (
-      <Fragment>
+      <>
         <TableHead>
           <TableRow>
             <TableHeadCell>Item</TableHeadCell>
@@ -86,7 +84,7 @@ const meta = {
             <TableCell>October 28, 2021</TableCell>
           </TableRow>
         </TableBody>
-      </Fragment>
+      </>
     ),
   },
   parameters: {
