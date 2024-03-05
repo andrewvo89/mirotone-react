@@ -24,7 +24,7 @@ const meta = {
   title: 'Layout/Grid',
   component: Grid,
   parameters: {
-    layout: 'padded',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Grid>;
