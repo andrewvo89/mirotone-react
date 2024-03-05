@@ -1,4 +1,7 @@
 export const colors = {
+  primaryText: 'var(--primary-text-color)',
+  secondaryText: 'var(--secondary-text-color)',
+  primaryActionColor: 'var(--primary-action-color)',
   blue: {
     100: 'var(--blue100)',
     200: 'var(--blue200)',

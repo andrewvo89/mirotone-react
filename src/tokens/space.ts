@@ -1,4 +1,4 @@
-export const spacing = {
+export const space = {
   xxxsmall: 'var(--space-xxxsmall)',
   xxsmall: 'var(--space-xxsmall)',
   xsmall: 'var(--space-xsmall)',

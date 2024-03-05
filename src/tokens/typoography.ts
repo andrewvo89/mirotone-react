@@ -14,7 +14,7 @@ export const typography = {
     xxxlarge: 'var(--font-size-xxxlarge)',
   },
   font: {
-    header: '--header-font',
-    body: '--body-font',
+    header: 'var(--header-font)',
+    body: 'var(--body-font)',
   },
 } as const;

@@ -1,6 +1,6 @@
 import { borderRadius } from './border-radius';
 import { colors } from './colors';
-import { spacing } from './spacing';
+import { space } from './space';
 import { typography } from './typoography';
 
 export type BorderRadius = (typeof borderRadius)[keyof typeof borderRadius];
@@ -33,4 +33,4 @@ export type FontSize = (typeof typography)['fontSize'][keyof (typeof typography)
 
 export type Font = (typeof typography)['font'][keyof (typeof typography)['font']];
 
-export type Spacing = (typeof spacing)[keyof typeof spacing];
+export type Spacing = (typeof space)[keyof typeof space];
