@@ -5,7 +5,6 @@ import { Divider } from '../..';
 const meta = {
   title: 'Components/Divider',
   component: Divider,
-  args: {},
   parameters: {
     layout: 'padded',
   },
