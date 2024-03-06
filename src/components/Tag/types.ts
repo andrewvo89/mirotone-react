@@ -8,10 +8,10 @@ export type BaseTagProps = {
   backgroundColor?: Colors;
 };
 
-export type TagProps = ComponentProps<'span'> & BaseTagProps;
+export type TagProps = Omit<ComponentProps<'span'>, 'ref'> & BaseTagProps;
 
-export type LinkTagProps = ComponentProps<'a'> & BaseTagProps;
+export type LinkTagProps = Omit<ComponentProps<'a'>, 'ref'> & BaseTagProps;
 
-export type TagButtonProps = Omit<ComponentProps<'button'>, 'children'> & {
+export type TagButtonProps = Omit<ComponentProps<'button'>, 'children' | 'ref'> & {
   icon: Icons;
 };

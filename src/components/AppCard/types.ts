@@ -2,14 +2,14 @@ import { ComponentProps } from 'react';
 
 import { Colors } from '../../tokens/types';
 
-export type AppCardProps = ComponentProps<'div'> & {
+export type AppCardProps = Omit<ComponentProps<'div'>, 'ref'> & {
   accentColor?: Colors;
 };
 
-export type AppCardTitleProps = ComponentProps<'h1'>;
+export type AppCardTitleProps = Omit<ComponentProps<'h1'>, 'ref'>;
 
-export type AppCardDescriptionProps = ComponentProps<'h1'>;
+export type AppCardDescriptionProps = Omit<ComponentProps<'h1'>, 'ref'>;
 
-export type AppCardBodyProps = ComponentProps<'div'>;
+export type AppCardBodyProps = Omit<ComponentProps<'div'>, 'ref'>;
 
-export type AppCardTagsProps = ComponentProps<'div'>;
+export type AppCardTagsProps = Omit<ComponentProps<'div'>, 'ref'>;

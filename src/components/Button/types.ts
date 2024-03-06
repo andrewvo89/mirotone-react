@@ -4,7 +4,7 @@ export type ButtonSize = 'small' | 'medium' | 'large';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'danger';
 
-export type ButtonProps = ComponentProps<'button'> & {
+export type ButtonProps = Omit<ComponentProps<'button'>, 'ref'> & {
   size?: ButtonSize;
   variant?: ButtonVariant;
   isDisabled?: boolean;

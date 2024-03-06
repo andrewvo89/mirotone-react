@@ -2,7 +2,7 @@ import { ComponentProps } from 'react';
 
 export type IconSize = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
 
-export type IconProps = ComponentProps<'span'> & {
+export type IconProps = Omit<ComponentProps<'span'>, 'ref'> & {
   size?: IconSize;
   name: Icons;
 };

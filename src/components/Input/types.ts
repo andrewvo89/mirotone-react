@@ -4,7 +4,7 @@ export type InputSize = 'small' | 'medium';
 
 export type FlexModifier = '1/4' | '2/4' | '3/4' | '4/4';
 
-export type InputProps = Omit<ComponentProps<'input'>, 'value' | 'onChange' | 'children' | 'size'> & {
+export type InputProps = Omit<ComponentProps<'input'>, 'value' | 'onChange' | 'children' | 'size' | 'ref'> & {
   size?: InputSize;
   value?: string;
   onChange?: (value: string) => void;
