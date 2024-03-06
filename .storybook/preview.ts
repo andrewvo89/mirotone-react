@@ -9,14 +9,13 @@ const preview: Preview = {
       storySort: {
         method: 'alphabetical',
         order: [
-          'Getting Started',
+          'Getting started',
           'Tokens',
-          ['Colors', 'Typography', 'Spacing', 'Border Radius'],
+          ['Colors', 'Typography', 'Spacing', 'Border radius'],
           'Typography',
           'Icons',
           'Layout',
           'Components',
-          'Roadmap',
         ],
       },
     },

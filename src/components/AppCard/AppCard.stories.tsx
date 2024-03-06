@@ -11,7 +11,7 @@ function Logo() {
 }
 
 const meta = {
-  title: 'Components/App Card',
+  title: 'Components/App card',
   component: AppCard,
   parameters: {
     layout: 'centered',

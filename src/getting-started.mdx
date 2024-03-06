@@ -1,18 +1,19 @@
 import { Meta } from '@storybook/blocks';
 
-<Meta title='Getting Started' />
+<Meta title='Getting started' />
 
-# Getting Started
+# Getting started
 
-Mirotone React is a React component library for the Mirotone Design System. It provides a set of components and utilities to help you build your application for Miro.
+Mirotone React is a component library for the Mirotone Design System. It provides a set of components and utilities to help you build faster for Miro. It is loosely based off [Mirotone CSS](https://www.mirotone.xyz/) and [Miro UI Components](https://www.figma.com/community/file/1125698230201231315/mirotone-ui-components).
 
-## Table of Contents
+## Table of contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Tokens](#components)
+- [Roadmap](#roadmap)
 - [Versions](#versions)
+- [License](#license)
 
 ## Installation
 
@@ -24,6 +25,10 @@ npm install mirotone-react
 
 ```bash
 yarn add mirotone-react
+```
+
+```bash
+pnpm add mirotone-react
 ```
 
 ## Usage
@@ -77,3 +82,144 @@ function App() {
 
 export default App;
 ```
+
+## Tokens
+
+Mirotone React provides a type safe way to access the tokens from Mirotone CSS.
+Tokens include color, typography, space, borderRadius.
+All tokens are exported from the main package. You can import them as follows:
+
+```tsx
+import { tokens } from 'mirotone-react';
+```
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Path</th>
+      <th>Documentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Color</td>
+      <td>`tokens.color`</td>
+      <td>[Color docs](?path=/docs/tokens-colors--docs)</td>
+    </tr>
+    <tr>
+      <td>Typography</td>
+      <td>`tokens.typography`</td>
+      <td>[Typography docs](?path=/docs/tokens-typography--docs)</td>
+    </tr>
+    <tr>
+      <td>Space</td>
+      <td>`tokens.space`</td>
+      <td>[Space docs](?path=/docs/tokens-space--docs)</td>
+    </tr>
+    <tr>
+      <td>Border radius</td>
+      <td>`tokens.borderRadius`</td>
+      <td>[Border radius docs](?path=/docs/tokens-border-radius--docs)</td>
+    </tr>
+  </tbody>
+</table>
+
+## Roadmap
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Status</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>App footer</td>
+      <td>Planned</td>
+      <td>
+        [Figma
+        design](https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-15152&mode=design&t=lya7mgGuGGuYILSD-4)
+      </td>
+    </tr>
+    <tr>
+      <td>App header</td>
+      <td>Planned</td>
+      <td>
+        [Figma
+        design](https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-15175&mode=design&t=M6wFp57pRdq4g6Te-4)
+      </td>
+    </tr>
+    <tr>
+      <td>App nav</td>
+      <td>Planned</td>
+      <td>
+        [Figma
+        design](https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-15189&mode=design&t=M6wFp57pRdq4g6Te-4)
+      </td>
+    </tr>
+    <tr>
+      <td>Dismissable badge</td>
+      <td>Planned</td>
+      <td>
+        [Figma
+        design](https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13487&mode=design&t=lya7mgGuGGuYILSD-4)
+      </td>
+    </tr>
+    <tr>
+      <td>Dropdown button</td>
+      <td>Planned</td>
+      <td>
+        [Figma
+        design](https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13529&mode=design&t=lya7mgGuGGuYILSD-4)
+      </td>
+    </tr>
+    <tr>
+      <td>Icon button</td>
+      <td>Planned</td>
+      <td>
+        [Figma
+        design](https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13902&mode=design&t=lya7mgGuGGuYILSD-4)
+      </td>
+    </tr>
+    <tr>
+      <td>Icon text button</td>
+      <td>Planned</td>
+      <td>
+        [Figma
+        design](https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13693&mode=design&t=lya7mgGuGGuYILSD-4)
+      </td>
+    </tr>
+    <tr>
+      <td>Tooltip</td>
+      <td>Planned</td>
+      <td>
+        [Figma
+        design](https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13308&mode=design&t=v8b8OhxAH4M1Erx0-4)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Versions
+
+<table>
+  <thead>
+    <tr>
+      <th>Mirotone React</th>
+      <th>Mirotone CSS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.0.0</td>
+      <td>5.1.1</td>
+    </tr>
+  </tbody>
+</table>
+
+## License
+
+Mirotone React is distributed under MIT license, Copyright (c) 2024 Andrew Vo-Nguyen. See [LICENSE](https://github.com/andrewvo89/mirotone-react/blob/main/LICENSE) for more information.

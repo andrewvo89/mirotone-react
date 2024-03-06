@@ -6,8 +6,6 @@ import DocBlockContainer from '../storybook/DocBlockContainer';
 
 # Colors
 
-## Color Palette
-
 <ColorPalette>
   <ColorItem title='theme.color.primaryText' subtitle='Primary text color' colors={{ primaryText: '#050038' }} />
   <ColorItem title='theme.color.secondaryText' subtitle='Secondary text color' colors={{ secondaryText: '#5f5c80' }} />
@@ -114,6 +112,8 @@ import DocBlockContainer from '../storybook/DocBlockContainer';
 </ColorPalette>
 
 ## Usage
+
+The colors are available as tokens in the `tokens.color` object. You can use them in your components like this:
 
 <DocBlockContainer>
   <Heading style={{ color: tokens.color.blue[900] }}>My app card</Heading>
