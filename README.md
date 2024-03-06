@@ -97,7 +97,7 @@ import { tokens } from 'mirotone-react';
 | ------------- | --------------------- | -------------------------------------------------------------------------------------------------------- |
 | Color         | `tokens.color`        | [Color docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-colors--docs)                |
 | Typography    | `tokens.typography`   | [Typography docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-typography--docs)       |
-| Space         | `tokens.space`        | [Space docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-space--docs)                 |
+| Space         | `tokens.space`        | [Space docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-spacing--docs)               |
 | Border radius | `tokens.borderRadius` | [Border radius docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-border-radius--docs) |
 
 ## Roadmap
