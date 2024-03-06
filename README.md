@@ -93,12 +93,12 @@ All tokens are exported from the main package. You can import them as follows:
 import { tokens } from 'mirotone-react';
 ```
 
-| Token         | Path                  | Documentation                                                |
-| ------------- | --------------------- | ------------------------------------------------------------ |
-| Color         | `tokens.color`        | [Color docs](?path=/docs/tokens-colors--docs)                |
-| Typography    | `tokens.typography`   | [Typography docs](?path=/docs/tokens-typography--docs)       |
-| Space         | `tokens.space`        | [Space docs](?path=/docs/tokens-space--docs)                 |
-| Border radius | `tokens.borderRadius` | [Border radius docs](?path=/docs/tokens-border-radius--docs) |
+| Token         | Path                  | Documentation                                                                                            |
+| ------------- | --------------------- | -------------------------------------------------------------------------------------------------------- |
+| Color         | `tokens.color`        | [Color docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-colors--docs)                |
+| Typography    | `tokens.typography`   | [Typography docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-typography--docs)       |
+| Space         | `tokens.space`        | [Space docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-space--docs)                 |
+| Border radius | `tokens.borderRadius` | [Border radius docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-border-radius--docs) |
 
 ## Roadmap
 
