@@ -23,7 +23,7 @@ export default function Spacing() {
                 style={{
                   gridColumn: '8/10',
                   borderRadius: val,
-                  backgroundColor: tokens.colors.indigo[400],
+                  backgroundColor: tokens.color.indigo[400],
                   display: 'block',
                   height: '48px',
                 }}

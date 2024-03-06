@@ -10,7 +10,7 @@ const Text = (props: PropsWithChildren) => (
       display: 'flex',
       height: '74px',
       width: '100%',
-      backgroundColor: tokens.colors.indigo[200],
+      backgroundColor: tokens.color.indigo[200],
       borderRadius: tokens.borderRadius.medium,
       justifyContent: 'center',
       alignItems: 'center',

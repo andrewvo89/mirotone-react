@@ -1,29 +1,29 @@
 import { borderRadius } from './border-radius';
-import { colors } from './colors';
+import { color } from './color';
 import { space } from './space';
 import { typography } from './typoography';
 
 export type BorderRadius = (typeof borderRadius)[keyof typeof borderRadius];
 
-export type Blue = (typeof colors)['blue'][keyof (typeof colors)['blue']];
+export type Blue = (typeof color)['blue'][keyof (typeof color)['blue']];
 
-export type Indigo = (typeof colors)['indigo'][keyof (typeof colors)['indigo']];
+export type Indigo = (typeof color)['indigo'][keyof (typeof color)['indigo']];
 
-export type IndigoAlpha = (typeof colors)['indigoAlpha'][keyof (typeof colors)['indigoAlpha']];
+export type IndigoAlpha = (typeof color)['indigoAlpha'][keyof (typeof color)['indigoAlpha']];
 
-export type Green = (typeof colors)['green'][keyof (typeof colors)['green']];
+export type Green = (typeof color)['green'][keyof (typeof color)['green']];
 
-export type Black = (typeof colors)['black'];
+export type Black = (typeof color)['black'];
 
-export type BlackAlpha = (typeof colors)['blackAlpha'][keyof (typeof colors)['blackAlpha']];
+export type BlackAlpha = (typeof color)['blackAlpha'][keyof (typeof color)['blackAlpha']];
 
-export type Red = (typeof colors)['red'][keyof (typeof colors)['red']];
+export type Red = (typeof color)['red'][keyof (typeof color)['red']];
 
-export type Yellow = (typeof colors)['yellow'][keyof (typeof colors)['yellow']];
+export type Yellow = (typeof color)['yellow'][keyof (typeof color)['yellow']];
 
-export type White = (typeof colors)['white'];
+export type White = (typeof color)['white'];
 
-export type WhiteAlpha = (typeof colors)['whiteAlpha'][keyof (typeof colors)['whiteAlpha']];
+export type WhiteAlpha = (typeof color)['whiteAlpha'][keyof (typeof color)['whiteAlpha']];
 
 export type Colors = Blue | Indigo | IndigoAlpha | Green | Black | BlackAlpha | Red | Yellow | White | WhiteAlpha;
 

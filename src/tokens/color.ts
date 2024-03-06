@@ -1,4 +1,4 @@
-export const colors = {
+export const color = {
   primaryText: 'var(--primary-text-color)',
   secondaryText: 'var(--secondary-text-color)',
   primaryActionColor: 'var(--primary-action-color)',

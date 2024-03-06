@@ -1,6 +1,6 @@
 import { borderRadius } from './border-radius';
-import { colors } from './colors';
+import { color } from './color';
 import { space } from './space';
 import { typography } from './typoography';
 
-export const tokens = { colors, typography, space, borderRadius } as const;
+export const tokens = { color, typography, space, borderRadius } as const;

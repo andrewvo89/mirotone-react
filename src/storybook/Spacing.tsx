@@ -25,10 +25,10 @@ export default function Spacing() {
               <div
                 style={{
                   gridColumn: '8/13',
-                  border: `1px solid ${tokens.colors.indigo[700]}`,
+                  border: `1px solid ${tokens.color.indigo[700]}`,
                   borderTop: 'none',
                   borderBottom: 'none',
-                  backgroundColor: tokens.colors.indigo[400],
+                  backgroundColor: tokens.color.indigo[400],
                   display: 'block',
                   height: '24px',
                   width: pixels,

@@ -31,5 +31,49 @@ yarn add mirotone-react
 All components and types are exported from the main package. You can import them as follows:
 
 ```tsx
-import { Button, ButtonProps, Input, InputProps } from 'mirotone-react';
+import { Button, ButtonProps, Input, InputProps, tokens } from 'mirotone-react';
+import { useCallback, useRef, useState } from 'react';
+
+const buttonProps: ButtonProps = {
+  size: 'large',
+  variant: 'danger',
+};
+
+const inputProps: InputProps = {
+  size: 'small',
+};
+
+function App() {
+  const [value, setValue] = useState('');
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const buttonClickHandler = useCallback(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
+  return (
+    <>
+      <Input
+        {...inputProps}
+        ref={inputRef}
+        value={value}
+        onChange={setValue}
+        style={{ color: tokens.color.red[800] }}
+      />
+      <Button
+        {...buttonProps}
+        ref={buttonRef}
+        style={{ borderRadius: tokens.borderRadius.small }}
+        onClick={buttonClickHandler}
+      >
+        Click to focus input
+      </Button>
+    </>
+  );
+}
+
+export default App;
 ```

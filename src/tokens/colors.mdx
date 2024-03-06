@@ -9,10 +9,10 @@ import DocBlockContainer from '../storybook/DocBlockContainer';
 ## Color Palette
 
 <ColorPalette>
-  <ColorItem title='theme.colors.primaryText' subtitle='Primary text color' colors={{ primaryText: '#050038' }} />
-  <ColorItem title='theme.colors.secondaryText' subtitle='Secondary text color' colors={{ secondaryText: '#5f5c80' }} />
+  <ColorItem title='theme.color.primaryText' subtitle='Primary text color' colors={{ primaryText: '#050038' }} />
+  <ColorItem title='theme.color.secondaryText' subtitle='Secondary text color' colors={{ secondaryText: '#5f5c80' }} />
   <ColorItem
-    title='theme.colors.primaryActionColor'
+    title='theme.color.primaryActionColor'
     subtitle='Primary action color'
     colors={{ primaryActionColor: '#4262ff' }}
   />
@@ -116,10 +116,10 @@ import DocBlockContainer from '../storybook/DocBlockContainer';
 ## Usage
 
 <DocBlockContainer>
-  <Heading style={{ color: tokens.colors.blue[900] }}>My app card</Heading>
-  <AppCard accentColor={tokens.colors.yellow[700]}>
+  <Heading style={{ color: tokens.color.blue[900] }}>My app card</Heading>
+  <AppCard accentColor={tokens.color.yellow[700]}>
     <Centered>
-      <Spinner spinnerColor={tokens.colors.red[600]} />
+      <Spinner spinnerColor={tokens.color.red[600]} />
     </Centered>
   </AppCard>
 </DocBlockContainer>
@@ -130,10 +130,10 @@ import { AppCard, Centered, Heading, Spinner, tokens } from 'mirotone-react';
 function App() {
   return (
     <>
-      <Heading style={{ color: tokens.colors.blue[900] }}>My app card</Heading>
-      <AppCard accentColor={tokens.colors.yellow[700]}>
+      <Heading style={{ color: tokens.color.blue[900] }}>My app card</Heading>
+      <AppCard accentColor={tokens.color.yellow[700]}>
         <Centered>
-          <Spinner spinnerColor={tokens.colors.red[600]} />
+          <Spinner spinnerColor={tokens.color.red[600]} />
         </Centered>
       </AppCard>
     </>
