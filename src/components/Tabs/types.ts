@@ -5,8 +5,8 @@ export type TabProps = PropsWithChildren<{
   badge?: string;
 }>;
 
-export type TabsProps = Omit<ComponentProps<'div'>, 'children'> & {
+export type TabsProps = Omit<ComponentProps<'div'>, 'children' | 'onClick'> & {
   activeIndex?: number;
-  setActiveIndex?: (index: number) => void;
+  onClick?: (index: number) => void;
   tabs: TabProps[];
 };

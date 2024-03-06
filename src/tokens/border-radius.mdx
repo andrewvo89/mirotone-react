@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/blocks';
+import DocBlockContainer from '../storybook/DocBlockContainer';
+import Spacing from '../storybook/Spacing';
+import BorderRadius from '../storybook/BorderRadius';
+import { Button, tokens } from '../..';
+
+<Meta title='Tokens/Border Radius' />
+
+# Border Radius
+
+To round edges, we support the following sizes:
+
+<BorderRadius />
+## Usage
+
+<DocBlockContainer>
+  <Button style={{ borderRadius: tokens.borderRadius.small }}>Small radius</Button>
+  <Button style={{ borderRadius: tokens.borderRadius.medium }}>Medium radius</Button>
+  <Button style={{ borderRadius: tokens.borderRadius.large }}>Large radius</Button>
+  <Button style={{ borderRadius: tokens.borderRadius.circle }}>Circle radius</Button>
+</DocBlockContainer>
+
+```tsx
+import { AppCard, Centered, Heading, Spinner, tokens } from 'mirotone-react';
+
+function App() {
+  return (
+    <>
+      <Button style={{ borderRadius: tokens.borderRadius.small }}>Small radius</Button>
+      <Button style={{ borderRadius: tokens.borderRadius.medium }}>Medium radius</Button>
+      <Button style={{ borderRadius: tokens.borderRadius.large }}>Large radius</Button>
+      <Button style={{ borderRadius: tokens.borderRadius.circle }}>Circle radius</Button>
+    </>
+  );
+}
+```

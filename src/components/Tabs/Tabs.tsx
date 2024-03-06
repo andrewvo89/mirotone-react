@@ -5,7 +5,7 @@ import { TabsProps } from './types';
 import { getActiveClassName } from './utils';
 
 const Tabs = forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
-  const { className, tabs, activeIndex, setActiveIndex, ...rest } = props;
+  const { className, tabs, activeIndex, onClick, ...rest } = props;
 
   const classNames = ['tabs', className].filter(isNonEmptyString);
 
@@ -16,7 +16,7 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
           const isActive = activeIndex === index;
           const classNames = ['tab', getActiveClassName(isActive), className].filter(isNonEmptyString);
           return (
-            <div key={tab.id} className={classNames.join(' ')} tabIndex={0} onClick={() => setActiveIndex?.(index)}>
+            <div key={tab.id} className={classNames.join(' ')} tabIndex={0} onClick={() => onClick?.(index)}>
               <div className='tab-text tab-badge' data-badge={tab.badge}>
                 {tab.children}
               </div>

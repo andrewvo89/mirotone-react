@@ -13,7 +13,7 @@ function Logo() {
 }
 
 const meta = {
-  title: 'Components/TextArea',
+  title: 'Components/Text Area',
   component: TextArea,
   args: {
     placeholder: 'Placeholder text',

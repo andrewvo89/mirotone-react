@@ -1,0 +1,65 @@
+import { Meta, Typeset } from '@storybook/blocks';
+import { AppCard, Centered, Heading, Spinner, Text, tokens } from '../../';
+import DocBlockContainer from '../storybook/DocBlockContainer';
+
+<Meta title='Tokens/Typography' />
+
+export const SampleText = 'small (12), medium (14), large (16), xlarge (20), xxlarge (24), xxxlarge (28).';
+
+# Typography
+
+## Normal weight
+
+<Typeset
+  fontSizes={[12, 14, 16, 20, 24, 28]}
+  fontWeight={tokens.typography.fontWeight.normal}
+  sampleText={SampleText}
+  fontFamily={tokens.typography.font}
+/>
+
+## Medium weight
+
+<Typeset
+  fontSizes={[12, 14, 16, 20, 24, 28]}
+  fontWeight={tokens.typography.fontWeight.medium}
+  sampleText={SampleText}
+  fontFamily={tokens.typography.font}
+/>
+
+## Bold weight
+
+<Typeset
+  fontSizes={[12, 14, 16, 20, 24, 28]}
+  fontWeight={tokens.typography.fontWeight.bold}
+  sampleText={SampleText}
+  fontFamily={tokens.typography.font}
+/>
+
+## Black weight
+
+<Typeset
+  fontSizes={[12, 14, 16, 20, 24, 28]}
+  fontWeight={tokens.typography.fontWeight.black}
+  sampleText={SampleText}
+  fontFamily={tokens.typography.font}
+/>
+
+## Usage
+
+<DocBlockContainer>
+  <Heading style={{ fontSize: tokens.typography.fontSize.medium }}>My custom heading</Heading>
+  <Text style={{ fontWeight: tokens.typography.fontWeight.black }}>My custom text</Text>
+</DocBlockContainer>
+
+```tsx
+import { AppCard, Centered, Heading, Spinner, tokens } from 'mirotone-react';
+
+function App() {
+  return (
+    <>
+      <Heading style={{ fontSize: tokens.typography.fontSize.medium }}>My custom heading</Heading>
+      <Text style={{ fontWeight: tokens.typography.fontWeight.black }}>My custom text</Text>
+    </>
+  );
+}
+```

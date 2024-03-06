@@ -7,7 +7,7 @@ import { Heading } from '../../';
 
 describe('Heading', () => {
   test('should render a heading with the correct level and class name', () => {
-    const { getByText } = render(<Heading level={1}>Hello, World!</Heading>);
+    const { getByText } = render(<Heading>Hello, World!</Heading>);
     const heading = getByText('Hello, World!');
 
     expect(heading.tagName).toBe('H1');

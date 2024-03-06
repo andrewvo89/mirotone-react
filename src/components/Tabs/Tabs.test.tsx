@@ -42,15 +42,15 @@ describe('Tabs component', () => {
     expect(badge3).not.toBeNull();
   });
 
-  test('should call setActiveIndex when a tab is clicked', async () => {
+  test('should call onClick when a tab is clicked', async () => {
     const user = userEvent.setup();
 
-    const setActiveIndex = vi.fn();
-    const { container } = render(<Tabs tabs={tabs} setActiveIndex={setActiveIndex} />);
+    const onClick = vi.fn();
+    const { container } = render(<Tabs tabs={tabs} onClick={onClick} />);
     const tabElements = container.querySelectorAll('.tab');
 
     await user.click(tabElements[2]);
-    expect(setActiveIndex).toHaveBeenCalledWith(2);
+    expect(onClick).toHaveBeenCalledWith(2);
   });
 
   test('should insert custom class name', () => {

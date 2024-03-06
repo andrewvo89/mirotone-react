@@ -14,6 +14,15 @@ const preview: Preview = {
     options: {
       storySort: {
         method: 'alphabetical',
+        order: [
+          'Getting Started',
+          'Tokens',
+          ['Colors', 'Typography', 'Spacing', 'Border Radius'],
+          'Typography',
+          'Icons',
+          'Layout',
+          'Components',
+        ],
       },
     },
   },

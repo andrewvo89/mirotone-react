@@ -5,7 +5,7 @@ import { SpinnerProps } from './types';
 import { getSizeClassName } from './utils';
 
 const Spinner = forwardRef<SVGSVGElement, SpinnerProps>((props, ref) => {
-  const { className, spinnerColor = 'var(--indigo700)', size = 'medium' } = props;
+  const { className, spinnerColor = 'var(--indigo700)', size = 'medium', style = {} } = props;
 
   const classNames = [styles['spinner'], styles[getSizeClassName(size)], className].filter(Boolean);
 
@@ -15,7 +15,7 @@ const Spinner = forwardRef<SVGSVGElement, SpinnerProps>((props, ref) => {
       role='progressbar'
       className={classNames.join(' ')}
       viewBox='25 25 50 50'
-      style={{ '--spinner-color': spinnerColor }}
+      style={{ ...style, '--spinner-color': spinnerColor }}
     >
       <circle className={styles['circle']} cx='50' cy='50' r='20' />
     </svg>

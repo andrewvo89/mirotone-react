@@ -6,7 +6,7 @@ import { RadioButton } from '../..';
 import { useArgs } from '@storybook/preview-api';
 
 const meta = {
-  title: 'Components/RadioButton',
+  title: 'Components/Radio Button',
   component: RadioButton,
   parameters: {
     layout: 'centered',
