@@ -1,12 +1,20 @@
+<p align="center">
+  <a href="https://nextjs.org">
+      <img src="https://andrewvo89.github.io/mirotone-react/mirotone-logo.png" height="128px">
+  </a>
+</p>
+
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-blue)](https://github.com/andrewvo89/mirotone-react)
+[![NPM Version](https://img.shields.io/npm/v/mirotone-react)](https://www.npmjs.com/package/mirotone-react)
 [![Coverage](https://img.shields.io/badge/coverage-100%25-blue)](https://github.com/andrewvo89/mirotone-react/blob/fb1297c03d5b42bb497139f56fc1ffd7d7030dc7/package.json#L16)
-[![GitHub Issues](https://img.shields.io/github/issues/andrewvo89/zod-error?color=blue)](https://github.com/andrewvo89/mirotone-react/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/andrewvo89/zod-error?color=blue)](https://github.com/andrewvo89/mirotone-react/pulls)
-[![License](https://img.shields.io/github/license/andrewvo89/zod-error?color=blue)](/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/andrewvo89/mirotone-react?color=blue)](https://github.com/andrewvo89/mirotone-react/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/andrewvo89/mirotone-react?color=blue)](https://github.com/andrewvo89/mirotone-react/pulls)
+[![License](https://img.shields.io/github/license/andrewvo89/mirotone-react?color=blue)](/LICENSE)
 
 </div>
+<br/>
 
 # Mirotone React
 
@@ -138,4 +146,4 @@ import { tokens } from 'mirotone-react';
 
 ## License
 
-Mirotone React is distributed under MIT license, Copyright (c) 2024 Andrew Vo-Nguyen. See [LICENSE](https://github.com/andrewvo89/mirotone-react/blob/main/LICENSE) for more information.
+Mirotone React is distributed under MIT license, Copyright (c) 2024 Andrew Vo-Nguyen. See [LICENSE](/LICENSE) for more information.
