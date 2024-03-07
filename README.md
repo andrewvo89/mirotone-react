@@ -21,7 +21,7 @@ For API docs and usage examples, visit the [Mirotone React](https://andrewvo89.g
 - [Links](#links)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Tokens](#components)
+- [Tokens](#tokens)
 - [Roadmap](#roadmap)
 - [Versions](#versions)
 - [License](#license)
