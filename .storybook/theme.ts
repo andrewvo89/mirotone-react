@@ -4,6 +4,6 @@ export default create({
   base: 'light',
   brandTitle: 'Mirotone React',
   brandUrl: 'https://github.com/andrewvo89/mirotone-react',
-  brandImage: '/mirotone-logo.png',
+  brandImage: `${process.env.PUBLIC_URL}/mirotone-logo.png`,
   brandTarget: '_blank',
 });
