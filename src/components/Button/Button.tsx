@@ -21,9 +21,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
     getVariantClassName(variant),
     getIsLoadingClassName(isLoading),
     className,
-  ]
-    .filter(isNonEmptyString)
-    .filter(Boolean);
+  ].filter(isNonEmptyString);
 
   return (
     <button {...rest} ref={ref} className={classNames.join(' ')} disabled={isDisabled}>

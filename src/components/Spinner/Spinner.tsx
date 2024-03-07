@@ -7,7 +7,7 @@ import { getSizeClassName } from './utils';
 const Spinner = forwardRef<SVGSVGElement, SpinnerProps>((props, ref) => {
   const { className, spinnerColor = 'var(--indigo700)', size = 'medium', style = {} } = props;
 
-  const classNames = [styles['spinner'], styles[getSizeClassName(size)], className].filter(Boolean);
+  const classNames = [styles['spinner'], styles[getSizeClassName(size)], className];
 
   return (
     <svg
