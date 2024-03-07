@@ -1,24 +1,32 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { FormGroup, InputDecoration, InputGroup, InputLabel, TextArea } from '../..';
+
 import { useArgs } from '@storybook/preview-api';
-
-import { FormGroup, TextArea, InputDecoration, InputGroup, InputLabel, tokens } from '../..';
-
-function Logo() {
-  return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-      <circle r='12' cx='12' cy='12' fill={tokens.color.indigo[700]}></circle>
-    </svg>
-  );
-}
+import { Logo } from '../../storybook/Logo';
 
 const meta = {
   title: 'Components/Text area',
   component: TextArea,
   args: {
     placeholder: 'Placeholder text',
-    size: 'medium',
-    value: '',
+  },
+  argTypes: {
+    size: {
+      defaultValue: {
+        summary: 'medium',
+      },
+    },
+    isDisabled: {
+      defaultValue: {
+        summary: false,
+      },
+    },
+    isReadOnly: {
+      defaultValue: {
+        summary: false,
+      },
+    },
   },
   parameters: {
     layout: 'centered',
@@ -111,6 +119,7 @@ export const Disabled: Story = {
 };
 
 export const ReadOnly: Story = {
+  name: 'Read only',
   args: {
     isReadOnly: true,
     defaultValue: 'Content',

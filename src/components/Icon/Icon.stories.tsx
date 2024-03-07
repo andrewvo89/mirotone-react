@@ -5,6 +5,13 @@ import { Icon } from '../..';
 const meta = {
   title: 'Components/Icon',
   component: Icon,
+  argTypes: {
+    size: {
+      defaultValue: {
+        summary: 'medium',
+      },
+    },
+  },
   args: {
     name: 'shapes',
   },
@@ -31,6 +38,13 @@ export const Small: Story = {
     size: 'small',
   },
 };
+
+export const Medium: Story = {
+  args: {
+    size: 'medium',
+  },
+};
+
 export const Large: Story = {
   args: {
     size: 'large',

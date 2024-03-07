@@ -14,7 +14,7 @@ const meta = {
     ],
   },
   parameters: {
-    layout: 'fullscreen',
+    layout: 'padded',
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Tabs>;

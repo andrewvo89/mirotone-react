@@ -1,16 +1,34 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '../..';
+import { Button, Icon, Text } from '../..';
 
 const meta = {
   title: 'Components/Button',
   component: Button,
+  argTypes: {
+    size: {
+      defaultValue: {
+        summary: 'medium',
+      },
+    },
+    variant: {
+      defaultValue: {
+        summary: 'primary',
+      },
+    },
+    isDisabled: {
+      defaultValue: {
+        summary: false,
+      },
+    },
+    isLoading: {
+      defaultValue: {
+        summary: false,
+      },
+    },
+  },
   args: {
     children: 'Button',
-    isDisabled: false,
-    isLoading: false,
-    size: 'medium',
-    variant: 'primary',
   },
   parameters: {
     layout: 'centered',
@@ -75,5 +93,24 @@ export const Disabled: Story = {
 export const Loading: Story = {
   args: {
     isLoading: true,
+  },
+};
+
+export const IconButton: Story = {
+  name: 'Icon button',
+  args: {
+    children: <Icon name='activity' />,
+  },
+};
+
+export const IconTextButton: Story = {
+  name: 'Icon & text button',
+  args: {
+    children: (
+      <>
+        <Icon name='activity' />
+        <Text>Icon & text button</Text>
+      </>
+    ),
   },
 };

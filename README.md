@@ -118,8 +118,6 @@ import { tokens } from 'mirotone-react';
 | App nav           | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-15189&mode=design&t=M6wFp57pRdq4g6Te-4>) |
 | Dismissable badge | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13487&mode=design&t=lya7mgGuGGuYILSD-4>) |
 | Dropdown button   | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13529&mode=design&t=lya7mgGuGGuYILSD-4>) |
-| Icon button       | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13902&mode=design&t=lya7mgGuGGuYILSD-4>) |
-| Icon text button  | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13693&mode=design&t=lya7mgGuGGuYILSD-4>) |
 | Tooltip           | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13308&mode=design&t=v8b8OhxAH4M1Erx0-4>) |
 
 ## Versions

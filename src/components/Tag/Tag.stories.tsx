@@ -1,10 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { LinkTag, Tag, TagButton } from '../..';
+import { LinkTag, Tag, TagButton, Text } from '../..';
 
 const meta = {
   title: 'Components/Tag',
   component: Tag,
+  argTypes: {
+    textColor: {
+      defaultValue: {
+        summary: 'var(--black)',
+      },
+    },
+    backgroundColor: {
+      defaultValue: {
+        summary: 'var(--indigo50)',
+      },
+    },
+  },
   args: {
     children: 'Tag',
   },
@@ -42,9 +54,10 @@ export const Link: Story = {
 };
 
 export const NestedButton: Story = {
+  name: 'Nested button',
   render: (args) => (
     <Tag {...args}>
-      Tag with nested button
+      <Text>Tag with nested button</Text>
       <TagButton icon='close' />
     </Tag>
   ),

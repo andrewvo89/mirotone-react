@@ -6,8 +6,14 @@ const meta = {
   title: 'Components/Link',
   component: Link,
   args: {
-    variant: 'primary',
     children: 'Link',
+  },
+  argTypes: {
+    variant: {
+      defaultValue: {
+        summary: 'primary',
+      },
+    },
   },
   parameters: {
     layout: 'centered',

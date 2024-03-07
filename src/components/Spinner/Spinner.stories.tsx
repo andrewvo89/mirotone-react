@@ -5,9 +5,17 @@ import { Spinner } from '../..';
 const meta = {
   title: 'Components/Spinner',
   component: Spinner,
-  args: {
-    size: 'medium',
-    spinnerColor: 'var(--indigo700)',
+  argTypes: {
+    size: {
+      defaultValue: {
+        summary: 'medium',
+      },
+    },
+    spinnerColor: {
+      defaultValue: {
+        summary: 'var(--indigo700)',
+      },
+    },
   },
   parameters: {
     layout: 'centered',

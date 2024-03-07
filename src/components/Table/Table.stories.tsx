@@ -87,7 +87,7 @@ const meta = {
     ),
   },
   parameters: {
-    layout: 'fullscreen',
+    layout: 'padded',
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Table>;
@@ -99,6 +99,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const NonStickyHeader: Story = {
+  name: 'Non-sticky header',
   args: {
     headIsSticky: false,
   },

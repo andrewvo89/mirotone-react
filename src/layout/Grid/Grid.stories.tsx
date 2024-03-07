@@ -1,30 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { PropsWithChildren } from 'react';
-
-import { Grid, GridItem, tokens } from '../..';
-
-const Text = (props: PropsWithChildren) => (
-  <div
-    style={{
-      display: 'flex',
-      height: '74px',
-      width: '100%',
-      backgroundColor: tokens.color.indigo[200],
-      borderRadius: tokens.borderRadius.medium,
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}
-  >
-    <code>{props.children}</code>
-  </div>
-);
+import { Grid, GridItem } from '../..';
+import Text from '../../storybook/GridItemText';
 
 const meta = {
   title: 'Layout/Grid',
   component: Grid,
   parameters: {
-    layout: 'fullscreen',
+    layout: 'padded',
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Grid>;
@@ -34,6 +17,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  parameters: {
+    layout: 'padded',
+  },
   render: () => (
     <Grid>
       <GridItem colStart={1} colEnd={2}>

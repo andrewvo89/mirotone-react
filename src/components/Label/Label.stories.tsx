@@ -6,8 +6,14 @@ const meta = {
   title: 'Components/Label',
   component: Label,
   args: {
-    variant: 'info',
     children: 'Label',
+  },
+  argTypes: {
+    variant: {
+      defaultValue: {
+        summary: 'info',
+      },
+    },
   },
   parameters: {
     layout: 'centered',

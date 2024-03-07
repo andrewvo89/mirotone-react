@@ -1,10 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Heading } from '..';
+import { Heading } from '../..';
 
 const meta = {
   title: 'Typography/Heading',
   component: Heading,
+  argTypes: {
+    level: {
+      defaultValue: {
+        summary: 1,
+      },
+    },
+  },
   parameters: {
     layout: 'centered',
   },

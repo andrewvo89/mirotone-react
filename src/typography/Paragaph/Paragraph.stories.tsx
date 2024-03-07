@@ -1,15 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Text } from '..';
+import { Paragraph } from '../..';
 
 const meta = {
-  title: 'Typography/Text',
-  component: Text,
+  title: 'Typography/Paragraph',
+  component: Paragraph,
+  argTypes: {
+    size: {
+      defaultValue: {
+        summary: 'medium',
+      },
+    },
+  },
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Text>;
+} satisfies Meta<typeof Paragraph>;
 
 export default meta;
 
@@ -17,21 +24,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Large: Story = {
   args: {
-    children: 'Text large',
+    children: 'Paragraph large',
     size: 'large',
   },
 };
 
 export const Medium: Story = {
   args: {
-    children: 'Text medium',
+    children: 'Paragraph medium',
     size: 'medium',
   },
 };
 
 export const Small: Story = {
   args: {
-    children: 'Text small',
+    children: 'Paragraph small',
     size: 'small',
   },
 };

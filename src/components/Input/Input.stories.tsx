@@ -1,23 +1,48 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import {
+  FormGroup,
+  Grid,
+  GridItem,
+  Input,
+  InputDecoration,
+  InputGroup,
+  InputLabel,
+  InputStatusText,
+  Select,
+  SelectOption,
+} from '../..';
+import { Logo } from '../../storybook/Logo';
+
 import { useArgs } from '@storybook/preview-api';
-
-import { FormGroup, Input, InputDecoration, InputGroup, InputLabel, InputStatusText, tokens } from '../..';
-
-function Logo() {
-  return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-      <circle r='12' cx='12' cy='12' fill={tokens.color.indigo[700]}></circle>
-    </svg>
-  );
-}
 
 const meta = {
   title: 'Components/Input',
   component: Input,
+  argTypes: {
+    size: {
+      defaultValue: {
+        summary: 'medium',
+      },
+    },
+    isDisabled: {
+      defaultValue: {
+        summary: false,
+      },
+    },
+    isReadOnly: {
+      defaultValue: {
+        summary: false,
+      },
+    },
+    flexModifier: {
+      defaultValue: {
+        summary: '4/4',
+      },
+    },
+  },
   args: {
     placeholder: 'Placeholder',
-    size: 'medium',
     type: 'text',
   },
   parameters: {
@@ -73,6 +98,7 @@ export const Small: Story = {
 };
 
 export const HelperText: Story = {
+  name: 'Helper text',
   render: (args) => (
     <FormGroup>
       <InputLabel htmlFor='feedback-1'>Input Label</InputLabel>
@@ -83,6 +109,7 @@ export const HelperText: Story = {
 };
 
 export const InputFeedback: Story = {
+  name: 'Input feedback',
   render: (args) => (
     <FormGroup status='success'>
       <InputLabel htmlFor='feedback-2'>Input Label</InputLabel>
@@ -125,6 +152,7 @@ export const Disabled: Story = {
 };
 
 export const ReadOnly: Story = {
+  name: 'Read only',
   args: {
     isReadOnly: true,
     value: 'Value',
@@ -155,6 +183,7 @@ export const Decoration: Story = {
 };
 
 export const SvgDecoration: Story = {
+  name: 'SVG decoration',
   args: {
     type: 'email',
     placeholder: 'email@address.com',
@@ -178,10 +207,10 @@ export const Group: Story = {
       <InputDecoration>
         <Logo />
       </InputDecoration>
-      <select className='select one-fourth' autoComplete='cc-type'>
-        <option value=''>Mastercard</option>
-        <option value=''>American Express</option>
-      </select>
+      <Select autoComplete='cc-type'>
+        <SelectOption value='master-card'>Mastercard</SelectOption>
+        <SelectOption value='american-express'>American Express</SelectOption>
+      </Select>
       <Input {...args} flexModifier='2/4' type='text' placeholder='Card number' autoComplete='cc-number' />
       <Input {...args} type='month' placeholder='Expiration date' autoComplete='cc-exp' />
       <Input {...args} flexModifier='2/4' type='number' placeholder='CVC' autoComplete='cc-csc' />
@@ -193,21 +222,27 @@ export const Group: Story = {
 };
 
 export const DecorationBorder: Story = {
+  name: 'Decoration border',
   render: (args) => (
-    <div className='grid'>
-      <InputGroup className='cs1 ce6'>
-        <InputDecoration borderRight>&euro;</InputDecoration>
-        <Input {...args} type='number' placeholder='123456' />
-      </InputGroup>
-      <InputGroup className='cs7 ce12'>
-        <Input type='number' placeholder='123456' />
-        <InputDecoration borderLeft>&euro;</InputDecoration>
-      </InputGroup>
-    </div>
+    <Grid>
+      <GridItem colStart={1} colEnd={6}>
+        <InputGroup>
+          <InputDecoration borderRight>&euro;</InputDecoration>
+          <Input {...args} type='number' placeholder='123456' />
+        </InputGroup>
+      </GridItem>
+      <GridItem colStart={7} colEnd={12}>
+        <InputGroup>
+          <Input type='number' placeholder='123456' />
+          <InputDecoration borderLeft>&euro;</InputDecoration>
+        </InputGroup>
+      </GridItem>
+    </Grid>
   ),
 };
 
 export const FlexModifiers: Story = {
+  name: 'Flex modifiers',
   render: (args) => (
     <div className='grid'>
       <InputGroup className='cs1 ce6'>

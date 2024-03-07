@@ -1,20 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AppCard, AppCardBody, AppCardDescription, AppCardTags, AppCardTitle, Tag, tokens } from '../..';
-
-function Logo() {
-  return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' className='app-card--app-logo'>
-      <circle r='12' cx='12' cy='12' fill={tokens.color.indigo[700]}></circle>
-    </svg>
-  );
-}
+import { AppCard, AppCardBody, AppCardDescription, AppCardTags, AppCardTitle, Tag } from '../..';
+import { Logo } from '../../storybook/Logo';
 
 const meta = {
   title: 'Components/App card',
   component: AppCard,
   parameters: {
     layout: 'centered',
+  },
+  argTypes: {
+    accentColor: {
+      defaultValue: {
+        summary: 'var(--blue600)',
+      },
+    },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof AppCard>;
@@ -45,6 +45,7 @@ export const Composition: Story = {
 };
 
 export const AccentColor: Story = {
+  name: 'Accent color',
   args: {
     accentColor: 'var(--indigo600)',
   },
