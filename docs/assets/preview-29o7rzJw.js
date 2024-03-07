@@ -1,1 +1,0 @@
-const o={parameters:{actions:{argTypesRegex:"^on[A-Z].*"},options:{storySort:{method:"alphabetical",order:["Getting started","Tokens",["Colors","Typography","Spacing","Border radius"],"Typography","Icons","Layout","Components"]}}}};export{o as default};
