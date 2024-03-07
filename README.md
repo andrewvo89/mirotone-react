@@ -30,7 +30,7 @@ For API docs and usage examples, visit the [Mirotone React](https://andrewvo89.g
 
 - [NPM package](https://www.npmjs.com/package/mirotone-react)
 - [GitHub repository](https://github.com/andrewvo89/mirotone-react)
-- [Documentation](https://andrewvo89.github.io/mirotone-react/?path=/docs/getting-started--docs)
+- [Documentation](https://andrewvo89.github.io/mirotone-react)
 - [Mirotone CSS](https://www.mirotone.xyz/)
 - [Miro UI Components](https://www.figma.com/community/file/1125698230201231315/mirotone-ui-components)
 
