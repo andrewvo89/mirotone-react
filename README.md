@@ -4,13 +4,13 @@
 [![Coverage](https://img.shields.io/badge/coverage-100%25-blue)](https://github.com/andrewvo89/mirotone-react/blob/fb1297c03d5b42bb497139f56fc1ffd7d7030dc7/package.json#L16)
 [![GitHub Issues](https://img.shields.io/github/issues/andrewvo89/zod-error?color=blue)](https://github.com/andrewvo89/mirotone-react/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/andrewvo89/zod-error?color=blue)](https://github.com/andrewvo89/mirotone-react/pulls)
-[![License](https://img.shields.io/github/license/andrewvo89/zod-error?color=blue)](https://github.com/andrewvo89/mirotone-react?tab=MIT-1-ov-file)
+[![License](https://img.shields.io/github/license/andrewvo89/zod-error?color=blue)](/LICENSE)
 
 </div>
 
 # Mirotone React
 
-Mirotone React is a component library for the Mirotone Design System. It provides a set of components and utilities to help you build faster for Miro. It is loosely based off [Mirotone CSS](https://www.mirotone.xyz/) and [Miro UI Components](https://www.figma.com/community/file/1125698230201231315/mirotone-ui-components).
+Mirotone React is a component library for the Mirotone Design System, offering a range of components and utilities to speed up development for Miro. It draws inspiration from [Mirotone CSS](https://www.mirotone.xyz/) and [Miro UI Components](https://www.figma.com/community/file/1125698230201231315/mirotone-ui-components).
 
 ## Documentation
 
