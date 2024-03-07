@@ -9,7 +9,7 @@ const preview: Preview = {
       storySort: {
         method: 'alphabetical',
         order: [
-          'Getting started',
+          'Mirotone React',
           'Tokens',
           ['Colors', 'Typography', 'Spacing', 'Border radius'],
           'Typography',

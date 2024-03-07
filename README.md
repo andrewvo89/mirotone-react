@@ -1,4 +1,4 @@
-# Getting started
+# Mirotone React
 
 Mirotone React is a component library for the Mirotone Design System. It provides a set of components and utilities to help you build faster for Miro. It is loosely based off [Mirotone CSS](https://www.mirotone.xyz/) and [Miro UI Components](https://www.figma.com/community/file/1125698230201231315/mirotone-ui-components).
 
@@ -8,12 +8,21 @@ For API docs and usage examples, visit the [Mirotone React](https://andrewvo89.g
 
 ## Table of contents
 
+- [Links](#links)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tokens](#components)
 - [Roadmap](#roadmap)
 - [Versions](#versions)
 - [License](#license)
+
+## Links
+
+- [NPM package](https://www.npmjs.com/package/mirotone-react)
+- [GitHub repository](https://github.com/andrewvo89/mirotone-react)
+- [Documentation](https://andrewvo89.github.io/mirotone-react/?path=/docs/getting-started--docs)
+- [Mirotone CSS](https://www.mirotone.xyz/)
+- [Miro UI Components](https://www.figma.com/community/file/1125698230201231315/mirotone-ui-components)
 
 ## Installation
 
@@ -97,7 +106,7 @@ import { tokens } from 'mirotone-react';
 | ------------- | --------------------- | -------------------------------------------------------------------------------------------------------- |
 | Color         | `tokens.color`        | [Color docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-colors--docs)                |
 | Typography    | `tokens.typography`   | [Typography docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-typography--docs)       |
-| Space         | `tokens.space`        | [Space docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-spacing--docs)               |
+| Spacing       | `tokens.space`        | [Spacing docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-spacing--docs)             |
 | Border radius | `tokens.borderRadius` | [Border radius docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/tokens-border-radius--docs) |
 
 ## Roadmap
