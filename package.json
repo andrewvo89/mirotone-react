@@ -3,7 +3,9 @@
   "description": "Mirotone React is a component library for the Mirotone Design System, offering a range of components and utilities to speed up development for Miro. It draws inspiration from Mirotone CSS and Miro UI Components.",
   "license": "MIT",
   "homepage": "https://andrewvo89.github.io/mirotone-react",
-  "repository": "https://github.com/andrewvo89/mirotone-react",
+  "repository": {
+    "url": "git+https://github.com/andrewvo89/mirotone-react.git"
+  },
   "keywords": [
     "mirotone",
     "miro",
