@@ -3,7 +3,7 @@ import { ChangeEventHandler, forwardRef } from 'react';
 import styles from './Toggle.module.css';
 import { ToggleProps } from './types';
 
-const Checkbox = forwardRef<HTMLInputElement, ToggleProps>((props, ref) => {
+const Toggle = forwardRef<HTMLInputElement, ToggleProps>((props, ref) => {
   const { label, value, onChange, className, ...rest } = props;
 
   const onChangeHandler: ChangeEventHandler<HTMLInputElement> = (event) => onChange?.(event.target.checked);
@@ -16,6 +16,6 @@ const Checkbox = forwardRef<HTMLInputElement, ToggleProps>((props, ref) => {
   );
 });
 
-Checkbox.displayName = 'Checkbox';
+Toggle.displayName = 'Toggle';
 
-export default Checkbox;
+export default Toggle;
