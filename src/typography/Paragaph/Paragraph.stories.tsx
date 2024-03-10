@@ -22,10 +22,10 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Large: Story = {
+export const Small: Story = {
   args: {
-    children: 'Paragraph large',
-    size: 'large',
+    children: 'Paragraph small',
+    size: 'small',
   },
 };
 
@@ -36,9 +36,9 @@ export const Medium: Story = {
   },
 };
 
-export const Small: Story = {
+export const Large: Story = {
   args: {
-    children: 'Paragraph small',
-    size: 'small',
+    children: 'Paragraph large',
+    size: 'large',
   },
 };

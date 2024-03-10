@@ -243,6 +243,9 @@ export const DecorationBorder: Story = {
 
 export const FlexModifiers: Story = {
   name: 'Flex modifiers',
+  args: {
+    flexModifier: undefined,
+  },
   render: (args) => (
     <div className='grid'>
       <InputGroup className='cs1 ce6'>
