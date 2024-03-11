@@ -16,6 +16,7 @@ const preview: Preview = {
           'Icons',
           'Layout',
           'Components',
+          'Beta',
         ],
       },
     },

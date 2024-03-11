@@ -1,0 +1,12 @@
+.menu-item {
+  padding: var(--space-xsmall) var(--space-small);
+}
+
+.menu-item:hover {
+  background-color: var(--blue100);
+  cursor: pointer;
+}
+
+.menu-item:focus-visible {
+  outline: none;
+}

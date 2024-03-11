@@ -16,7 +16,6 @@
     "system",
     "ui"
   ],
-  "private": false,
   "version": "1.0.4",
   "type": "module",
   "scripts": {
@@ -86,5 +85,8 @@
   "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.0.6"
+  }
 }
