@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Fragment } from 'react';
-
 import { RadioButton, tokens } from '../..';
+
 import { useArgs } from '@storybook/preview-api';
 
 const meta = {
