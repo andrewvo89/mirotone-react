@@ -1,0 +1,1 @@
+const o={parameters:{actions:{argTypesRegex:"^on[A-Z].*"},options:{storySort:{method:"alphabetical",order:["Mirotone React","Tokens",["Colors","Typography","Spacing","Border radius"],"Typography","Icons","Layout","Components","Beta"]}}}};export{o as default};
