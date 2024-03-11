@@ -26,7 +26,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "npx rollup -c",
+    "build": "rollup -c",
     "test": "vitest --run",
     "coverage": "vitest --coverage --run"
   },

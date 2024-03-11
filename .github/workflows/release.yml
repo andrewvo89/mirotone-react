@@ -13,7 +13,8 @@ jobs:
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn build
+      - run: NODE_ENV=development && yarn install
+      - run: NODE_ENV=production && yarn build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
