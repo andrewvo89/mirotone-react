@@ -7,12 +7,12 @@ import styles from './DropdownMenu.module.css';
 import { DropdownMenuProps } from './types';
 
 const DropdownMenu = forwardRef<HTMLDivElement, DropdownMenuProps>((props, ref) => {
-  const { size = 'medium', trigger, children, className, ...rest } = props;
+  const { size = 'medium', trigger, onOpenChange, children, className, ...rest } = props;
 
   const classNames = [styles['content'], `p-${size}`, className].filter(isNonEmptyString);
 
   return (
-    <Root>
+    <Root onOpenChange={onOpenChange}>
       <Trigger asChild>{trigger}</Trigger>
       <Portal>
         <Content className={classNames.join(' ')} {...rest} ref={ref}>

@@ -1,5 +1,5 @@
 import { createRef } from 'react';
-import { afterEach, describe, expect, test } from 'vitest';
+import { afterEach, describe, expect, test, vi } from 'vitest';
 
 import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -24,6 +24,17 @@ describe('DropdownMenu', () => {
 
     const menu = screen.queryByRole('menu');
     expect(menu).not.toBeNull();
+  });
+
+  test('should call onOpenChange when the menu is opened', async () => {
+    const user = userEvent.setup();
+    const onOpenChange = vi.fn();
+    const { getByRole } = render(<DropdownMenu onOpenChange={onOpenChange} trigger={<button>Open me</button>} />);
+
+    const trigger = getByRole('button');
+    await user.click(trigger);
+
+    expect(onOpenChange).toHaveBeenCalledWith(true);
   });
 
   test('should apply the correct size class name', async () => {
