@@ -1,3 +1,7 @@
+.container {
+  margin-bottom: 0;
+}
+
 :global(.toggle span).empty-label {
   padding: 0;
 }

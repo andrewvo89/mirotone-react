@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Fragment } from 'react';
 
-import { RadioButton } from '../..';
+import { RadioButton, tokens } from '../..';
 import { useArgs } from '@storybook/preview-api';
 
 const meta = {
@@ -44,10 +44,10 @@ export const Label: Story = {
 
 export const Multiple: Story = {
   render: () => (
-    <Fragment>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: tokens.space.xsmall }}>
       <RadioButton label='Option 1' name='radio' />
       <RadioButton label='Option 2' name='radio' />
       <RadioButton label='Option 3' name='radio' />
-    </Fragment>
+    </div>
   ),
 };

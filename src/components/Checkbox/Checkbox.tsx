@@ -9,7 +9,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
   const onChangeHandler: ChangeEventHandler<HTMLInputElement> = (event) => onChange?.(event.target.checked);
 
   return (
-    <label className='checkbox'>
+    <label className={['checkbox', styles['container']].join(' ')}>
       <input {...rest} ref={ref} className={className} type='checkbox' checked={value} onChange={onChangeHandler} />
       {label ? <span>{label}</span> : <span className={styles['empty-label']} />}
     </label>
