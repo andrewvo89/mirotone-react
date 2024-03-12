@@ -1,8 +1,7 @@
-name: Build and Deploy
+name: Publish documentation
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
   workflow_dispatch:
 jobs:
   build-and-deploy:
@@ -17,7 +16,7 @@ jobs:
           node-version: 20
           cache: 'yarn'
       - name: Install
-        run: echo $NODE_ENV && yarn install
+        run: yarn install
       - name: Build
         run: yarn build-storybook
       - name: Deploy

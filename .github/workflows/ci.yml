@@ -1,7 +1,8 @@
-name: Publish package to npmjs
+name: Continuous integration
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
   workflow_dispatch:
 jobs:
   build:
@@ -25,7 +26,3 @@ jobs:
         run: yarn test
       - name: Build
         run: yarn build
-      - name: Publish
-        run: yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
