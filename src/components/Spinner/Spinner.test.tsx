@@ -4,7 +4,7 @@ import { cleanup, render } from '@testing-library/react';
 
 import { Spinner } from '../../';
 
-describe.only('Spinner', () => {
+describe('Spinner', () => {
   afterEach(cleanup);
 
   test('should render a spinner', () => {
@@ -13,7 +13,7 @@ describe.only('Spinner', () => {
     expect(spinner).not.toBeNull();
   });
 
-  test.only('should render a small spinner', () => {
+  test('should render a small spinner', () => {
     const { getByRole } = render(<Spinner size='small' />);
     const spinner = getByRole('progressbar');
     expect(spinner).toHaveClass('spinner-small');
