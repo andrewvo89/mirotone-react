@@ -7,14 +7,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Enable Corepack before setting up Node
-        run: corepack enable
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'yarn'
           registry-url: 'https://registry.npmjs.org'
       # Run install in development mode to install devDependencies
       - run: NODE_ENV=development && yarn install && NODE_ENV=production
