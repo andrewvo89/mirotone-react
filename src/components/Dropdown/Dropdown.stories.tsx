@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import {
   Checkbox,
-  DropdownMenu,
+  Dropdown,
   DropdownMenuDivider,
   DropdownMenuItem,
   DropdownMenuItemProps,
@@ -15,20 +15,20 @@ import { useState } from 'react';
 import DropdownButton from './DropdownButton';
 
 const meta = {
-  title: 'Beta/Dropdown menu',
-  component: DropdownMenu,
+  title: 'Beta/Dropdown',
+  component: Dropdown,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof DropdownMenu>;
+} satisfies Meta<typeof Dropdown>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const MenuItems: Story = {
-  name: 'Menu items',
+  name: 'Dropdown items',
   args: {
     trigger: <DropdownButton variant='tertiary'>Settings</DropdownButton>,
     children: (
@@ -46,7 +46,7 @@ export const MenuItems: Story = {
 };
 
 export const CheckboxMenuItems: Story = {
-  name: 'Checkbox menu items',
+  name: 'Checkbox items',
   args: {
     trigger: <DropdownButton>Choose members</DropdownButton>,
     style: { minWidth: 200 },
@@ -69,7 +69,7 @@ export const CheckboxMenuItems: Story = {
 
     return (
       <div style={{ display: 'flex', gap: tokens.space.small }}>
-        <DropdownMenu {...args} onOpenChange={onOpenChangeHandler}>
+        <Dropdown {...args} onOpenChange={onOpenChangeHandler}>
           <DropdownMenuItem disableCloseOnSelect>
             <Checkbox
               label='Jack Hudson'
@@ -91,7 +91,7 @@ export const CheckboxMenuItems: Story = {
               onChange={(value) => handleSelect('Lena Steady', value)}
             />
           </DropdownMenuItem>
-        </DropdownMenu>
+        </Dropdown>
         <div>
           {Array.from(selected).map((name) => (
             <Paragraph key={name}>{name}</Paragraph>
@@ -109,7 +109,7 @@ const dropdownMenuItemStyle: DropdownMenuItemProps['style'] = {
 };
 
 export const IconMenuItems: Story = {
-  name: 'Icon menu items',
+  name: 'Icon items',
   args: {
     trigger: <DropdownButton variant='secondary'>Filter</DropdownButton>,
     style: { minWidth: 200 },
@@ -152,8 +152,8 @@ export const PreferredSide: Story = {
     ),
   },
   render: (args) => (
-    <DropdownMenu {...args} trigger={<DropdownButton>Preferred side: {args.side}</DropdownButton>}>
+    <Dropdown {...args} trigger={<DropdownButton>Preferred side: {args.side}</DropdownButton>}>
       {args.children}
-    </DropdownMenu>
+    </Dropdown>
   ),
 };

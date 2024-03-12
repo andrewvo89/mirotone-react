@@ -3,10 +3,10 @@ import { forwardRef } from 'react';
 import { Content, Portal, Root, Trigger } from '@radix-ui/react-dropdown-menu';
 
 import { isNonEmptyString } from '../../utils/common';
-import styles from './DropdownMenu.module.css';
-import { DropdownMenuProps } from './types';
+import styles from './Dropdown.module.css';
+import { DropdownProps } from './types';
 
-const DropdownMenu = forwardRef<HTMLDivElement, DropdownMenuProps>((props, ref) => {
+const Dropdown = forwardRef<HTMLDivElement, DropdownProps>((props, ref) => {
   const { size = 'medium', trigger, onOpenChange, children, className, ...rest } = props;
 
   const classNames = [styles['content'], `p-${size}`, className].filter(isNonEmptyString);
@@ -23,6 +23,6 @@ const DropdownMenu = forwardRef<HTMLDivElement, DropdownMenuProps>((props, ref) 
   );
 });
 
-DropdownMenu.displayName = 'DropdownMenu';
+Dropdown.displayName = 'Dropdown';
 
-export default DropdownMenu;
+export default Dropdown;

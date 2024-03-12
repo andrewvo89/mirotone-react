@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-import { Button, ButtonProps, Icon } from '../../';
+import { Button, ButtonProps, Icon } from '../..';
 import styles from './DropdownButton.module.css';
 
 const DropdownButton = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {

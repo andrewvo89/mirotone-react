@@ -7,7 +7,7 @@ import {
 
 export type DropdownContentSize = 'small' | 'medium' | 'large';
 
-export type DropdownMenuProps = Omit<ComponentProps<'div'>, 'ref'> & {
+export type DropdownProps = Omit<ComponentProps<'div'>, 'ref'> & {
   size?: DropdownContentSize;
   side?: RadixDropdownMenuContentProps['side'];
   onOpenChange?: RadixDropdownMenuProps['onOpenChange'];

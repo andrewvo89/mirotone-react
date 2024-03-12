@@ -4,7 +4,7 @@ import { afterEach, describe, expect, test, vi } from 'vitest';
 import { cleanup, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { DropdownMenu, DropdownMenuItem } from '../../';
+import { Dropdown, DropdownMenuItem } from '../..';
 
 describe('DropdownMenuItem', () => {
   afterEach(() => {
@@ -16,9 +16,9 @@ describe('DropdownMenuItem', () => {
     const user = userEvent.setup();
 
     const { getByRole, queryByRole } = render(
-      <DropdownMenu trigger={<button>Open me</button>}>
+      <Dropdown trigger={<button>Open me</button>}>
         <DropdownMenuItem />
-      </DropdownMenu>,
+      </Dropdown>,
     );
 
     const trigger = getByRole('button');
@@ -33,9 +33,9 @@ describe('DropdownMenuItem', () => {
     const onSelect = vi.fn();
 
     const { getByRole } = render(
-      <DropdownMenu trigger={<button>Open me</button>}>
+      <Dropdown trigger={<button>Open me</button>}>
         <DropdownMenuItem onSelect={onSelect} />
-      </DropdownMenu>,
+      </Dropdown>,
     );
 
     const trigger = getByRole('button');
@@ -52,9 +52,9 @@ describe('DropdownMenuItem', () => {
     const onSelect = vi.fn();
 
     const { getByRole, queryByRole } = render(
-      <DropdownMenu trigger={<button>Open me</button>}>
+      <Dropdown trigger={<button>Open me</button>}>
         <DropdownMenuItem disableCloseOnSelect onSelect={onSelect} />
-      </DropdownMenu>,
+      </Dropdown>,
     );
 
     const trigger = getByRole('button');
@@ -72,9 +72,9 @@ describe('DropdownMenuItem', () => {
     const onSelect = vi.fn();
 
     const { getByRole, queryByRole } = render(
-      <DropdownMenu trigger={<button>Open me</button>}>
+      <Dropdown trigger={<button>Open me</button>}>
         <DropdownMenuItem onSelect={onSelect} />
-      </DropdownMenu>,
+      </Dropdown>,
     );
 
     const trigger = getByRole('button');
@@ -91,9 +91,9 @@ describe('DropdownMenuItem', () => {
     const user = userEvent.setup();
 
     const { getByRole } = render(
-      <DropdownMenu trigger={<button>Open me</button>}>
+      <Dropdown trigger={<button>Open me</button>}>
         <DropdownMenuItem className='custom-class' />
-      </DropdownMenu>,
+      </Dropdown>,
     );
 
     const trigger = getByRole('button');
@@ -108,9 +108,9 @@ describe('DropdownMenuItem', () => {
     const ref = createRef<HTMLDivElement>();
 
     const { getByRole } = render(
-      <DropdownMenu trigger={<button>Open me</button>}>
+      <Dropdown trigger={<button>Open me</button>}>
         <DropdownMenuItem ref={ref} />
-      </DropdownMenu>,
+      </Dropdown>,
     );
 
     const trigger = getByRole('button');

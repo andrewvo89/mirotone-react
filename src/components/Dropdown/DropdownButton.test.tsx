@@ -2,7 +2,7 @@ import { describe, expect, test } from 'vitest';
 
 import { render } from '@testing-library/react';
 
-import { DropdownButton } from '../../';
+import { DropdownButton } from '../..';
 
 describe('DropdownButton', () => {
   test('should render children text', () => {
