@@ -1,6 +1,6 @@
 Bundled license information:
 
-telejson/dist/index.mjs:
+telejson/dist/index.js:
   /*!
    * isobject <https://github.com/jonschlinkert/isobject>
    *
