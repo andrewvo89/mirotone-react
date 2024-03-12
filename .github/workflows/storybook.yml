@@ -21,6 +21,8 @@ jobs:
         with:
           node-version: 20
           cache: 'yarn'
+      - name: Set yarn version # https://github.com/storybookjs/storybook/issues/22431#issuecomment-1987009623
+        run: yarn set version classic
       - name: Install
         run: yarn install
       - name: Build

@@ -89,6 +89,5 @@
   "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
-  ],
-  "packageManager": "yarn@4.1.1"
+  ]
 }
