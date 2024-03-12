@@ -4,8 +4,8 @@ import {
   Checkbox,
   Dropdown,
   DropdownDivider,
-  DropdownMenuItem,
-  DropdownMenuItemProps,
+  DropdownItem,
+  DropdownItemProps,
   Icon,
   Paragraph,
   Text,
@@ -33,13 +33,13 @@ export const MenuItems: Story = {
     trigger: <DropdownButton variant='tertiary'>Settings</DropdownButton>,
     children: (
       <>
-        <DropdownMenuItem onSelect={() => {}}>Team profile</DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => {}}>Team members</DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => {}}>Apps & Integrations</DropdownMenuItem>
+        <DropdownItem onSelect={() => {}}>Team profile</DropdownItem>
+        <DropdownItem onSelect={() => {}}>Team members</DropdownItem>
+        <DropdownItem onSelect={() => {}}>Apps & Integrations</DropdownItem>
         <DropdownDivider />
-        <DropdownMenuItem onSelect={() => {}} style={{ color: tokens.color.red[700] }}>
+        <DropdownItem onSelect={() => {}} style={{ color: tokens.color.red[700] }}>
           Leave team
-        </DropdownMenuItem>
+        </DropdownItem>
       </>
     ),
   },
@@ -70,27 +70,27 @@ export const CheckboxMenuItems: Story = {
     return (
       <div style={{ display: 'flex', gap: tokens.space.small }}>
         <Dropdown {...args} onOpenChange={onOpenChangeHandler}>
-          <DropdownMenuItem disableCloseOnSelect>
+          <DropdownItem disableCloseOnSelect>
             <Checkbox
               label='Jack Hudson'
               checked={selected.has('Jack Hudson')}
               onChange={(value) => handleSelect('Jack Hudson', value)}
             />
-          </DropdownMenuItem>
-          <DropdownMenuItem disableCloseOnSelect>
+          </DropdownItem>
+          <DropdownItem disableCloseOnSelect>
             <Checkbox
               label='Katy Cormick'
               checked={selected.has('Katy Cormick')}
               onChange={(value) => handleSelect('Katy Cormick', value)}
             />
-          </DropdownMenuItem>
-          <DropdownMenuItem disableCloseOnSelect>
+          </DropdownItem>
+          <DropdownItem disableCloseOnSelect>
             <Checkbox
               label='Lena Steady'
               checked={selected.has('Lena Steady')}
               onChange={(value) => handleSelect('Lena Steady', value)}
             />
-          </DropdownMenuItem>
+          </DropdownItem>
         </Dropdown>
         <div>
           {Array.from(selected).map((name) => (
@@ -102,7 +102,7 @@ export const CheckboxMenuItems: Story = {
   },
 };
 
-const dropdownMenuItemStyle: DropdownMenuItemProps['style'] = {
+const dropdownMenuItemStyle: DropdownItemProps['style'] = {
   display: 'flex',
   gap: tokens.space.small,
   alignItems: 'center',
@@ -115,20 +115,20 @@ export const IconMenuItems: Story = {
     style: { minWidth: 200 },
     children: (
       <>
-        <DropdownMenuItem style={dropdownMenuItemStyle}>
+        <DropdownItem style={dropdownMenuItemStyle}>
           <Icon name='sticky' />
           <Text>Stickies</Text>
-        </DropdownMenuItem>
-        <DropdownMenuItem style={dropdownMenuItemStyle}>
+        </DropdownItem>
+        <DropdownItem style={dropdownMenuItemStyle}>
           <Icon name='shapes' />
           <Text>Shapes</Text>
-        </DropdownMenuItem>
-        <DropdownMenuItem style={dropdownMenuItemStyle}>
+        </DropdownItem>
+        <DropdownItem style={dropdownMenuItemStyle}>
           <Icon name='frames' />
           <Text>Frames</Text>
-        </DropdownMenuItem>
+        </DropdownItem>
         <DropdownDivider />
-        <DropdownMenuItem style={{ color: tokens.color.blue[700] }}>Clear filter</DropdownMenuItem>
+        <DropdownItem style={{ color: tokens.color.blue[700] }}>Clear filter</DropdownItem>
       </>
     ),
   },
@@ -141,13 +141,13 @@ export const PreferredSide: Story = {
     side: 'top',
     children: (
       <>
-        <DropdownMenuItem onSelect={() => {}}>Team profile</DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => {}}>Team members</DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => {}}>Apps & Integrations</DropdownMenuItem>
+        <DropdownItem onSelect={() => {}}>Team profile</DropdownItem>
+        <DropdownItem onSelect={() => {}}>Team members</DropdownItem>
+        <DropdownItem onSelect={() => {}}>Apps & Integrations</DropdownItem>
         <DropdownDivider />
-        <DropdownMenuItem onSelect={() => {}} style={{ color: tokens.color.red[700] }}>
+        <DropdownItem onSelect={() => {}} style={{ color: tokens.color.red[700] }}>
           Leave team
-        </DropdownMenuItem>
+        </DropdownItem>
       </>
     ),
   },

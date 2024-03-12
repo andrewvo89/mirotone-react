@@ -3,10 +3,10 @@ import { forwardRef } from 'react';
 import { Item } from '@radix-ui/react-dropdown-menu';
 
 import { isNonEmptyString } from '../../utils/common';
-import styles from './DropdownMenuItem.module.css';
-import { DropdownMenuItemProps } from './types';
+import styles from './DropdownItem.module.css';
+import { DropdownItemProps } from './types';
 
-const DropdownMenuItem = forwardRef<HTMLDivElement, DropdownMenuItemProps>((props, ref) => {
+const DropdownItem = forwardRef<HTMLDivElement, DropdownItemProps>((props, ref) => {
   const { className, disableCloseOnSelect = false, onSelect, ...rest } = props;
 
   const classNames = [styles['menu-item'], className].filter(isNonEmptyString);
@@ -21,6 +21,6 @@ const DropdownMenuItem = forwardRef<HTMLDivElement, DropdownMenuItemProps>((prop
   return <Item className={classNames.join(' ')} {...rest} ref={ref} onSelect={onSelectHandler} />;
 });
 
-DropdownMenuItem.displayName = 'DropdownMenuItem';
+DropdownItem.displayName = 'DropdownItem';
 
-export default DropdownMenuItem;
+export default DropdownItem;

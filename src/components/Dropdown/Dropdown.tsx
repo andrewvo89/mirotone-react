@@ -9,7 +9,7 @@ import { DropdownProps } from './types';
 const Dropdown = forwardRef<HTMLDivElement, DropdownProps>((props, ref) => {
   const { size = 'medium', trigger, onOpenChange, children, className, ...rest } = props;
 
-  const classNames = [styles['content'], `p-${size}`, className].filter(isNonEmptyString);
+  const classNames = [styles['panel'], `p-${size}`, className].filter(isNonEmptyString);
 
   return (
     <Root onOpenChange={onOpenChange}>

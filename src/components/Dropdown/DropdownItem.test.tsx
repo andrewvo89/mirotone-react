@@ -4,9 +4,9 @@ import { afterEach, describe, expect, test, vi } from 'vitest';
 import { cleanup, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { Dropdown, DropdownMenuItem } from '../..';
+import { Dropdown, DropdownItem } from '../..';
 
-describe('DropdownMenuItem', () => {
+describe('DropdownItem', () => {
   afterEach(() => {
     vi.resetAllMocks();
     cleanup();
@@ -17,7 +17,7 @@ describe('DropdownMenuItem', () => {
 
     const { getByRole, queryByRole } = render(
       <Dropdown trigger={<button>Open me</button>}>
-        <DropdownMenuItem />
+        <DropdownItem />
       </Dropdown>,
     );
 
@@ -34,7 +34,7 @@ describe('DropdownMenuItem', () => {
 
     const { getByRole } = render(
       <Dropdown trigger={<button>Open me</button>}>
-        <DropdownMenuItem onSelect={onSelect} />
+        <DropdownItem onSelect={onSelect} />
       </Dropdown>,
     );
 
@@ -53,7 +53,7 @@ describe('DropdownMenuItem', () => {
 
     const { getByRole, queryByRole } = render(
       <Dropdown trigger={<button>Open me</button>}>
-        <DropdownMenuItem disableCloseOnSelect onSelect={onSelect} />
+        <DropdownItem disableCloseOnSelect onSelect={onSelect} />
       </Dropdown>,
     );
 
@@ -73,7 +73,7 @@ describe('DropdownMenuItem', () => {
 
     const { getByRole, queryByRole } = render(
       <Dropdown trigger={<button>Open me</button>}>
-        <DropdownMenuItem onSelect={onSelect} />
+        <DropdownItem onSelect={onSelect} />
       </Dropdown>,
     );
 
@@ -92,7 +92,7 @@ describe('DropdownMenuItem', () => {
 
     const { getByRole } = render(
       <Dropdown trigger={<button>Open me</button>}>
-        <DropdownMenuItem className='custom-class' />
+        <DropdownItem className='custom-class' />
       </Dropdown>,
     );
 
@@ -109,7 +109,7 @@ describe('DropdownMenuItem', () => {
 
     const { getByRole } = render(
       <Dropdown trigger={<button>Open me</button>}>
-        <DropdownMenuItem ref={ref} />
+        <DropdownItem ref={ref} />
       </Dropdown>,
     );
 

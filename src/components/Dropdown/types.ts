@@ -14,7 +14,7 @@ export type DropdownProps = Omit<ComponentProps<'div'>, 'ref'> & {
   trigger: ReactNode;
 };
 
-export type DropdownMenuItemProps = Omit<ComponentProps<'div'>, 'ref' | 'onSelect'> & {
+export type DropdownItemProps = Omit<ComponentProps<'div'>, 'ref' | 'onSelect'> & {
   disableCloseOnSelect?: boolean;
   onSelect?: () => void;
 };
