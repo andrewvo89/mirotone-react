@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import {
-  Button,
   Checkbox,
   DropdownMenu,
   DropdownMenuDivider,
@@ -13,6 +12,7 @@ import {
   tokens,
 } from '../..';
 import { useState } from 'react';
+import DropdownButton from './DropdownButton';
 
 const meta = {
   title: 'Beta/Dropdown menu',
@@ -30,12 +30,7 @@ type Story = StoryObj<typeof meta>;
 export const MenuItems: Story = {
   name: 'Menu items',
   args: {
-    trigger: (
-      <Button variant='tertiary'>
-        <Text>Settings</Text>
-        <Icon name='arrow-down' />
-      </Button>
-    ),
+    trigger: <DropdownButton variant='tertiary'>Settings</DropdownButton>,
     children: (
       <>
         <DropdownMenuItem onSelect={() => {}}>Team profile</DropdownMenuItem>
@@ -53,12 +48,7 @@ export const MenuItems: Story = {
 export const CheckboxMenuItems: Story = {
   name: 'Checkbox menu items',
   args: {
-    trigger: (
-      <Button>
-        <Text>Choose members</Text>
-        <Icon name='arrow-down' />
-      </Button>
-    ),
+    trigger: <DropdownButton>Choose members</DropdownButton>,
     style: { minWidth: 200 },
   },
   render: function App(args) {
@@ -121,12 +111,7 @@ const dropdownMenuItemStyle: DropdownMenuItemProps['style'] = {
 export const IconMenuItems: Story = {
   name: 'Icon menu items',
   args: {
-    trigger: (
-      <Button variant='secondary'>
-        <Text>Filter</Text>
-        <Icon name='arrow-down' />
-      </Button>
-    ),
+    trigger: <DropdownButton variant='secondary'>Filter</DropdownButton>,
     style: { minWidth: 200 },
     children: (
       <>
@@ -167,15 +152,7 @@ export const PreferredSide: Story = {
     ),
   },
   render: (args) => (
-    <DropdownMenu
-      {...args}
-      trigger={
-        <Button>
-          <Text>Preferred side: {args.side}</Text>
-          <Icon name='arrow-down' />
-        </Button>
-      }
-    >
+    <DropdownMenu {...args} trigger={<DropdownButton>Preferred side: {args.side}</DropdownButton>}>
       {args.children}
     </DropdownMenu>
   ),
