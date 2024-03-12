@@ -9,14 +9,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'yarn'
           registry-url: 'https://registry.npmjs.org'
       # Run install in development mode to install devDependencies
-      - run: NODE_ENV=development && yarn install && NODE_ENV=production
-      - run: yarn build
-      - run: npm publish
+      - run: echo $NODE_ENV
+      - name: Install dependencies
+        run: NODE_ENV=development && yarn install && NODE_ENV=production
+      - name: Lint
+        run: yarn lint
+      - name: Typecheck
+        run: yarn typecheck
+      - name: Test
+        run: yarn test
+      - name: Build
+        run: yarn build
+      - name: Publish
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
