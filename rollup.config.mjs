@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
+import { uglify } from 'rollup-plugin-uglify';
 
 // This is required to read package.json file when
 // using Native ES modules in Node.js
@@ -19,12 +20,12 @@ export default [
       {
         file: packageJson.main,
         format: 'cjs',
-        sourcemap: true,
+        sourcemap: false,
       },
       {
         file: packageJson.module,
         format: 'esm',
-        sourcemap: true,
+        sourcemap: false,
       },
     ],
     plugins: [
@@ -35,6 +36,7 @@ export default [
       postcss({
         extensions: ['.css'],
       }),
+      uglify(),
     ],
   },
   {
