@@ -17,10 +17,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Install and Build
-        run: | # Install npm packages and build the Storybook files
-          yarn install
-          yarn build-storybook
+          cache: 'yarn'
+      - name: Install
+        run: yarn install
+      - name: Build
+        run: yarn build-storybook
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
