@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {
   Checkbox,
   Dropdown,
-  DropdownMenuDivider,
+  DropdownDivider,
   DropdownMenuItem,
   DropdownMenuItemProps,
   Icon,
@@ -36,7 +36,7 @@ export const MenuItems: Story = {
         <DropdownMenuItem onSelect={() => {}}>Team profile</DropdownMenuItem>
         <DropdownMenuItem onSelect={() => {}}>Team members</DropdownMenuItem>
         <DropdownMenuItem onSelect={() => {}}>Apps & Integrations</DropdownMenuItem>
-        <DropdownMenuDivider />
+        <DropdownDivider />
         <DropdownMenuItem onSelect={() => {}} style={{ color: tokens.color.red[700] }}>
           Leave team
         </DropdownMenuItem>
@@ -127,7 +127,7 @@ export const IconMenuItems: Story = {
           <Icon name='frames' />
           <Text>Frames</Text>
         </DropdownMenuItem>
-        <DropdownMenuDivider />
+        <DropdownDivider />
         <DropdownMenuItem style={{ color: tokens.color.blue[700] }}>Clear filter</DropdownMenuItem>
       </>
     ),
@@ -144,7 +144,7 @@ export const PreferredSide: Story = {
         <DropdownMenuItem onSelect={() => {}}>Team profile</DropdownMenuItem>
         <DropdownMenuItem onSelect={() => {}}>Team members</DropdownMenuItem>
         <DropdownMenuItem onSelect={() => {}}>Apps & Integrations</DropdownMenuItem>
-        <DropdownMenuDivider />
+        <DropdownDivider />
         <DropdownMenuItem onSelect={() => {}} style={{ color: tokens.color.red[700] }}>
           Leave team
         </DropdownMenuItem>

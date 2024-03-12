@@ -3,26 +3,26 @@ import { afterEach, describe, expect, test } from 'vitest';
 
 import { cleanup, render } from '@testing-library/react';
 
-import { DropdownMenuDivider } from '../..';
+import { DropdownDivider } from '../..';
 
-describe('DropdownMenuDivider', () => {
+describe('DropdownDivider', () => {
   afterEach(cleanup);
 
   test('should render correctly', () => {
-    const { container } = render(<DropdownMenuDivider />);
+    const { container } = render(<DropdownDivider />);
     const divider = container.querySelector('hr');
     expect(divider).not.toBeNull();
   });
 
   test('should pass down custom class name', () => {
-    const { container } = render(<DropdownMenuDivider className='custom-divider' />);
+    const { container } = render(<DropdownDivider className='custom-divider' />);
     const divider = container.querySelector('hr');
     expect(divider).toHaveClass('custom-divider');
   });
 
   test('should pass down ref', () => {
     const ref = createRef<HTMLHRElement>();
-    const { container } = render(<DropdownMenuDivider ref={ref} />);
+    const { container } = render(<DropdownDivider ref={ref} />);
     const divider = container.querySelector('hr');
     expect(divider).toBe(ref.current);
   });

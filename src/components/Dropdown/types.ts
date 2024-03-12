@@ -19,4 +19,4 @@ export type DropdownMenuItemProps = Omit<ComponentProps<'div'>, 'ref' | 'onSelec
   onSelect?: () => void;
 };
 
-export type DropdownMenuDividerProps = Omit<ComponentProps<'hr'>, 'children' | 'ref'>;
+export type DropdownDividerProps = Omit<ComponentProps<'hr'>, 'children' | 'ref'>;
