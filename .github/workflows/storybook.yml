@@ -16,9 +16,8 @@ jobs:
         with:
           node-version: 20
           cache: 'yarn'
-      - run: echo $NODE_ENV
       - name: Install
-        run: yarn install
+        run: echo $NODE_ENV && yarn install
       - name: Build
         run: yarn build-storybook
       - name: Deploy

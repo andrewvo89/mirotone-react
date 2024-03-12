@@ -18,7 +18,7 @@ jobs:
       # Run install in development mode to install devDependencies
       - run: echo $NODE_ENV
       - name: Install dependencies
-        run: NODE_ENV=development && yarn install && NODE_ENV=production
+        run: echo $NODE_ENV NODE_ENV=development && yarn install && NODE_ENV=production
       - name: Lint
         run: yarn lint
       - name: Typecheck
