@@ -4,14 +4,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
-import { uglify } from 'rollup-plugin-uglify';
-
-// This is required to read package.json file when
-// using Native ES modules in Node.js
-// https://rollupjs.org/command-line-interface/#importing-package-json
-import { createRequire } from 'node:module';
-const requireFile = createRequire(import.meta.url);
-const packageJson = requireFile('./package.json');
+import terser from '@rollup/plugin-terser';
+import packageJson from './package.json' assert { type: 'json' };
 
 export default [
   {
@@ -36,8 +30,9 @@ export default [
       postcss({
         extensions: ['.css'],
       }),
-      uglify(),
+      terser(),
     ],
+    external: Object.keys(packageJson.peerDependencies),
   },
   {
     input: 'src/index.ts',
