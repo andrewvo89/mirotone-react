@@ -15,3 +15,5 @@ export type LinkTagProps = Omit<ComponentProps<'a'>, 'ref'> & BaseTagProps;
 export type TagButtonProps = Omit<ComponentProps<'button'>, 'children' | 'ref'> & {
   icon: Icons;
 };
+
+export type TagImageProps = Omit<ComponentProps<'img'>, 'children' | 'ref'>;

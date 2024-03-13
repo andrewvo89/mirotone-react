@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { LinkTag, Tag, TagButton, Text } from '../..';
+import { LinkTag, Tag, TagButton, TagImage, Text } from '../..';
 
 const meta = {
   title: 'Components/Tag',
@@ -61,4 +61,22 @@ export const NestedButton: Story = {
       <TagButton icon='close' />
     </Tag>
   ),
+};
+
+export const Icon: Story = {
+  args: {
+    icon: 'link',
+    children: 'JIRA-1234',
+  },
+};
+
+export const Image: Story = {
+  args: {
+    children: (
+      <>
+        <TagImage src='https://www.mirotone.xyz/profile.png' alt='Profile photo' width='16' height='16' />
+        Author: Mettin
+      </>
+    ),
+  },
 };

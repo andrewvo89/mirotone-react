@@ -1,10 +1,12 @@
-import { describe, expect, test } from 'vitest';
+import { afterEach, describe, expect, test } from 'vitest';
 
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 
 import { DropdownButton } from '../..';
 
 describe('DropdownButton', () => {
+  afterEach(cleanup);
+
   test('should render children text', () => {
     const { queryByText } = render(<DropdownButton>Hello World</DropdownButton>);
     const button = queryByText('Hello World');
