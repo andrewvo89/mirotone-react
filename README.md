@@ -134,7 +134,7 @@ import { tokens } from 'mirotone-react';
 | App footer        | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-15152&mode=design&t=lya7mgGuGGuYILSD-4>) |
 | App header        | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-15175&mode=design&t=M6wFp57pRdq4g6Te-4>) |
 | App nav           | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-15189&mode=design&t=M6wFp57pRdq4g6Te-4>) |
-| Dismissable badge | Beta    | [Dics](https://andrewvo89.github.io/mirotone-react/?path=/docs/beta-dismissable-badge--docs)                                                                           |
+| Dismissable badge | Beta    | [Docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/beta-dismissable-badge--docs)                                                                           |
 | Dropdown          | Beta    | [Docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/beta-dropdown--docs)                                                                                    |
 | Tooltip           | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13308&mode=design&t=v8b8OhxAH4M1Erx0-4>) |
 
