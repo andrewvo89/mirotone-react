@@ -1,0 +1,30 @@
+.badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xsmall);
+  padding: var(--space-xsmall) var(--space-xsmall) var(--space-xsmall) calc(var(--space-xsmall) * 1.5);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+.close-button {
+  border-radius: var(--border-radius);
+  height: unset;
+  padding: var(--space-xxsmall);
+  background-color: unset;
+  border: none;
+  &:hover {
+    background-color: var(--hover-background-color);
+    cursor: pointer;
+  }
+
+  :global(span.icon-close) {
+    background-size: calc(var(--icon-size) / 1.25);
+    height: calc(var(--icon-size) / 1.25);
+    width: calc(var(--icon-size) / 1.25);
+    pointer-events: none;
+    filter: var(--icon-filter);
+  }
+}
