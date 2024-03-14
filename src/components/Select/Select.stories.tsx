@@ -7,6 +7,18 @@ import { useArgs } from '@storybook/preview-api';
 const meta = {
   title: 'Components/Select',
   component: Select,
+  argTypes: {
+    size: {
+      defaultValue: {
+        summary: 'medium',
+      },
+    },
+    isDisabled: {
+      defaultValue: {
+        summary: false,
+      },
+    },
+  },
   parameters: {
     layout: 'centered',
   },

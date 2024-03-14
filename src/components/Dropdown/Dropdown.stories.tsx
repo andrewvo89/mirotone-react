@@ -19,6 +19,13 @@ import { useArgs } from '@storybook/preview-api';
 const meta = {
   title: 'Beta/Dropdown',
   component: Dropdown,
+  argTypes: {
+    size: {
+      defaultValue: {
+        summary: 'medium',
+      },
+    },
+  },
   args: {
     children: (
       <>
@@ -153,7 +160,7 @@ export const PreferredSide: Story = {
 
 export const Controlled: Story = {
   args: {
-    open: true,
+    open: false,
     trigger: <Text>Dropdown trigger is over here</Text>,
   },
   render: function App(args) {

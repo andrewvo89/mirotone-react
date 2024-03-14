@@ -7,6 +7,23 @@ import { useArgs } from '@storybook/preview-api';
 const meta = {
   title: 'Beta/Tooltip',
   component: Tooltip,
+  argTypes: {
+    size: {
+      defaultValue: {
+        summary: 'medium',
+      },
+    },
+    delayDuration: {
+      defaultValue: {
+        summary: 500,
+      },
+    },
+    disableCloseOnOutside: {
+      defaultValue: {
+        summary: false,
+      },
+    },
+  },
   args: {
     trigger: <Button>Hover over me</Button>,
     children: 'This is a tooltip text.',

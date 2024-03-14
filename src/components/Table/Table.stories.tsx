@@ -22,6 +22,13 @@ const Container = (props: PropsWithChildren) => <div style={{ height: 200, overf
 const meta = {
   title: 'Components/Table',
   component: Table,
+  argTypes: {
+    headIsSticky: {
+      defaultValue: {
+        summary: true,
+      },
+    },
+  },
   render: (args) => (
     <Container>
       <Table {...args} />

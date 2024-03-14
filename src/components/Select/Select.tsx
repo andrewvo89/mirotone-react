@@ -5,7 +5,7 @@ import { SelectProps } from './types';
 import { getSizeClassName } from './utils';
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>((props, ref) => {
-  const { value, onChange, size = 'medium', isDisabled, className, ...rest } = props;
+  const { value, onChange, size = 'medium', isDisabled = false, className, ...rest } = props;
 
   const classNames = ['select', getSizeClassName(size), className].filter(isNonEmptyString);
 

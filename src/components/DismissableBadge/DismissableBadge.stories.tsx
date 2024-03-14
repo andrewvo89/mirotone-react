@@ -6,6 +6,18 @@ import { useState } from 'react';
 const meta = {
   title: 'Beta/Dismissable badge',
   component: DismissableBadge,
+  argTypes: {
+    rounded: {
+      defaultValue: {
+        summary: false,
+      },
+    },
+    variant: {
+      defaultValue: {
+        summary: 'primary',
+      },
+    },
+  },
   args: {
     children: 'User Mapping',
   },
