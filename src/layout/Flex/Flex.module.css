@@ -1,9 +1,11 @@
 .flex {
   display: flex;
-  align-content: var(--align-content, unset);
-  align-items: var(--align-items, unset);
-  flex-direction: var(--flex-direction, unset);
-  flex-wrap: var(--flex-wrap, unset);
-  gap: var(--gap, unset);
-  justify-content: var(--justify-content, unset);
+  align-content: var(--align-content);
+  align-items: var(--align-items);
+  column-gap: var(--column-gap);
+  flex-direction: var(--flex-direction);
+  flex-wrap: var(--flex-wrap);
+  gap: var(--gap);
+  justify-content: var(--justify-content);
+  row-gap: var(--row-gap);
 }

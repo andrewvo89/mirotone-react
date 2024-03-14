@@ -26,32 +26,50 @@ describe('Flex', () => {
   });
 
   test('should set alignContent prop', () => {
-    const { container } = render(<Flex alignContent='center'>Children</Flex>);
-    expect(container.firstChild).toHaveStyle('--align-content: center');
+    const { queryByText } = render(<Flex alignContent='center'>Children</Flex>);
+    const element = queryByText('Children');
+    expect(element).toHaveStyle('--align-content: center');
   });
 
   test('should set alignItems prop', () => {
-    const { container } = render(<Flex alignItems='center'>Children</Flex>);
-    expect(container.firstChild).toHaveStyle('--align-items: center');
+    const { queryByText } = render(<Flex alignItems='center'>Children</Flex>);
+    const element = queryByText('Children');
+    expect(element).toHaveStyle('--align-items: center');
+  });
+
+  test('should set columnGap prop', () => {
+    const { queryByText } = render(<Flex columnGap='10px'>Children</Flex>);
+    const element = queryByText('Children');
+    expect(element).toHaveStyle('--column-gap: 10px');
   });
 
   test('should set flexDirection prop', () => {
-    const { container } = render(<Flex flexDirection='row-reverse'>Children</Flex>);
-    expect(container.firstChild).toHaveStyle('--flex-direction: row-reverse');
+    const { queryByText } = render(<Flex flexDirection='row-reverse'>Children</Flex>);
+    const element = queryByText('Children');
+    expect(element).toHaveStyle('--flex-direction: row-reverse');
   });
 
   test('should set flexWrap prop', () => {
-    const { container } = render(<Flex flexWrap='wrap-reverse'>Children</Flex>);
-    expect(container.firstChild).toHaveStyle('--flex-wrap: wrap-reverse');
+    const { queryByText } = render(<Flex flexWrap='wrap-reverse'>Children</Flex>);
+    const element = queryByText('Children');
+    expect(element).toHaveStyle('--flex-wrap: wrap-reverse');
   });
 
   test('should set gap prop', () => {
-    const { container } = render(<Flex gap='20px'>Children</Flex>);
-    expect(container.firstChild).toHaveStyle('--gap: 20px');
+    const { queryByText } = render(<Flex gap='20px'>Children</Flex>);
+    const element = queryByText('Children');
+    expect(element).toHaveStyle('--gap: 20px');
   });
 
   test('should set justifyContent prop', () => {
-    const { container } = render(<Flex justifyContent='space-between'>Children</Flex>);
-    expect(container.firstChild).toHaveStyle('--justify-content: space-between');
+    const { queryByText } = render(<Flex justifyContent='space-between'>Children</Flex>);
+    const element = queryByText('Children');
+    expect(element).toHaveStyle('--justify-content: space-between');
+  });
+
+  test('should set rowGap prop', () => {
+    const { queryByText } = render(<Flex rowGap='15px'>Children</Flex>);
+    const element = queryByText('Children');
+    expect(element).toHaveStyle('--row-gap: 15px');
   });
 });

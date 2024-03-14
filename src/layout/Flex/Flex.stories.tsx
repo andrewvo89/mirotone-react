@@ -21,6 +21,11 @@ const meta: Meta<typeof Flex> = {
         </Button>
       </>
     ),
+    style: {
+      border: `1px solid ${tokens.color.indigo[300]}`,
+      borderRadius: tokens.borderRadius.large,
+      padding: tokens.space.small,
+    },
   },
   parameters: {
     layout: 'centered',
@@ -50,7 +55,15 @@ export const Wrap: Story = {
   args: {
     flexWrap: 'wrap',
   },
-  render: (args) => <Flex {...args} style={{ width: 100 }} />,
+  render: (args) => (
+    <Flex
+      {...args}
+      style={{ ...args.style, width: 100 }}
+      justifyContent='space-evenly'
+      rowGap={tokens.space.xsmall}
+      columnGap={tokens.space.xsmall}
+    />
+  ),
 };
 
 export const Gap: Story = {
