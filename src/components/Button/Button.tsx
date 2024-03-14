@@ -3,6 +3,7 @@ import { forwardRef } from 'react';
 import { ButtonProps } from './types';
 import { getIsLoadingClassName, getSizeClassName, getVariantClassName } from './utils';
 import { isNonEmptyString } from '../../utils/common';
+import styles from './Button.module.css';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const {
@@ -17,6 +18,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 
   const classNames = [
     'button',
+    styles['button'],
     getSizeClassName(size),
     getVariantClassName(variant),
     getIsLoadingClassName(isLoading),
