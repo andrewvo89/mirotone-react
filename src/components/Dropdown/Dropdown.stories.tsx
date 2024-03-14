@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import {
+  Button,
   Checkbox,
   Dropdown,
   DropdownDivider,
@@ -13,10 +14,24 @@ import {
 } from '../..';
 import { useState } from 'react';
 import DropdownButton from './DropdownButton';
+import { useArgs } from '@storybook/preview-api';
 
 const meta = {
   title: 'Beta/Dropdown',
   component: Dropdown,
+  args: {
+    children: (
+      <>
+        <DropdownItem onSelect={() => {}}>Team profile</DropdownItem>
+        <DropdownItem onSelect={() => {}}>Team members</DropdownItem>
+        <DropdownItem onSelect={() => {}}>Apps & Integrations</DropdownItem>
+        <DropdownDivider />
+        <DropdownItem onSelect={() => {}} style={{ color: tokens.color.red[700] }}>
+          Leave team
+        </DropdownItem>
+      </>
+    ),
+  },
   parameters: {
     layout: 'centered',
   },
@@ -31,17 +46,6 @@ export const MenuItems: Story = {
   name: 'Dropdown items',
   args: {
     trigger: <DropdownButton variant='tertiary'>Settings</DropdownButton>,
-    children: (
-      <>
-        <DropdownItem onSelect={() => {}}>Team profile</DropdownItem>
-        <DropdownItem onSelect={() => {}}>Team members</DropdownItem>
-        <DropdownItem onSelect={() => {}}>Apps & Integrations</DropdownItem>
-        <DropdownDivider />
-        <DropdownItem onSelect={() => {}} style={{ color: tokens.color.red[700] }}>
-          Leave team
-        </DropdownItem>
-      </>
-    ),
   },
 };
 
@@ -139,21 +143,35 @@ export const PreferredSide: Story = {
   args: {
     trigger: <></>,
     side: 'top',
-    children: (
-      <>
-        <DropdownItem onSelect={() => {}}>Team profile</DropdownItem>
-        <DropdownItem onSelect={() => {}}>Team members</DropdownItem>
-        <DropdownItem onSelect={() => {}}>Apps & Integrations</DropdownItem>
-        <DropdownDivider />
-        <DropdownItem onSelect={() => {}} style={{ color: tokens.color.red[700] }}>
-          Leave team
-        </DropdownItem>
-      </>
-    ),
   },
   render: (args) => (
     <Dropdown {...args} trigger={<DropdownButton>Preferred side: {args.side}</DropdownButton>}>
       {args.children}
     </Dropdown>
   ),
+};
+
+export const Controlled: Story = {
+  args: {
+    open: true,
+    trigger: <Text>Dropdown trigger is over here</Text>,
+  },
+  render: function App(args) {
+    const { open, onOpenChange, ...rest } = args;
+    const [, setArgs] = useArgs();
+
+    const onOpenChangeHandler = (open: boolean) => {
+      onOpenChange?.(open);
+      setArgs({ open });
+    };
+
+    return (
+      <div style={{ display: 'flex', gap: tokens.space.small }}>
+        <Button onClick={() => onOpenChangeHandler(!open)}>Toggle dropdown manually</Button>
+        <Dropdown {...rest} onOpenChange={onOpenChangeHandler} open={open}>
+          {args.children}
+        </Dropdown>
+      </div>
+    );
+  },
 };

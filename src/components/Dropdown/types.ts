@@ -10,6 +10,7 @@ export type DropdownContentSize = 'small' | 'medium' | 'large';
 export type DropdownProps = Omit<ComponentProps<'div'>, 'ref'> & {
   size?: DropdownContentSize;
   side?: RadixDropdownMenuContentProps['side'];
+  open?: RadixDropdownMenuProps['open'];
   onOpenChange?: RadixDropdownMenuProps['onOpenChange'];
   trigger: ReactNode;
 };

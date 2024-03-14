@@ -26,6 +26,22 @@ describe('Dropdown', () => {
     expect(menu).not.toBeNull();
   });
 
+  test('should manually set the open prop', () => {
+    const open = true;
+    render(<Dropdown open={open} trigger={<button>Open me</button>} />);
+
+    const menu = screen.queryByRole('menu');
+    expect(menu).not.toBeNull();
+  });
+
+  test('should manually set the open prop to false', () => {
+    const open = false;
+    render(<Dropdown open={open} trigger={<button>Open me</button>} />);
+
+    const menu = screen.queryByRole('menu');
+    expect(menu).toBeNull();
+  });
+
   test('should call onOpenChange when the menu is opened', async () => {
     const user = userEvent.setup();
     const onOpenChange = vi.fn();

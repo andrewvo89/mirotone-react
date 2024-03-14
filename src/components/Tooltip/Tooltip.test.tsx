@@ -89,21 +89,23 @@ describe('Tooltip', () => {
     await waitFor(() => expect(queryByRole('tooltip')).not.toBeNull());
 
     await user.click(getByText('Click after hover'));
-    expect(queryByRole('tooltip')).not.toBeNull();
+    expect(screen.queryByRole('tooltip')).not.toBeNull();
   });
 
   test('should manually set the open prop', () => {
     const open = true;
     render(<Tooltip open={open} trigger={<button>Trigger</button>} />);
 
-    expect(screen.queryByRole('tooltip')).not.toBeNull();
+    const tooltip = screen.queryByRole('tooltip');
+    expect(tooltip).not.toBeNull();
   });
 
   test('should manually set the open prop to false', () => {
     const open = false;
     render(<Tooltip open={open} trigger={<button>Trigger</button>} />);
 
-    expect(screen.queryByRole('tooltip')).toBeNull();
+    const tooltip = screen.queryByRole('tooltip');
+    expect(tooltip).toBeNull();
   });
 
   test('should trigger onOpenChange on hover', async () => {
