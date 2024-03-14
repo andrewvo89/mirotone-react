@@ -15,7 +15,7 @@ import {
 } from './utils';
 
 const DismissableBadge = forwardRef<HTMLDivElement, DismissableBadgeProps>((props, ref) => {
-  const { className, children, rounded = false, variant = 'primary', onClose, ...rest } = props;
+  const { className, children, rounded = false, variant = 'primary', onClose, style, ...rest } = props;
 
   const classNames = [styles['badge'], 'p-medium', className].filter(isNonEmptyString);
 
@@ -25,6 +25,7 @@ const DismissableBadge = forwardRef<HTMLDivElement, DismissableBadgeProps>((prop
       ref={ref}
       className={classNames.join(' ')}
       style={{
+        ...style,
         '--border-radius': getBadgeBorderRadiusStyle(rounded),
         '--background-color': getBadgeBackgroundColor(variant),
         '--border': getBadgeBorder(variant),

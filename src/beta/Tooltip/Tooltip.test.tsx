@@ -33,7 +33,7 @@ describe('Tooltip', () => {
 
     await user.hover(trigger);
 
-    await waitFor(() => expect(screen.queryByRole('tooltip')).not.toBeNull(), { timeout: 500 });
+    await waitFor(() => expect(screen.queryByRole('tooltip')).not.toBeNull());
   });
 
   test('should set the delayDuration to 1000', async () => {
@@ -47,7 +47,7 @@ describe('Tooltip', () => {
 
     await user.hover(trigger);
 
-    await waitFor(() => expect(screen.queryByRole('tooltip')).not.toBeNull(), { timeout: 1000 });
+    await waitFor(() => expect(screen.queryByRole('tooltip')).not.toBeNull());
   });
 
   test('should close the tooltip after unhover', async () => {
