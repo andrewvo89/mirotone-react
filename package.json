@@ -31,7 +31,8 @@
     "coverage": "vitest --coverage --run"
   },
   "dependencies": {
-    "@radix-ui/react-dropdown-menu": "^2.0.6"
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-tooltip": "^1.0.7"
   },
   "peerDependencies": {
     "react": "^18.2.0",

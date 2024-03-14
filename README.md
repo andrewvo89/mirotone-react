@@ -40,7 +40,7 @@ For API docs and usage examples, visit the [Mirotone React](https://andrewvo89.g
 - [GitHub repository](https://github.com/andrewvo89/mirotone-react)
 - [Documentation](https://andrewvo89.github.io/mirotone-react)
 - [Mirotone CSS](https://www.mirotone.xyz/)
-- [Miro UI Components](https://www.figma.com/community/file/1125698230201231315/mirotone-ui-components)
+- [Miro UI components](https://www.figma.com/community/file/1125698230201231315/mirotone-ui-components)
 
 ## Installation
 
@@ -136,7 +136,7 @@ import { tokens } from 'mirotone-react';
 | App nav           | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-15189&mode=design&t=M6wFp57pRdq4g6Te-4>) |
 | Dismissable badge | Beta    | [Docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/beta-dismissable-badge--docs)                                                                           |
 | Dropdown          | Beta    | [Docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/beta-dropdown--docs)                                                                                    |
-| Tooltip           | Planned | [Figma design](<https://www.figma.com/file/BI4RtvvajB7E3EQHlNTL4I/Mirotone-UI-Components-(Community)?type=design&node-id=3642-13308&mode=design&t=v8b8OhxAH4M1Erx0-4>) |
+| Tooltip           | Beta    | [Docs](https://andrewvo89.github.io/mirotone-react/?path=/docs/beta-tooltip--docs)                                                                                     |
 
 ## Versions
 
