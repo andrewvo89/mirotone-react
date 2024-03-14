@@ -1,9 +1,7 @@
 export * from './AppCard';
 export * from './Button';
 export * from './Checkbox';
-export * from './DismissableBadge';
 export * from './Divider';
-export * from './Dropdown';
 export * from './FormGroup';
 export * from './Icon';
 export * from './Input';
@@ -17,4 +15,3 @@ export * from './Tabs';
 export * from './Tag';
 export * from './TextArea';
 export * from './Toggle';
-export * from './Tooltip';
