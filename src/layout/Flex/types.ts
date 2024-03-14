@@ -5,6 +5,7 @@ export type FlexProps = ComponentProps<'div'> & {
   alignItems?: CSSProperties['alignItems'];
   columnGap?: CSSProperties['columnGap'];
   flexDirection?: CSSProperties['flexDirection'];
+  flexFlow?: CSSProperties['flexFlow'];
   flexWrap?: CSSProperties['flexWrap'];
   gap?: CSSProperties['gap'];
   justifyContent?: CSSProperties['justifyContent'];

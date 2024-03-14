@@ -3,6 +3,17 @@ import { CSSProperties, forwardRef } from 'react';
 import { FlexProps } from './types';
 import { isNonEmptyString } from '../../utils/common';
 import styles from './Flex.module.css';
+import {
+  getAlignContentClassName,
+  getAlignItemsClassName,
+  getColumnGapClassName,
+  getFlexDirectionClassName,
+  getFlexFlowClassName,
+  getFlexWrapClassName,
+  getGapClassName,
+  getJustifyContentClassName,
+  getRowGapClassName,
+} from './utils';
 
 const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
   const {
@@ -11,6 +22,7 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
     alignItems,
     columnGap,
     flexDirection,
+    flexFlow,
     flexWrap,
     gap,
     justifyContent,
@@ -19,7 +31,19 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
     ...rest
   } = props;
 
-  const classNames = [styles['flex'], className].filter(isNonEmptyString);
+  const classNames = [
+    styles['flex'],
+    getAlignContentClassName(alignContent),
+    getAlignItemsClassName(alignItems),
+    getColumnGapClassName(columnGap),
+    getFlexDirectionClassName(flexDirection),
+    getFlexFlowClassName(flexFlow),
+    getFlexWrapClassName(flexWrap),
+    getGapClassName(gap),
+    getJustifyContentClassName(justifyContent),
+    getRowGapClassName(rowGap),
+    className,
+  ].filter(isNonEmptyString);
 
   let flexStyles: CSSProperties = {};
   if (alignContent) {
@@ -33,6 +57,9 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
   }
   if (flexDirection) {
     flexStyles = { ...flexStyles, '--flex-direction': flexDirection };
+  }
+  if (flexFlow) {
+    flexStyles = { ...flexStyles, '--flex-flow': flexFlow };
   }
   if (flexWrap) {
     flexStyles = { ...flexStyles, '--flex-wrap': flexWrap };

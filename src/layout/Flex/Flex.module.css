@@ -1,11 +1,39 @@
 .flex {
   display: flex;
+}
+
+.align-content {
   align-content: var(--align-content);
+}
+
+.align-items {
   align-items: var(--align-items);
+}
+
+.column-gap {
   column-gap: var(--column-gap);
+}
+
+.flex-direction {
   flex-direction: var(--flex-direction);
+}
+
+.flex-flow {
+  flex-flow: var(--flex-flow);
+}
+
+.flex-wrap {
   flex-wrap: var(--flex-wrap);
+}
+
+.gap {
   gap: var(--gap);
+}
+
+.justify-content {
   justify-content: var(--justify-content);
+}
+
+.row-gap {
   row-gap: var(--row-gap);
 }

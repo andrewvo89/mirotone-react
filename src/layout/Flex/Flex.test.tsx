@@ -49,6 +49,12 @@ describe('Flex', () => {
     expect(element).toHaveStyle('--flex-direction: row-reverse');
   });
 
+  test('should set flexFlow prop', () => {
+    const { queryByText } = render(<Flex flexFlow='column wrap'>Children</Flex>);
+    const element = queryByText('Children');
+    expect(element).toHaveStyle('--flex-flow: column wrap');
+  });
+
   test('should set flexWrap prop', () => {
     const { queryByText } = render(<Flex flexWrap='wrap-reverse'>Children</Flex>);
     const element = queryByText('Children');

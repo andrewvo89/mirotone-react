@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, Text, Tooltip, tokens } from '../..';
+import { Button, Flex, Text, Tooltip, tokens } from '../..';
 
 import { useArgs } from '@storybook/preview-api';
 
@@ -91,12 +91,12 @@ export const Controlled: Story = {
     };
 
     return (
-      <div style={{ display: 'flex', gap: tokens.space.small }}>
+      <Flex gap={tokens.space.small} alignItems='center'>
         <Button onClick={() => onOpenChangeHandler(!open)}>Toggle tooltip manually</Button>
         <Tooltip {...rest} onOpenChange={onOpenChangeHandler} open={open} disableCloseOnOutside>
           {args.children}
         </Tooltip>
-      </div>
+      </Flex>
     );
   },
 };

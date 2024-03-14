@@ -1,7 +1,7 @@
-import { tokens } from '..';
+import { Flex, tokens } from '..';
 import DocBlockContainer from './DocBlockContainer';
 
-const spacePixelMap: Record<keyof typeof tokens.borderRadius, string> = {
+const borderRadiusPixelMap: Record<keyof typeof tokens.borderRadius, string> = {
   small: '2px',
   medium: '4px',
   large: '8px',
@@ -10,11 +10,11 @@ const spacePixelMap: Record<keyof typeof tokens.borderRadius, string> = {
   circle: '50%',
 };
 
-export default function Spacing() {
+export default function BorderRadius() {
   return (
     <DocBlockContainer>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-        {Object.entries(spacePixelMap).map(([size, val]) => {
+      <Flex flexDirection='column' gap={tokens.space.xsmall}>
+        {Object.entries(borderRadiusPixelMap).map(([size, val]) => {
           return (
             <div key={size} style={{ display: 'grid', gridTemplateColumns: 'repeat(12,1fr)', alignItems: 'center' }}>
               <span style={{ gridColumn: '1/7' }}>{size}</span>
@@ -31,7 +31,7 @@ export default function Spacing() {
             </div>
           );
         })}
-      </div>
+      </Flex>
     </DocBlockContainer>
   );
 }

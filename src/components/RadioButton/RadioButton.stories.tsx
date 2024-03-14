@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { RadioButton, tokens } from '../..';
+import { Flex, RadioButton, tokens } from '../..';
 
 import { useArgs } from '@storybook/preview-api';
 
@@ -43,10 +43,10 @@ export const Label: Story = {
 
 export const Multiple: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: tokens.space.xsmall }}>
+    <Flex flexDirection='column' gap={tokens.space.xsmall}>
       <RadioButton label='Option 1' name='radio' />
       <RadioButton label='Option 2' name='radio' />
       <RadioButton label='Option 3' name='radio' />
-    </div>
+    </Flex>
   ),
 };

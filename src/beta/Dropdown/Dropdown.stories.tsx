@@ -1,17 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {
-  Button,
-  Checkbox,
-  Dropdown,
-  DropdownDivider,
-  DropdownItem,
-  DropdownItemProps,
-  Icon,
-  Paragraph,
-  Text,
-  tokens,
-} from '../..';
+import { Button, Checkbox, Dropdown, DropdownDivider, DropdownItem, Flex, Icon, Text, tokens } from '../..';
 import { useState } from 'react';
 import DropdownButton from './DropdownButton';
 import { useArgs } from '@storybook/preview-api';
@@ -27,6 +16,7 @@ const meta = {
     },
   },
   args: {
+    trigger: <></>,
     children: (
       <>
         <DropdownItem onSelect={() => {}}>Team profile</DropdownItem>
@@ -59,7 +49,6 @@ export const MenuItems: Story = {
 export const CheckboxMenuItems: Story = {
   name: 'Checkbox items',
   args: {
-    trigger: <DropdownButton>Choose members</DropdownButton>,
     style: { minWidth: 200 },
   },
   render: function App(args) {
@@ -79,44 +68,35 @@ export const CheckboxMenuItems: Story = {
     const onOpenChangeHandler = () => setSelected(new Set());
 
     return (
-      <div style={{ display: 'flex', gap: tokens.space.small }}>
-        <Dropdown {...args} onOpenChange={onOpenChangeHandler}>
-          <DropdownItem disableCloseOnSelect>
-            <Checkbox
-              label='Jack Hudson'
-              checked={selected.has('Jack Hudson')}
-              onChange={(value) => handleSelect('Jack Hudson', value)}
-            />
-          </DropdownItem>
-          <DropdownItem disableCloseOnSelect>
-            <Checkbox
-              label='Katy Cormick'
-              checked={selected.has('Katy Cormick')}
-              onChange={(value) => handleSelect('Katy Cormick', value)}
-            />
-          </DropdownItem>
-          <DropdownItem disableCloseOnSelect>
-            <Checkbox
-              label='Lena Steady'
-              checked={selected.has('Lena Steady')}
-              onChange={(value) => handleSelect('Lena Steady', value)}
-            />
-          </DropdownItem>
-        </Dropdown>
-        <div>
-          {Array.from(selected).map((name) => (
-            <Paragraph key={name}>{name}</Paragraph>
-          ))}
-        </div>
-      </div>
+      <Dropdown
+        {...args}
+        trigger={<DropdownButton>Choose members{`${selected.size > 0 ? ` (${selected.size})` : ''}`}</DropdownButton>}
+        onOpenChange={onOpenChangeHandler}
+      >
+        <DropdownItem disableCloseOnSelect>
+          <Checkbox
+            label='Jack Hudson'
+            checked={selected.has('Jack Hudson')}
+            onChange={(value) => handleSelect('Jack Hudson', value)}
+          />
+        </DropdownItem>
+        <DropdownItem disableCloseOnSelect>
+          <Checkbox
+            label='Katy Cormick'
+            checked={selected.has('Katy Cormick')}
+            onChange={(value) => handleSelect('Katy Cormick', value)}
+          />
+        </DropdownItem>
+        <DropdownItem disableCloseOnSelect>
+          <Checkbox
+            label='Lena Steady'
+            checked={selected.has('Lena Steady')}
+            onChange={(value) => handleSelect('Lena Steady', value)}
+          />
+        </DropdownItem>
+      </Dropdown>
     );
   },
-};
-
-const dropdownMenuItemStyle: DropdownItemProps['style'] = {
-  display: 'flex',
-  gap: tokens.space.small,
-  alignItems: 'center',
 };
 
 export const IconMenuItems: Story = {
@@ -126,17 +106,23 @@ export const IconMenuItems: Story = {
     style: { minWidth: 200 },
     children: (
       <>
-        <DropdownItem style={dropdownMenuItemStyle}>
-          <Icon name='sticky' />
-          <Text>Stickies</Text>
+        <DropdownItem>
+          <Flex gap={tokens.space.small} alignItems='center'>
+            <Icon name='sticky' />
+            <Text>Stickies</Text>
+          </Flex>
         </DropdownItem>
-        <DropdownItem style={dropdownMenuItemStyle}>
-          <Icon name='shapes' />
-          <Text>Shapes</Text>
+        <DropdownItem>
+          <Flex gap={tokens.space.small} alignItems='center'>
+            <Icon name='shapes' />
+            <Text>Shapes</Text>
+          </Flex>
         </DropdownItem>
-        <DropdownItem style={dropdownMenuItemStyle}>
-          <Icon name='frames' />
-          <Text>Frames</Text>
+        <DropdownItem>
+          <Flex gap={tokens.space.small} alignItems='center'>
+            <Icon name='frames' />
+            <Text>Frames</Text>
+          </Flex>
         </DropdownItem>
         <DropdownDivider />
         <DropdownItem style={{ color: tokens.color.blue[700] }}>Clear filter</DropdownItem>
@@ -148,7 +134,6 @@ export const IconMenuItems: Story = {
 export const PreferredSide: Story = {
   name: 'Preferred side',
   args: {
-    trigger: <></>,
     side: 'top',
   },
   render: (args) => (
@@ -173,12 +158,12 @@ export const Controlled: Story = {
     };
 
     return (
-      <div style={{ display: 'flex', gap: tokens.space.small }}>
+      <Flex gap={tokens.space.small} alignItems='center'>
         <Button onClick={() => onOpenChangeHandler(!open)}>Toggle dropdown manually</Button>
         <Dropdown {...rest} onOpenChange={onOpenChangeHandler} open={open}>
           {args.children}
         </Dropdown>
-      </div>
+      </Flex>
     );
   },
 };

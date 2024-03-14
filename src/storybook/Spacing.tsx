@@ -1,4 +1,4 @@
-import { tokens } from '..';
+import { Flex, tokens } from '..';
 import DocBlockContainer from './DocBlockContainer';
 
 const spacePixelMap: Record<keyof typeof tokens.space, string> = {
@@ -16,7 +16,7 @@ const spacePixelMap: Record<keyof typeof tokens.space, string> = {
 export default function Spacing() {
   return (
     <DocBlockContainer>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+      <Flex flexDirection='column' gap={tokens.space.xsmall}>
         {Object.entries(spacePixelMap).map(([size, pixels]) => {
           return (
             <div key={size} style={{ display: 'grid', gridTemplateColumns: 'repeat(12,1fr)', alignItems: 'center' }}>
@@ -37,7 +37,7 @@ export default function Spacing() {
             </div>
           );
         })}
-      </div>
+      </Flex>
     </DocBlockContainer>
   );
 }
