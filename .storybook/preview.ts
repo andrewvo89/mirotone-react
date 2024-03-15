@@ -17,6 +17,7 @@ const preview: Preview = {
           'Layout',
           'Components',
           'Beta',
+          'Recipes',
         ],
       },
     },

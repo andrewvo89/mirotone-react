@@ -99,7 +99,7 @@ export const Loading: Story = {
 export const IconButton: Story = {
   name: 'Icon button',
   args: {
-    children: <Icon name='activity' />,
+    children: <Icon name='activity' style={{ pointerEvents: 'none' }} />,
   },
 };
 
@@ -108,7 +108,7 @@ export const IconTextButton: Story = {
   args: {
     children: (
       <>
-        <Icon name='activity' />
+        <Icon name='activity' style={{ pointerEvents: 'none' }} />
         <Text>Icon & text button</Text>
       </>
     ),

@@ -9,9 +9,9 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const classNames = ['link', `link-${variant}`, className].filter(isNonEmptyString);
 
   return (
-    <span {...rest} ref={ref} className={classNames.join(' ')}>
+    <a {...rest} ref={ref} className={classNames.join(' ')}>
       {children}
-    </span>
+    </a>
   );
 });
 
