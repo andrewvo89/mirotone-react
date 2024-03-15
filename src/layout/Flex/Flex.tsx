@@ -1,8 +1,8 @@
-import { CSSProperties, forwardRef } from 'react';
+import { forwardRef } from 'react';
 
-import { FlexProps } from './types';
 import { isNonEmptyString } from '../../utils/common';
 import styles from './Flex.module.css';
+import { FlexProps } from './types';
 import {
   getAlignContentClassName,
   getAlignItemsClassName,
@@ -45,7 +45,7 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
     className,
   ].filter(isNonEmptyString);
 
-  let flexStyles: CSSProperties = {};
+  let flexStyles = { ...style };
   if (alignContent) {
     flexStyles = { ...flexStyles, '--align-content': alignContent };
   }
@@ -74,7 +74,7 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
     flexStyles = { ...flexStyles, '--row-gap': rowGap };
   }
 
-  return <div {...rest} ref={ref} className={classNames.join(' ')} style={{ ...style, ...flexStyles }} />;
+  return <div {...rest} ref={ref} className={classNames.join(' ')} style={flexStyles} />;
 });
 
 Flex.displayName = 'Flex';

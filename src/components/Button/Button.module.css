@@ -4,3 +4,9 @@
     margin: 0;
   }
 }
+
+.gap {
+  && {
+    gap: var(--gap);
+  }
+}

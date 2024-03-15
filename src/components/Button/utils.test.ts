@@ -1,5 +1,7 @@
 import { describe, expect, test } from 'vitest';
-import { getIsLoadingClassName, getSizeClassName, getVariantClassName } from './utils';
+
+import styles from './Button.module.css';
+import { getGapClassName, getIsLoadingClassName, getSizeClassName, getVariantClassName } from './utils';
 
 describe('getSizeClassName', () => {
   test('should return small button class name', () => {
@@ -40,5 +42,15 @@ describe('getIsLoadingClassName', () => {
 
   test('should return empty string', () => {
     expect(getIsLoadingClassName(false)).toBe('');
+  });
+});
+
+describe('getGapClassName', () => {
+  test('should return empty string', () => {
+    expect(getGapClassName(undefined)).toBe('');
+  });
+
+  test('should return gap class name', () => {
+    expect(getGapClassName('small')).toBe(styles['gap']);
   });
 });

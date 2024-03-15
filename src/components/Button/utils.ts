@@ -1,3 +1,6 @@
+import { CSSProperties } from 'react';
+
+import styles from './Button.module.css';
 import { ButtonSize, ButtonVariant } from './types';
 
 export function getSizeClassName(size: ButtonSize): string {
@@ -26,4 +29,8 @@ export function getVariantClassName(variant: ButtonVariant): string {
 
 export function getIsLoadingClassName(isLoading: boolean): string {
   return isLoading ? 'button-loading' : '';
+}
+
+export function getGapClassName(gap?: CSSProperties['gap']): string {
+  return gap ? styles['gap'] : '';
 }

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, Icon, Text } from '../..';
+import { Button, Icon, Text, tokens } from '../..';
 
 const meta = {
   title: 'Components/Button',
@@ -106,6 +106,18 @@ export const IconButton: Story = {
 export const IconTextButton: Story = {
   name: 'Icon & text button',
   args: {
+    children: (
+      <>
+        <Icon name='activity' style={{ pointerEvents: 'none' }} />
+        <Text>Icon & text button</Text>
+      </>
+    ),
+  },
+};
+
+export const Gap: Story = {
+  args: {
+    gap: tokens.space.xlarge,
     children: (
       <>
         <Icon name='activity' style={{ pointerEvents: 'none' }} />
