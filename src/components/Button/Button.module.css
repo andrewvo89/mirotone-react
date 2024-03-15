@@ -1,3 +1,6 @@
-.button:nth-child(n) {
-  margin: 0;
+.button {
+  place-content: center;
+  &:nth-child(n) {
+    margin: 0;
+  }
 }
