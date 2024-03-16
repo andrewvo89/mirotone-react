@@ -49,3 +49,10 @@ export const Heading4: Story = {
     level: 4,
   },
 };
+
+export const Colored: Story = {
+  args: {
+    children: 'Colored heading',
+    fontColor: 'var(--red900)',
+  },
+};

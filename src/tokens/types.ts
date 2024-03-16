@@ -25,7 +25,26 @@ export type White = (typeof color)['white'];
 
 export type WhiteAlpha = (typeof color)['whiteAlpha'][keyof (typeof color)['whiteAlpha']];
 
-export type Colors = Blue | Indigo | IndigoAlpha | Green | Black | BlackAlpha | Red | Yellow | White | WhiteAlpha;
+export type PrimaryText = (typeof color)['primaryText'];
+
+export type PrimaryActionColor = (typeof color)['primaryActionColor'];
+
+export type SecondaryText = (typeof color)['secondaryText'];
+
+export type Colors =
+  | Blue
+  | Indigo
+  | IndigoAlpha
+  | Green
+  | Black
+  | BlackAlpha
+  | Red
+  | Yellow
+  | White
+  | WhiteAlpha
+  | PrimaryText
+  | PrimaryActionColor
+  | SecondaryText;
 
 export type FontWeight = (typeof typography)['fontWeight'][keyof (typeof typography)['fontWeight']];
 

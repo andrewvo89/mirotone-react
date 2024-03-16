@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Paragraph } from '../..';
+import { Paragraph, tokens } from '../..';
 
 const meta = {
   title: 'Typography/Paragraph',
@@ -9,6 +9,16 @@ const meta = {
     size: {
       defaultValue: {
         summary: 'medium',
+      },
+    },
+    fontWeight: {
+      defaultValue: {
+        summary: tokens.typography.fontWeight.normal,
+      },
+    },
+    fontColor: {
+      defaultValue: {
+        summary: tokens.color.primaryText,
       },
     },
   },
@@ -40,5 +50,43 @@ export const Large: Story = {
   args: {
     children: 'Paragraph large',
     size: 'large',
+  },
+};
+export const NormalWeight: Story = {
+  name: 'Normal weight',
+  args: {
+    children: 'Normal weight',
+    fontWeight: 'var(--font-weight-normal)',
+  },
+};
+
+export const MediumWeight: Story = {
+  name: 'Medium weight',
+  args: {
+    children: 'Light weight',
+    fontWeight: 'var(--font-weight-medium)',
+  },
+};
+
+export const BoldWeight: Story = {
+  name: 'Bold weight',
+  args: {
+    children: 'Bold weight',
+    fontWeight: 'var(--font-weight-bold)',
+  },
+};
+
+export const BlackWeight: Story = {
+  name: 'Black weight',
+  args: {
+    children: 'Black weight',
+    fontWeight: 'var(--font-weight-black)',
+  },
+};
+
+export const Colored: Story = {
+  args: {
+    children: 'Colored text',
+    fontColor: 'var(--red900)',
   },
 };

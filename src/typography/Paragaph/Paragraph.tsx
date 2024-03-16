@@ -2,14 +2,28 @@ import { forwardRef } from 'react';
 
 import { isNonEmptyString } from '../../utils/common';
 import { ParagraphProps } from './types';
+import styles from './Paragraph.module.css';
 
 const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>((props, ref) => {
-  const { className, children, size = 'medium', ...rest } = props;
+  const {
+    className,
+    children,
+    size = 'medium',
+    fontWeight = 'var(--font-weight-normal)',
+    fontColor = 'var(--primary-text-color)',
+    style = {},
+    ...rest
+  } = props;
 
-  const classNames = [`p-${size}`, className].filter(isNonEmptyString);
+  const classNames = [`p-${size}`, styles['paragraph'], className].filter(isNonEmptyString);
 
   return (
-    <p {...rest} ref={ref} className={classNames.join(' ')}>
+    <p
+      {...rest}
+      ref={ref}
+      className={classNames.join(' ')}
+      style={{ ...style, '--font-weight': fontWeight, '--font-color': fontColor }}
+    >
       {children}
     </p>
   );
