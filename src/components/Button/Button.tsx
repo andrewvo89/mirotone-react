@@ -30,7 +30,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 
   let buttonStyles = { ...style };
 
-  if (gap) {
+  if (gap !== undefined) {
     buttonStyles = { ...buttonStyles, '--gap': gap };
   }
 

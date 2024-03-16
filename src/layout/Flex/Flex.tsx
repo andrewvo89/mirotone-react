@@ -46,31 +46,31 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
   ].filter(isNonEmptyString);
 
   let flexStyles = { ...style };
-  if (alignContent) {
+  if (alignContent !== undefined) {
     flexStyles = { ...flexStyles, '--align-content': alignContent };
   }
-  if (alignItems) {
+  if (alignItems !== undefined) {
     flexStyles = { ...flexStyles, '--align-items': alignItems };
   }
-  if (columnGap) {
+  if (columnGap !== undefined) {
     flexStyles = { ...flexStyles, '--column-gap': columnGap };
   }
-  if (flexDirection) {
+  if (flexDirection !== undefined) {
     flexStyles = { ...flexStyles, '--flex-direction': flexDirection };
   }
-  if (flexFlow) {
+  if (flexFlow !== undefined) {
     flexStyles = { ...flexStyles, '--flex-flow': flexFlow };
   }
-  if (flexWrap) {
+  if (flexWrap !== undefined) {
     flexStyles = { ...flexStyles, '--flex-wrap': flexWrap };
   }
-  if (gap) {
+  if (gap !== undefined) {
     flexStyles = { ...flexStyles, '--gap': gap };
   }
-  if (justifyContent) {
+  if (justifyContent !== undefined) {
     flexStyles = { ...flexStyles, '--justify-content': justifyContent };
   }
-  if (rowGap) {
+  if (rowGap !== undefined) {
     flexStyles = { ...flexStyles, '--row-gap': rowGap };
   }
 
