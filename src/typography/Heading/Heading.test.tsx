@@ -37,6 +37,12 @@ describe('Heading', () => {
     expect(heading).toHaveClass('h4');
   });
 
+  test('should render a heading with no color', () => {
+    const { getByText } = render(<Heading>Hello, World!</Heading>);
+    const heading = getByText('Hello, World!');
+    expect(heading).toHaveStyle('--font-color: inherit');
+  });
+
   test('should render a heading with a custom color', () => {
     const { getByText } = render(<Heading fontColor='var(--red900)'>Hello, World!</Heading>);
     const heading = getByText('Hello, World!');

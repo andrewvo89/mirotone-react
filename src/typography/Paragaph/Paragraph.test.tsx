@@ -31,8 +31,14 @@ describe('Paragraph', () => {
     expect(paragraph).toHaveClass('p-large');
   });
 
-  test('should render a text with normal weight', () => {
+  test('should render a text with no weight set', () => {
     const { getByText } = render(<Paragraph>Hello, World!</Paragraph>);
+    const text = getByText('Hello, World!');
+    expect(text).toHaveStyle('--font-weight: inherit');
+  });
+
+  test('should render a text with normal weight', () => {
+    const { getByText } = render(<Paragraph fontWeight='var(--font-weight-normal)'>Hello, World!</Paragraph>);
     const text = getByText('Hello, World!');
     expect(text).toHaveStyle('--font-weight: var(--font-weight-normal)');
   });
@@ -55,10 +61,10 @@ describe('Paragraph', () => {
     expect(text).toHaveStyle('--font-weight: var(--font-weight-black)');
   });
 
-  test('should render a text with a custom color', () => {
-    const { getByText } = render(<Paragraph fontColor='var(--red900)'>Hello, World!</Paragraph>);
+  test('should render a text with a no color', () => {
+    const { getByText } = render(<Paragraph>Hello, World!</Paragraph>);
     const text = getByText('Hello, World!');
-    expect(text).toHaveStyle('--font-color: var(--red900)');
+    expect(text).toHaveStyle('--font-color: inherit');
   });
 
   test('should render a paragraph with a custom class name', () => {

@@ -9,8 +9,8 @@ const Text = forwardRef<HTMLSpanElement, TextProps>((props, ref) => {
     className,
     children,
     size = 'medium',
-    fontWeight = 'var(--font-weight-normal)',
-    fontColor = 'var(--primary-text-color)',
+    fontWeight = 'inherit',
+    fontColor = 'inherit',
     style = {},
     ...rest
   } = props;

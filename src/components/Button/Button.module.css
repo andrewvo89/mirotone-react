@@ -6,9 +6,6 @@
   :global(span.icon) {
     pointer-events: none;
   }
-  :global([class*='p-']) {
-    color: inherit;
-  }
 }
 
 .gap {

@@ -18,7 +18,7 @@ const meta = {
     },
     fontColor: {
       defaultValue: {
-        summary: tokens.color.primaryText,
+        summary: 'inherit',
       },
     },
   },
