@@ -31,12 +31,6 @@ describe('Text', () => {
     expect(text).toHaveClass('p-large');
   });
 
-  test('should render a text with no weight set', () => {
-    const { getByText } = render(<Text>Hello, World!</Text>);
-    const text = getByText('Hello, World!');
-    expect(text).toHaveStyle('--font-weight: inherit');
-  });
-
   test('should render a text with normal weight', () => {
     const { getByText } = render(<Text fontWeight='var(--font-weight-normal)'>Hello, World!</Text>);
     const text = getByText('Hello, World!');
@@ -59,12 +53,6 @@ describe('Text', () => {
     const { getByText } = render(<Text fontWeight='var(--font-weight-black)'>Hello, World!</Text>);
     const text = getByText('Hello, World!');
     expect(text).toHaveStyle('--font-weight: var(--font-weight-black)');
-  });
-
-  test('should render a text with a no color', () => {
-    const { getByText } = render(<Text>Hello, World!</Text>);
-    const text = getByText('Hello, World!');
-    expect(text).toHaveStyle('--font-color: inherit');
   });
 
   test('should render a text with a custom color', () => {

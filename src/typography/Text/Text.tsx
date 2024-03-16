@@ -5,25 +5,22 @@ import styles from './Text.module.css';
 import { TextProps } from './types';
 
 const Text = forwardRef<HTMLSpanElement, TextProps>((props, ref) => {
-  const {
-    className,
-    children,
-    size = 'medium',
-    fontWeight = 'inherit',
-    fontColor = 'inherit',
-    style = {},
-    ...rest
-  } = props;
+  const { className, children, size = 'medium', fontWeight, fontColor, style = {}, ...rest } = props;
 
   const classNames = [`p-${size}`, styles['text'], className].filter(isNonEmptyString);
 
+  let textStyle = { ...style };
+
+  if (fontWeight !== undefined) {
+    textStyle = { ...textStyle, '--font-weight': fontWeight };
+  }
+
+  if (fontColor !== undefined) {
+    textStyle = { ...textStyle, '--font-color': fontColor };
+  }
+
   return (
-    <span
-      {...rest}
-      ref={ref}
-      className={classNames.join(' ')}
-      style={{ ...style, '--font-weight': fontWeight, '--font-color': fontColor }}
-    >
+    <span {...rest} ref={ref} className={classNames.join(' ')} style={textStyle}>
       {children}
     </span>
   );
