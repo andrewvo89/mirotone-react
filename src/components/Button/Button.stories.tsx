@@ -99,7 +99,7 @@ export const Loading: Story = {
 export const IconButton: Story = {
   name: 'Icon button',
   args: {
-    children: <Icon name='activity' style={{ pointerEvents: 'none' }} />,
+    children: <Icon name='activity' />,
   },
 };
 
@@ -108,7 +108,7 @@ export const IconTextButton: Story = {
   args: {
     children: (
       <>
-        <Icon name='activity' style={{ pointerEvents: 'none' }} />
+        <Icon name='activity' />
         <Text>Icon & text button</Text>
       </>
     ),
@@ -120,7 +120,7 @@ export const Gap: Story = {
     gap: tokens.space.xlarge,
     children: (
       <>
-        <Icon name='activity' style={{ pointerEvents: 'none' }} />
+        <Icon name='activity' />
         <Text>Icon & text button</Text>
       </>
     ),
