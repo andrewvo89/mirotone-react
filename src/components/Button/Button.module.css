@@ -11,6 +11,12 @@
   }
 }
 
+.button-loading {
+  &&& > :global(span.icon) {
+    filter: opacity(0);
+  }
+}
+
 .gap {
   && {
     gap: var(--gap);

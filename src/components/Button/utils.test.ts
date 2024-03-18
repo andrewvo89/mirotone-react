@@ -37,7 +37,7 @@ describe('getVariantClassName', () => {
 
 describe('getIsLoadingClassName', () => {
   test('should return loading button class name', () => {
-    expect(getIsLoadingClassName(true)).toBe('button-loading');
+    expect(getIsLoadingClassName(true)).toBe(`button-loading ${styles['button-loading']}`);
   });
 
   test('should return empty string', () => {

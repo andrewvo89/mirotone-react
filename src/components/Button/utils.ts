@@ -28,7 +28,7 @@ export function getVariantClassName(variant: ButtonVariant): string {
 }
 
 export function getIsLoadingClassName(isLoading: boolean): string {
-  return isLoading ? 'button-loading' : '';
+  return isLoading ? `button-loading ${styles['button-loading']}` : '';
 }
 
 export function getGapClassName(gap?: CSSProperties['gap']): string {
