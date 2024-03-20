@@ -1,8 +1,16 @@
-import type { Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '../..';
 import * as stories from '../../components/Button/Button.stories';
 
-export default { ...stories.default, title: 'Recipes/Icon & text button' } satisfies Meta<typeof Button>;
+const meta = {
+  ...stories.default,
+  title: 'Recipes/Icon & text button',
+  tags: ['autodocs'],
+} satisfies Meta<typeof Button>;
 
-export const IconTextButton = stories.IconTextButton;
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const IconTextButton: Story = stories.IconTextButton;
