@@ -26,7 +26,7 @@ describe('Tooltip', () => {
     expect(trigger).not.toBeNull();
   });
 
-  test('should render the children content upon clicking the trigger', async () => {
+  test('should render the children content upon hovering the trigger', async () => {
     const user = userEvent.setup();
     const { getByRole } = render(<Tooltip trigger={<button>Trigger</button>}>Tooltip</Tooltip>);
     const trigger = getByRole('button');
