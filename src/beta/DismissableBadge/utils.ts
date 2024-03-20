@@ -1,4 +1,5 @@
-import { DismissableBadgeVariant, tokens } from '../..';
+import { tokens } from '../../tokens';
+import { DismissableBadgeVariant } from './types';
 
 export function getBadgeBorderRadiusStyle(rounded: boolean): string {
   return rounded ? tokens.borderRadius.xxlarge : tokens.borderRadius.medium;

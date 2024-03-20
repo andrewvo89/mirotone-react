@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-import { Icon } from '../..';
+import { Icon } from '../../components';
 import { isNonEmptyString } from '../../utils/common';
 import styles from './DismissableBadge.module.css';
 import { DismissableBadgeProps } from './types';
