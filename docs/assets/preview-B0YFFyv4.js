@@ -1,1 +1,0 @@
-const o={parameters:{options:{storySort:{method:"alphabetical",order:["Mirotone React","Tokens",["Colors","Typography","Spacing","Border radius"],"Typography","Icons","Layout","Components","Beta","Recipes"]}}}};export{o as default};
