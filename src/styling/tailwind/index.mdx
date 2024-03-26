@@ -1,0 +1,30 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import App from '.';
+
+<Meta title='Styling/Tailwind CSS' />
+
+# Tailwind CSS
+
+All components are compatible with Tailwind CSS. The `className` props is exposed to allow Tailwind CSS classes to be applied to the component.
+
+#### **`index.css`**
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+#### **`App.tsx`**
+
+```tsx
+import './index.css';
+
+import { Text } from 'mirotone-react';
+
+const App = () => <Text className='text-3xl font-bold underline text-blue-500'>Tailwind text</Text>;
+
+export default App;
+```
+
+<App />

@@ -1,0 +1,34 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import App from './';
+
+<Meta title='Styling/CSS' />
+
+# CSS styling
+
+All components can be styled using CSS or CSS modules. The `className` prop is exposed to allow classes to be applied to the component.
+
+#### **`index.module.css`**
+
+```css
+.text {
+  color: var(--blue600);
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+```
+
+#### **`App.tsx`**
+
+```tsx
+import styles from './index.module.css';
+
+import { Text } from 'mirotone-react';
+
+const App = () => <Text className={styles.text}>CSS text</Text>;
+
+export default App;
+```
+
+<App />

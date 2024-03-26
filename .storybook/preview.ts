@@ -16,6 +16,7 @@ const preview: Preview = {
           'Layout',
           'Components',
           'Beta',
+          'Styling',
           'Recipes',
         ],
       },

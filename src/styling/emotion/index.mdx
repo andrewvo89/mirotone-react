@@ -1,0 +1,62 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import { CSSApp, StyledApp } from '.';
+
+<Meta title='Styling/Emotion' />
+
+# Emotion CSS-in-JS
+
+## @emotion/css
+
+Components can be styled using the `css` function from `@emotion/css` to generate class names. The `className` props is exposed to allow the generated class names to be applied to the component.
+
+#### **`App.tsx`**
+
+```tsx
+import { css } from '@emotion/css';
+
+import { Text, tokens } from 'mirotone-react';
+
+const App = () => (
+  <Text
+    className={css`
+      color: ${tokens.color.blue[600]};
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    `}
+  >
+    Emotion css prop
+  </Text>
+);
+
+export default App;
+```
+
+<CSSApp />
+
+## @emotion/styled
+
+Components can be styled using the `styled` function from `@emotion/styled` to generate styled components. The `className` props is exposed to allow the generated class names to be applied to the component.
+
+#### **`App.tsx`**
+
+```tsx
+import styled from '@emotion/styled';
+
+import { Text, tokens } from 'mirotone-react';
+
+const StyledText = styled(Text)({
+  color: tokens.color.blue[600],
+  fontWeight: 'bold',
+  textDecoration: 'underline',
+  fontSize: '1.875rem',
+  lineHeight: '2.25rem',
+});
+
+const App = () => <StyledText>Emotion styled component</StyledText>;
+
+export default App;
+```
+
+<StyledApp />.
