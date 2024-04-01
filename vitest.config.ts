@@ -20,7 +20,7 @@ export default defineConfig({
       provider: 'istanbul',
       reporter: ['text', 'html'],
       include: ['src/**'],
-      exclude: ['src/**/*.stories.*', 'src/storybook/**', 'src/tokens/**'],
+      exclude: ['src/**/*.stories.*', 'src/storybook/**', 'src/styling/**', 'src/tokens/**'],
     },
     setupFiles: ['./setup.jsdom.ts'],
     globals: true,
