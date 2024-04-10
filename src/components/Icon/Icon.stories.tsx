@@ -62,3 +62,23 @@ export const XXLarge: Story = {
     size: 'xxlarge',
   },
 };
+
+export const Colored: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "Icons are SVGs under the hood. To change the color of an icon, apply a CSS `filter` property. A CSS filter converter can be used to convert hex/rgb colors to filter values. In this example https://cssfilterconverter.com/ is used to convert Mirotone's `blue700` (#4262ff) to a filter of: `brightness(0) saturate(100%) invert(32%) sepia(41%) saturate(3910%) hue-rotate(223deg) brightness(99%) contrast(102%)`.",
+      },
+    },
+  },
+  render: (args) => (
+    <Icon
+      {...args}
+      style={{
+        filter:
+          'brightness(0) saturate(100%) invert(32%) sepia(41%) saturate(3910%) hue-rotate(223deg) brightness(99%) contrast(102%)',
+      }}
+    />
+  ),
+};
