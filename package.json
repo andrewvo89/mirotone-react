@@ -27,7 +27,8 @@
     "build-storybook": "storybook build",
     "build": "rollup -c",
     "test": "vitest --run",
-    "coverage": "vitest --coverage --run"
+    "coverage": "vitest --coverage --run",
+    "publish": "npm publish"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.0.6",
