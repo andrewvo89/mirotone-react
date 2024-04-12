@@ -16,7 +16,7 @@
     "system",
     "ui"
   ],
-  "version": "1.3.10",
+  "version": "1.3.11",
   "scripts": {
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
