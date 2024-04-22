@@ -16,19 +16,38 @@ describe('Paragraph', () => {
   test('should render a paragraph of size small', () => {
     const { getByText } = render(<Paragraph size='small'>Hello, World!</Paragraph>);
     const paragraph = getByText('Hello, World!');
-    expect(paragraph).toHaveClass('p-small');
+    console.log(paragraph.style);
+    expect(paragraph).toHaveStyle('--font-size: var(--font-size-small)');
   });
 
   test('should render a paragraph of size medium', () => {
     const { getByText } = render(<Paragraph>Hello, World!</Paragraph>);
     const paragraph = getByText('Hello, World!');
-    expect(paragraph).toHaveClass('p-medium');
+    expect(paragraph).toHaveStyle('--font-size: var(--font-size-medium)');
   });
 
   test('should render a paragraph of size large', () => {
     const { getByText } = render(<Paragraph size='large'>Hello, World!</Paragraph>);
     const paragraph = getByText('Hello, World!');
-    expect(paragraph).toHaveClass('p-large');
+    expect(paragraph).toHaveStyle('--font-size: var(--font-size-large)');
+  });
+
+  test('should render a paragraph of size xlarge', () => {
+    const { getByText } = render(<Paragraph size='xlarge'>Hello, World!</Paragraph>);
+    const paragraph = getByText('Hello, World!');
+    expect(paragraph).toHaveStyle('--font-size: var(--font-size-xlarge)');
+  });
+
+  test('should render a paragraph of size xxlarge', () => {
+    const { getByText } = render(<Paragraph size='xxlarge'>Hello, World!</Paragraph>);
+    const paragraph = getByText('Hello, World!');
+    expect(paragraph).toHaveStyle('--font-size: var(--font-size-xxlarge)');
+  });
+
+  test('should render a paragraph of size xxxlarge', () => {
+    const { getByText } = render(<Paragraph size='xxxlarge'>Hello, World!</Paragraph>);
+    const paragraph = getByText('Hello, World!');
+    expect(paragraph).toHaveStyle('--font-size: var(--font-size-xxxlarge)');
   });
 
   test('should render a text with normal weight', () => {

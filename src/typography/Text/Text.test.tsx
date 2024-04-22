@@ -16,19 +16,37 @@ describe('Text', () => {
   test('should render a text of size small', () => {
     const { getByText } = render(<Text size='small'>Hello, World!</Text>);
     const text = getByText('Hello, World!');
-    expect(text).toHaveClass('p-small');
+    expect(text).toHaveStyle('--font-size: var(--font-size-small)');
   });
 
   test('should render a text of size medium', () => {
     const { getByText } = render(<Text>Hello, World!</Text>);
     const text = getByText('Hello, World!');
-    expect(text).toHaveClass('p-medium');
+    expect(text).toHaveStyle('--font-size: var(--font-size-medium)');
   });
 
   test('should render a text of size large', () => {
     const { getByText } = render(<Text size='large'>Hello, World!</Text>);
     const text = getByText('Hello, World!');
-    expect(text).toHaveClass('p-large');
+    expect(text).toHaveStyle('--font-size: var(--font-size-large)');
+  });
+
+  test('should render a text of size xlarge', () => {
+    const { getByText } = render(<Text size='xlarge'>Hello, World!</Text>);
+    const text = getByText('Hello, World!');
+    expect(text).toHaveStyle('--font-size: var(--font-size-xlarge)');
+  });
+
+  test('should render a text of size xxlarge', () => {
+    const { getByText } = render(<Text size='xxlarge'>Hello, World!</Text>);
+    const text = getByText('Hello, World!');
+    expect(text).toHaveStyle('--font-size: var(--font-size-xxlarge)');
+  });
+
+  test('should render a text of size xxxlarge', () => {
+    const { getByText } = render(<Text size='xxxlarge'>Hello, World!</Text>);
+    const text = getByText('Hello, World!');
+    expect(text).toHaveStyle('--font-size: var(--font-size-xxxlarge)');
   });
 
   test('should render a text with normal weight', () => {

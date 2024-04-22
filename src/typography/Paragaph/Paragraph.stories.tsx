@@ -52,6 +52,28 @@ export const Large: Story = {
     size: 'large',
   },
 };
+
+export const XLarge: Story = {
+  args: {
+    children: 'Paragraph xlarge',
+    size: 'xlarge',
+  },
+};
+
+export const XXLarge: Story = {
+  args: {
+    children: 'Paragraph xxlarge',
+    size: 'xxlarge',
+  },
+};
+
+export const XXXLarge: Story = {
+  args: {
+    children: 'Paragraph xxxlarge',
+    size: 'xxxlarge',
+  },
+};
+
 export const NormalWeight: Story = {
   name: 'Normal weight',
   args: {
