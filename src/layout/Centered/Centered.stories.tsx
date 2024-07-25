@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Centered, Heading, Paragraph } from '../..';
-import Container from '../../storybook/CenteredContainer';
 import Skeleton from '../../storybook/Skeleton';
 
 const meta: Meta<typeof Centered> = {
@@ -27,8 +26,19 @@ export const Default: Story = {
     ),
   },
   render: (args) => (
-    <Container>
+    <div
+      style={{
+        height: '500px',
+        padding: 'var(--space-small)',
+        width: '338px',
+        display: 'block',
+        border: '2px solid var(--indigo300)',
+        borderRadius: 'var(--border-radius-medium)',
+        margin: 'var(--space-small) auto',
+        background: 'var(--white)',
+      }}
+    >
       <Centered {...args} />
-    </Container>
+    </div>
   ),
 };
