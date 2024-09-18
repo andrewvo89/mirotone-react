@@ -140,6 +140,7 @@ import { tokens } from 'mirotone-react';
 | Mirotone React | Mirotone CSS | Mirotone UI Components |
 | -------------- | ------------ | ---------------------- |
 | 1.x.x          | 5.1.1        | 1.4                    |
+| 2.0.0          | 5.3          | 1.4                    |
 
 ## License
 
