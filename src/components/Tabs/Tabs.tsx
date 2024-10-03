@@ -15,9 +15,10 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
         {tabs.map((tab, index) => {
           const isActive = activeIndex === index;
           const classNames = ['tab', getActiveClassName(isActive), className].filter(isNonEmptyString);
+          const tabTextClassNames = ['tab-text', tab.badge ? 'tab-badge' : undefined].filter(isNonEmptyString);
           return (
             <div key={tab.id} className={classNames.join(' ')} tabIndex={0} onClick={() => onClick?.(index)}>
-              <div className='tab-text tab-badge' data-badge={tab.badge}>
+              <div className={tabTextClassNames.join(' ')} data-badge={tab.badge}>
                 {tab.children}
               </div>
             </div>
