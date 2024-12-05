@@ -22,7 +22,7 @@ jobs:
           cache: 'yarn'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
       - name: Lint
         run: yarn lint
       - name: Typecheck
