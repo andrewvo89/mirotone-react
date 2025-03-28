@@ -4573,7 +4573,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/rollup-plugin-peer-deps-external@npm:^2":
+"@types/rollup-plugin-peer-deps-external@npm:^2.2.5":
   version: 2.2.5
   resolution: "@types/rollup-plugin-peer-deps-external@npm:2.2.5"
   dependencies:
@@ -9419,7 +9419,7 @@ __metadata:
     "@testing-library/user-event": "npm:^14.5.2"
     "@types/react": "npm:^18.2.56"
     "@types/react-dom": "npm:^18.2.19"
-    "@types/rollup-plugin-peer-deps-external": "npm:^2"
+    "@types/rollup-plugin-peer-deps-external": "npm:^2.2.5"
     "@typescript-eslint/eslint-plugin": "npm:^7.0.2"
     "@typescript-eslint/parser": "npm:^7.0.2"
     "@vitejs/plugin-react": "npm:^4.2.1"
