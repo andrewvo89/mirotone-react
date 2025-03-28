@@ -1,1 +1,0 @@
-import{j as o}from"./jsx-runtime-DRTy3Uxn.js";import{t as s}from"./Text-DFITVtsb.js";function r(){return o.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",className:"app-card--app-logo",children:o.jsx("circle",{r:"12",cx:"12",cy:"12",fill:s.color.indigo[700]})})}r.__docgenInfo={description:"",methods:[],displayName:"Logo"};export{r as L};
