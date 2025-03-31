@@ -59,6 +59,18 @@ describe('Tabs component', () => {
     expect(tabsElement).toHaveClass('custom-tabs');
   });
 
+  test('should include tab badge class name', () => {
+    const { container } = render(<Tabs tabs={tabs} className='custom-tabs' />);
+    const tabsElement = container.querySelector('.tab-text');
+    expect(tabsElement).toHaveClass('tab-badge');
+  });
+
+  test('should not include tab badge class name', () => {
+    const { container } = render(<Tabs tabs={tabs.map(({ badge, ...rest }) => rest)} className='custom-tabs' />);
+    const tabsElement = container.querySelector('.tab-text');
+    expect(tabsElement).not.toHaveClass('tab-badge');
+  });
+
   test('should pass down ref', () => {
     const ref = createRef<HTMLDivElement>();
     const { container } = render(<Tabs tabs={tabs} ref={ref} />);

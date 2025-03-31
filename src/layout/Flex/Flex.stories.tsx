@@ -27,9 +27,7 @@ const meta: Meta<typeof Flex> = {
       padding: tokens.space.small,
     },
   },
-  parameters: {
-    layout: 'centered',
-  },
+  parameters: { layout: 'centered' },
   tags: ['autodocs'],
 };
 
@@ -39,35 +37,24 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const Vertical: Story = {
-  args: {
-    flexDirection: 'column',
-  },
-};
+export const Vertical: Story = { args: { flexDirection: 'column' } };
 
-export const Horizontal: Story = {
-  args: {
-    flexDirection: 'row',
-  },
-};
+export const Horizontal: Story = { args: { flexDirection: 'row' } };
 
 export const Wrap: Story = {
-  args: {
-    flexWrap: 'wrap',
+  args: { flexWrap: 'wrap' },
+  render: (args) => {
+    return (
+      <Flex
+        {...args}
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        style={{ ...args.style, width: 100 }}
+        justifyContent='space-evenly'
+        rowGap={tokens.space.xsmall}
+        columnGap={tokens.space.xsmall}
+      />
+    );
   },
-  render: (args) => (
-    <Flex
-      {...args}
-      style={{ ...args.style, width: 100 }}
-      justifyContent='space-evenly'
-      rowGap={tokens.space.xsmall}
-      columnGap={tokens.space.xsmall}
-    />
-  ),
 };
 
-export const Gap: Story = {
-  args: {
-    gap: tokens.space.xsmall,
-  },
-};
+export const Gap: Story = { args: { gap: tokens.space.xsmall } };
