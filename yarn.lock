@@ -2681,13 +2681,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/estree@npm:0.0.39":
-  version: 0.0.39
-  resolution: "@types/estree@npm:0.0.39"
-  checksum: 10c0/f0af6c95ac1988c4827964bd9d3b51d24da442e2188943f6dfcb1e1559103d5d024d564b2e9d3f84c53714a02a0a7435c7441138eb63d9af5de4dfc66cdc0d92
-  languageName: node
-  linkType: hard
-
 "@types/estree@npm:1.0.8":
   version: 1.0.8
   resolution: "@types/estree@npm:1.0.8"
@@ -2706,15 +2699,6 @@ __metadata:
   version: 2.0.13
   resolution: "@types/mdx@npm:2.0.13"
   checksum: 10c0/5edf1099505ac568da55f9ae8a93e7e314e8cbc13d3445d0be61b75941226b005e1390d9b95caecf5dcb00c9d1bab2f1f60f6ff9876dc091a48b547495007720
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:*":
-  version: 22.13.14
-  resolution: "@types/node@npm:22.13.14"
-  dependencies:
-    undici-types: "npm:~6.20.0"
-  checksum: 10c0/fa2ab5b8277bfbcc86c42e46a3ea9871b0d559894cc9d955685d17178c9499f0b1bf03d1d1ea8d92ef2dda818988f4035acb8abf9dc15423a998fa56173ab804
   languageName: node
   linkType: hard
 
@@ -2765,12 +2749,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/rollup-plugin-peer-deps-external@npm:^2.2.5":
-  version: 2.2.5
-  resolution: "@types/rollup-plugin-peer-deps-external@npm:2.2.5"
-  dependencies:
-    rollup: "npm:^0.63.4"
-  checksum: 10c0/36876e9786a5257b2289cc9d02b3290eaaf5299905814893fe0fe345545b1b2091e6a683b27a012e98b54f25662605d3caf5a5f6297f4392d896cb50de1bbfbc
+"@types/rollup-plugin-peer-deps-external@npm:^2.2.6":
+  version: 2.2.6
+  resolution: "@types/rollup-plugin-peer-deps-external@npm:2.2.6"
+  peerDependencies:
+    rollup: "*"
+  checksum: 10c0/9a1fb217101363521882818be0d9e13ab2459d864139bb2ebab48cf7498ce121ad42641cb0e11e57fecb1f4d9f8d5ea6322f83667880c62623ea5ff52af18885
   languageName: node
   linkType: hard
 
@@ -6224,7 +6208,7 @@ __metadata:
     "@testing-library/user-event": "npm:^14.5.2"
     "@types/react": "npm:^18.2.56"
     "@types/react-dom": "npm:^18.2.19"
-    "@types/rollup-plugin-peer-deps-external": "npm:^2.2.5"
+    "@types/rollup-plugin-peer-deps-external": "npm:^2.2.6"
     "@typescript-eslint/eslint-plugin": "npm:^7.0.2"
     "@typescript-eslint/parser": "npm:^7.0.2"
     "@vitejs/plugin-react": "npm:^4.2.1"
@@ -7685,18 +7669,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^0.63.4":
-  version: 0.63.5
-  resolution: "rollup@npm:0.63.5"
-  dependencies:
-    "@types/estree": "npm:0.0.39"
-    "@types/node": "npm:*"
-  bin:
-    rollup: ./bin/rollup
-  checksum: 10c0/e8a7c31155fb3d8a9a2c65933a2c3a1125244a4e1e2ba3f2703322532d54fc6304b15fafd5821e5ba7bd8a70bac5119dd85ecd5957ddc131f99905b7c3d4e69d
-  languageName: node
-  linkType: hard
-
 "rollup@npm:^4.20.0":
   version: 4.38.0
   resolution: "rollup@npm:4.38.0"
@@ -8755,13 +8727,6 @@ __metadata:
   version: 1.5.4
   resolution: "ufo@npm:1.5.4"
   checksum: 10c0/b5dc4dc435c49c9ef8890f1b280a19ee4d0954d1d6f9ab66ce62ce64dd04c7be476781531f952a07c678d51638d02ad4b98e16237be29149295b0f7c09cda765
-  languageName: node
-  linkType: hard
-
-"undici-types@npm:~6.20.0":
-  version: 6.20.0
-  resolution: "undici-types@npm:6.20.0"
-  checksum: 10c0/68e659a98898d6a836a9a59e6adf14a5d799707f5ea629433e025ac90d239f75e408e2e5ff086afc3cace26f8b26ee52155293564593fbb4a2f666af57fc59bf
   languageName: node
   linkType: hard
 
