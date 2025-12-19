@@ -18,6 +18,7 @@ module.exports = {
     'src/vite-env.d.ts',
     'vite.config.ts',
     'vitest.config.ts',
+    'setup.jsdom.ts',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
