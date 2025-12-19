@@ -1,0 +1,3 @@
+import{j as o}from"./index-CfptBk_o.js";import{useMDXComponents as s}from"./index-BqIVwv1J.js";import{M as m,I as c,a}from"./index-Bz8aPHvw.js";import{I as i}from"./Text-w2RWykAU.js";import{b as j}from"./types-DWPftK33.js";import"./index-D4H_InIO.js";import"./index-vYCkCKEW.js";import"./iframe-BKUC5TR5.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";function e(t){const n={h1:"h1",...s(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(m,{title:"Icons/Board objects"}),`
+`,o.jsx(n.h1,{id:"board-objects",children:"Board objects"}),`
+`,o.jsx(c,{children:j.map(r=>o.jsx(a,{name:r,children:o.jsx(i,{name:r},r)}))})]})}function C(t={}){const{wrapper:n}={...s(),...t.components};return n?o.jsx(n,{...t,children:o.jsx(e,{...t})}):e(t)}export{C as default};
