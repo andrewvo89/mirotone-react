@@ -16,7 +16,7 @@
     "system",
     "ui"
   ],
-  "version": "2.0.5",
+  "version": "2.0.6",
   "scripts": {
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
