@@ -30,5 +30,6 @@ jobs:
         run: yarn test
       - name: Build
         run: yarn build
+        # https://github.com/actions/setup-node/issues/1440#issuecomment-3571890875
       - name: Publish
-        run: npm publish
+        run: NODE_AUTH_TOKEN="" npm publish
