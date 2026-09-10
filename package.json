@@ -89,7 +89,7 @@
     "typescript": "^5.2.2",
     "vite": "^6.0.2",
     "vite-tsconfig-paths": "^4.3.1",
-    "vitest": "^3.2.6"
+    "vitest": "^4.1.11"
   },
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
