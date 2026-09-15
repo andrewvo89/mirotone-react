@@ -1,0 +1,96 @@
+# On merge to main, bump package.json, commit, and push a v* tag.
+# A GitHub Release is then created from that tag (see create-release.yml).
+#
+# Labels on the merged PR:
+#   release:major  — bump major
+#   release:minor  — bump minor
+#   skip-release   — do not bump, tag, or release
+# Default bump is patch.
+name: Bump version and tag
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: Semver bump type
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+        default: patch
+concurrency:
+  group: bump-version
+  cancel-in-progress: false
+permissions:
+  contents: write
+  actions: write
+jobs:
+  bump:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.meta.outputs.skip }}
+      tag: ${{ steps.bump.outputs.tag }}
+    steps:
+      - name: Determine bump
+        id: meta
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          DISPATCH_BUMP: ${{ inputs.bump }}
+          LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "type=$DISPATCH_BUMP" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [[ ",$LABELS," == *",skip-release,"* ]]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Skipping release because the skip-release label was set"
+            exit 0
+          fi
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+          if [[ ",$LABELS," == *",release:major,"* ]]; then
+            echo "type=major" >> "$GITHUB_OUTPUT"
+          elif [[ ",$LABELS," == *",release:minor,"* ]]; then
+            echo "type=minor" >> "$GITHUB_OUTPUT"
+          else
+            echo "type=patch" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Checkout
+        if: steps.meta.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Set up Node.js
+        if: steps.meta.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Bump version, commit, and tag
+        if: steps.meta.outputs.skip != 'true'
+        id: bump
+        env:
+          BUMP: ${{ steps.meta.outputs.type }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --ff-only origin main
+          npm version "$BUMP" -m "%s"
+          VERSION="$(node -p "require('./package.json').version")"
+          echo "tag=v${VERSION}" >> "$GITHUB_OUTPUT"
+          git push origin HEAD:main --follow-tags
+  github-release:
+    needs: bump
+    if: needs.bump.outputs.skip != 'true' && needs.bump.outputs.tag != ''
+    uses: ./.github/workflows/create-release.yml
+    with:
+      tag: ${{ needs.bump.outputs.tag }}
+    permissions:
+      contents: write
+      actions: write
