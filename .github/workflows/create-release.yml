@@ -1,0 +1,50 @@
+# Creates a GitHub Release from a v* tag and starts npm publish + docs deploy.
+#
+# GitHub does not run other workflows for events created with GITHUB_TOKEN
+# (including release: published). After opening the release, this workflow
+# therefore dispatches the existing publish workflows on the tag ref.
+name: Create GitHub Release
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_call:
+    inputs:
+      tag:
+        description: Tag to release (for example v2.0.8)
+        required: true
+        type: string
+permissions:
+  contents: write
+  actions: write
+jobs:
+  github-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve tag
+        id: tag
+        run: echo "name=${TAG}" >> "$GITHUB_OUTPUT"
+        env:
+          TAG: ${{ inputs.tag || github.ref_name }}
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ steps.tag.outputs.name }}
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.tag.outputs.name }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG already exists"
+          else
+            gh release create "$TAG" --title "$TAG" --generate-notes --verify-tag
+          fi
+      - name: Publish package and documentation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.tag.outputs.name }}
+        run: |
+          gh workflow run release.yml --ref "$TAG"
+          gh workflow run storybook.yml --ref "$TAG"
