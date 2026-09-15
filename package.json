@@ -21,7 +21,7 @@
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc --noEmit",
-    "precommit": "yarn lint && yarn typecheck && yarn coverage",
+    "precommit": "pnpm lint && pnpm typecheck && pnpm coverage",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -52,6 +52,7 @@
     "@storybook/addon-onboarding": "^8.0.2",
     "@storybook/blocks": "^8.0.2",
     "@storybook/manager-api": "^8.0.2",
+    "@storybook/preview-api": "^8.0.2",
     "@storybook/react": "^8.0.2",
     "@storybook/react-vite": "^8.6.15",
     "@storybook/test": "^8.0.2",
@@ -97,5 +98,5 @@
   "files": [
     "lib/**/*"
   ],
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "pnpm@12.4.1"
 }
