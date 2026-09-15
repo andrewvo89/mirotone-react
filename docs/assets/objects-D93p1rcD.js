@@ -1,0 +1,3 @@
+import{j as t}from"./index-5F5Je061.js";import{useMDXComponents as s}from"./index-BqIVwv1J.js";import{M as m,I as c,a as i}from"./index-CuOcWpzz.js";import{I as a}from"./Text-DFnzDMxA.js";import{o as j}from"./types-DWPftK33.js";import"./index-D4H_InIO.js";import"./index-Bo68MQcX.js";import"./iframe-Bqtogjo_.js";import"./index-DVORmRLy.js";import"./index-DrFu-skq.js";function r(o){const n={h1:"h1",...s(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{title:"Icons/Objects"}),`
+`,t.jsx(n.h1,{id:"objects",children:"Objects"}),`
+`,t.jsx(c,{children:j.map(e=>t.jsx(i,{name:e,children:t.jsx(a,{name:e},e)}))})]})}function C(o={}){const{wrapper:n}={...s(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(r,{...o})}):r(o)}export{C as default};
